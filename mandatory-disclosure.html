@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandatory Disclosure - Dyal Singh College, Karnal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+        }
+        /* --- Ticker Specific Styles --- */
+        .ticker-wrap {
+            width: 100%;
+            height: 50px; /* Fixed height for the ticker row */
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+            position: relative; /* Essential for absolute positioning of children */
+            overflow: hidden; /* Keeps content confined */
+            box-sizing: border-box;
+        }
+        .ticker-label {
+            background-color: #dc2626; /* red-600 */
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem; /* Adjusted padding */
+            font-size: 1.125rem; /* text-lg */
+            white-space: nowrap; /* Ensure text doesn't wrap inside the label */
+            position: absolute; /* Position it independently */
+            left: 0;
+            top: 0;
+            height: 100%; /* Make it fill the height of the ticker-wrap */
+            display: flex; /* For internal centering */
+            align-items: center; /* Vertically center "NEWS / EVENTS" */
+            justify-content: center; /* Horizontally center "NEWS / EVENTS" */
+            z-index: 20; /* Ensure it's above the scrolling content */
+            box-sizing: border-box;
+        }
+        .ticker-content-wrapper {
+            position: absolute; /* Absolute to move independently */
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%; /* Take full width of parent ticker-wrap */
+            overflow: hidden; /* Hide content outside this wrapper */
+            box-sizing: border-box;
+        }
+        .ticker-inner-content {
+            display: inline-block; /* Essential for white-space: nowrap on children */
+            white-space: nowrap; /* Keep all news items on one line */
+            animation: tickerScroll 60s linear infinite; /* Slower speed, apply animation here */
+            padding-left: 180px; /* Start content after the label's assumed width */
+            line-height: 50px; /* Vertically align text if no align-items */
+            font-size: 0.875rem; /* text-sm */
+            color: #4b5563; /* text-gray-700 */
+        }
+        .ticker-inner-content:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes tickerScroll {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); } /* Scrolls half its total duplicated width */
+        }
+
+        /* --- END Ticker Specific Styles --- */
+
+
+        /* Dropdown styles - REVISED FOR STABILITY AND USABILITY (with !important for force) */
+        /* Main dropdown container */
+        .dropdown {
+            position: relative;
+            padding-bottom: 0.5rem; /* Add buffer below the main menu item */
+            padding-top: 0.5rem;    /* Add buffer above the main menu item */
+            margin-bottom: -0.5rem; /* Compensate for added padding to maintain overall height alignment */
+            margin-top: -0.5rem;    /* Compensate for added padding */
+            z-index: 20; /* Increased base z-index for main dropdowns to ensure they are on top */
+        }
+
+        /* The actual dropdown menu box */
+        .dropdown-menu, .sub-dropdown-menu {
+            display: none !important; /* Force hide by default, JS will override */
+            position: absolute;
+            background-color: white !important; /* Force solid white background */
+            min-width: 220px; /* Sufficient width for content */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            border-radius: 0.5rem;
+            overflow: hidden; /* Ensures content stays within rounded corners and truly hidden elements are truly hidden */
+            z-index: 100; /* Ensure it appears over page content */
+            opacity: 0; /* Starts invisible for fade effect */
+            transition: opacity 0.2s ease-out; /* Smooth transition for opacity only */
+            pointer-events: none; /* Allows clicks through when not visible */
+            top: auto; /* Reset top for better control from parent */
+        }
+
+        .dropdown-menu {
+            margin-top: calc(0.75rem + 0.5rem) !important; /* Space below the adjusted padding of parent button */
+            left: 0;
+        }
+
+        .sub-dropdown-menu {
+            min-width: 200px; /* Adjust width for sub-menu if needed */
+            left: 100%; /* Position to the right of parent menu item */
+            top: -0.5rem !important; /* Force align with the top of the parent item's visual box */
+            margin-left: 0.5rem; /* Small gap from parent */
+            z-index: 101; /* Higher z-index for sub-menu */
+        }
+
+        /* Styles applied by JavaScript when 'is-active' class is present */
+        .dropdown-menu.is-active, .sub-dropdown-menu.is-active {
+            display: flex !important; /* Force show using flexbox for column layout */
+            flex-direction: column;
+            opacity: 1 !important; /* Force fully visible */
+            pointer-events: auto !important; /* Force enable clicks */
+        }
+
+        /* Styling for actual menu items */
+        .dropdown-menu a, .sub-dropdown-menu a {
+            color: #1f2937 !important; /* Force to a darker gray (near black) */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex; /* Use flex to align text and arrow for sub-menu parents */
+            align-items: center; /* Vertically center content */
+            justify-content: space-between; /* Push arrow to the right for sub-menu parents */
+            text-align: left; /* Default text alignment */
+            transition: all 0.2s ease-in-out;
+            white-space: nowrap; /* Prevent text wrapping in menu items */
+            font-size: 0.95rem; /* Slightly larger text for readability */
+        }
+        /* ORANGE HOVER EFFECT FOR DROPDOWN ITEMS */
+        .dropdown-menu a:hover, .sub-dropdown-menu a:hover {
+            background-color: #f97316 !important; /* Orange-500 from Tailwind */
+            color: white !important; /* White text on orange hover */
+            padding-left: 1.5rem !important; /* Force slight indent on hover */
+        }
+
+        /* Ensure parent menu item text remains white, not yellow, unless hovered */
+        .nav-main a.font-medium, .nav-main button.font-medium {
+            color: white !important; /* Force default text to be white */
+        }
+        .nav-main a.font-medium:hover, .nav-main button.font-medium:hover {
+            color: #fcd34d !important; /* Yellow on hover */
+        }
+        /* For dropdown button text */
+        .dropdown > button {
+            display: inline-flex; /* Maintain inline-flex for dropdown buttons */
+            align-items: center;
+            color: white !important; /* Force Default text color for dropdown buttons */
+            text-transform: uppercase; /* Ensure uppercase */
+            font-weight: 500; /* Medium weight */
+            transition: color 0.2s; /* Smooth color transition */
+        }
+        .dropdown > button:hover {
+            color: #fcd34d !important; /* Yellow on hover */
+        }
+
+        /* ARROW ROTATION */
+        .dropdown > button svg {
+            transition: transform 0.2s ease-in-out; /* Smooth transition for rotation */
+        }
+        /* Rotate arrow when dropdown is active */
+        .dropdown:hover > button svg, /* Pure CSS hover fallback */
+        .dropdown > button.is-active svg /* JS controlled active state */
+        {
+            transform: rotate(180deg);
+        }
+
+        .sub-dropdown > a svg {
+            transition: transform 0.2s ease-in-out;
+        }
+        .sub-dropdown:hover > a svg, /* Pure CSS hover fallback */
+        .sub-dropdown > a.is-active svg /* JS controlled active state */
+        {
+            transform: rotate(90deg); /* Rotate for sub-dropdowns */
+        }
+
+
+        /* Custom styles to match the expectation image (retained) */
+        .top-utility-bar {
+            background-color: #f8f9fa;
+            color: #333;
+            font-size: 0.75rem;
+        }
+        .top-utility-bar a {
+            color: #333;
+            transition: color 0.2s ease-in-out;
+        }
+        .top-utility-bar a:hover {
+            color: #2563eb;
+        }
+
+        .main-header-content {
+            background-color: #111A3A;
+            color: white;
+            padding: 1rem 0;
+        }
+        .main-header-content .college-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .main-header-content .naac-accredited-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .nav-main {
+            background-color: #1a2a51;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Page specific header/banner for Mandatory Disclosure */
+        .page-header-banner {
+            background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop'); /* Placeholder image, replace with your actual banner */
+            background-size: cover;
+            background-position: center;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        .page-header-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.4); /* Dark overlay */
+        }
+        .page-header-banner h1 {
+            font-size: 2.5rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            z-index: 1;
+        }
+
+        /* Mandatory Disclosure content specific styles (from original index.html relevant parts) */
+        .mandatory-disclosure-content h4 {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-size: 1.125rem; /* text-lg */
+        }
+        .mandatory-disclosure-content p {
+            line-height: 1.6;
+            color: #374151;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .mandatory-disclosure-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+        .mandatory-disclosure-content table th, .mandatory-disclosure-content table td {
+            border: 1px solid #000 !important; /* From your custom CSS in original index.html */
+            padding: 0.75rem 1rem;
+            vertical-align: top;
+        }
+        .mandatory-disclosure-content table th {
+            background-color: #f3f4f6; /* gray-100 */
+            font-weight: 600;
+            color: #1f2937; /* gray-900 */
+        }
+        .mandatory-disclosure-content table tr:nth-child(even) {
+            background-color: #f9fafb; /* gray-50 */
+        }
+        .mandatory-disclosure-content table tr:hover {
+            background-color: #e0f2fe; /* blue-50, or you can use your custom lightcyan from original index.html */
+            /* Using custom lightcyan from your original index.html for table row hover */
+            background-color: lightcyan; /* cite: 4 */
+        }
+        .mandatory-disclosure-content table a {
+            color: #2563eb; /* blue-600 */
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        .mandatory-disclosure-content table a:hover {
+            color: #1d4ed8; /* blue-700 */
+        }
+
+        /* Specific styles from your original index.html to carry over if needed */
+        .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a, .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab>a:focus  {
+            border-color: #b2262a !important;
+            background-color: #1e73be !important;
+            color: #fff !important;
+            font-weight: 600 !important;
+        } /* cite: 4 */
+        .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab>a {
+            border-color: #e3e3e3;
+            background-color: #a3a3a3 !important;
+            color: #fff !important;
+        } /* cite: 4 */
+        .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab>a:focus, .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab>a:hover {
+            background-color: #1e73be;
+            color: #fff !important;
+        } /* cite: 4 */
+        img {
+            height: auto;
+            max-width: 100%;
+            /* Original had fixed width: 700px, which might break responsiveness for small images */
+            /* width: 700px; */ /* cite: 4 */
+        }
+        .main-navigation ul li ul { /* This was causing issues, overriding with !important */
+            width: 200px;
+            position: absolute;
+            top: 140%;
+            left: 0%;
+            z-index: 10;
+            visibility: hidden;
+            opacity: 0;
+            /* These are now managed by .is-active class via JS and !important flags */
+        } /* cite: 4 */
+
+    </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-md">
+        <div class="top-utility-bar py-2 px-4 md:px-8 border-b border-gray-200">
+            <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center text-xs">
+                <div class="flex items-center space-x-3 mb-2 sm:mb-0">
+                    <a href="https://www.facebook.com/dscknl" target="_blank" class="hover:text-blue-600 transition-colors"><img src="file:///C:/Users/sahil/Desktop/Web Make/Images/fb.png" alt="Facebook" class="inline-block h-4 w-4"></a>
+                    <a href="https://www.dsckarnal.ac.in/#" target="_blank" class="hover:text-blue-600 transition-colors"><img src="file:///C:/Users/sahil/Desktop/Web Make/Images/yt.png" alt="YouTube" class="inline-block h-4 w-4"></a>
+                    <a href="https://www.instagram.com/dsckarnal/" target="_blank" class="hover:text-blue-600 transition-colors"><img src="file:///C:/Users/sahil/Desktop/Web Make/Images/inst.png" alt="Instagram" class="inline-block h-4 w-4"></a>
+                    <a href="https://x.com/KarnalDyal" target="_blank" class="hover:text-blue-600 transition-colors"><img src="file:///C:/Users/sahil/Desktop/Web Make/Images/tw.png" alt="Twitter" class="inline-block h-4 w-4"></a>
+                    <a href="https://www.dsckarnal.ac.in/#" target="_blank" class="hover:text-blue-600 transition-colors"><img src="file:///C:/Users/sahil/Desktop/Web Make/Images/in.png" alt="LinkedIn" class="inline-block h-4 w-4"></a>
+                </div>
+
+                <div class="flex flex-wrap justify-center items-center space-x-4">
+                    <a href="tel:0184-2252030" class="hover:text-blue-600 transition-colors"><span>0184-2252030</span></a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="mailto:dsckarnal@dsckarnal.ac.in" class="hover:text-blue-600 transition-colors"><span>dsckarnal@dsckarnal.ac.in</span></a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="iqac.html" class="hover:text-blue-600 transition-colors">IQAC</a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="nirf.html" class="hover:text-blue-600 transition-colors">NIRF</a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="rti.html" class="hover:text-blue-600 transition-colors">RTI</a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="feedback-reports.html">Feedback Reports</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header-content py-4 px-4 md:px-8">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <a href="home.html" class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <img src="C:/Users/sahil/Downloads/dsc_logo-removebg-preview.png" alt="Dyal Singh College Logo" class="w-24 h-24 object-contain">
+                    <div>
+                        <h1 class="college-title font-extrabold">DYAL SINGH COLLEGE, KARNAL</h1>
+                        <p class="naac-accredited-text font-semibold">NAAC Accredited Grade A+</p>
+                    </div>
+                </a>
+                <div class="flex-shrink-0">
+                    <img src="C:/Users/sahil/Downloads/110_anni-removebg-preview (1).png" alt="110 Years Anniversary" class="w-32 h-32 object-contain">
+                </div>
+            </div>
+        </div>
+
+        <div class="ticker-wrap">
+            <div class="ticker-label">NEWS / EVENTS</div>
+            <div class="ticker-content-wrapper">
+                <div class="ticker-inner-content">
+                    <span class="mx-4">Admission Related Counselling and Free Enrollment.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Department of Commerce, Dyal Singh College Karnal, is organising a One Day Workshop on 'Online Tax Filing' on 27th June 2025.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Department of Zoology starts a Value Added Course on 'Camera Trap Method in Wildlife Research' for the students of B.Sc.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Revised Date Sheet for KUK theory examination which were postponed due to heavy rain & Flood.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Online Registration Open for Admissions in various courses (2025-26).</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Resource Management for Sustainable Future event on July 15th.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Admission Related Counselling and Free Enrollment.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Department of Commerce, Dyal Singh College Karnal, is organising a One Day Workshop on 'Online Tax Filing' on 27th June 2025.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Department of Zoology starts a Value Added Course on 'Camera Trap Method in Wildlife Research' for the students of B.Sc.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Revised Date Sheet for KUK theory examination which were postponed due to heavy rain & Flood.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Online Registration Open for Admissions in various courses (2025-26).</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Resource Management for Sustainable Future event on July 15th.</span><span class="text-gray-300 mx-2">|</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-main py-3">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="flex items-center justify-between">
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="home.html" class="font-medium hover:text-yellow-300 transition-colors uppercase">Home</a>
+
+                        <div class="dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase">
+                                About Us
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="college-profile.html">College Profile</a>
+                                <a href="history.html">History</a>
+                                <a href="vision-mission.html">Vision & Mission</a>
+                                <a href="official-logo.html">Official Logo</a>
+                                <a href="our-motto.html">Our Motto</a>
+                                <a href="organogram.html">Organogram</a>
+                                <a href="administration.html">Administration</a>
+                                <a href="quality-policy.html">Quality Policy</a>
+                                <a href="value-ethics.html">Value & Ethics</a>
+                                <a href="annual-reports.html">Annual Reports</a>
+                                <a href="mandatory-disclosure.html">Mandatory Disclosure</a>
+                            </div>
+                        </div>
+
+                        <div class="relative dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase">
+                                Academics
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#">Academic Calendar</a>
+                                <a href="#">Courses Offered</a>
+                                <a href="#">Faculty</a>
+                                <a href="#">Time Table</a>
+                                <div class="relative sub-dropdown">
+                                    <a href="#" class="inline-flex items-center justify-between w-full">
+                                        Publications
+                                        <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                    <div class="sub-dropdown-menu">
+                                        <a href="#">Journals</a>
+                                        <a href="#">Magazine</a>
+                                        <a href="#">Proceedings/Books</a>
+                                        <a href="#">Annual Reports</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase">
+                                Admissions
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#">Prospectus</a>
+                                <a href="https://admissions.highereduhry.ac.in/" target="_blank">Online Admissions</a>
+                                <a href="#">Fee Structure</a>
+                                <a href="https://www.studyinindia.gov.in/admission/registrations" target="_blank">International Student Registration</a>
+                            </div>
+                        </div>
+
+                        <div class="relative dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase">
+                                Student's Corner
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#">Syllabus</a>
+                                <a href="#">Examinations</a>
+                                <div class="relative sub-dropdown">
+                                    <a href="#" class="inline-flex items-center justify-between w-full">
+                                        Student Support
+                                        <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                    <div class="sub-dropdown-menu">
+                                        <a href="#">PAY ONLINE</a>
+                                        <a href="#">Scholarships</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase">
+                                Alumni Corner
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#">Our Illustrious Alumni</a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScExb42BN1RApEjvcBFMWZmPKj-gRDDxO2gMHV-J8Qhcjd_ZQ/viewform?usp=sf_link" target="_blank">Registration Form</a>
+                                <a href="#">Alumni Gallery</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase">
+                                Facilities
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#">Academic Facilities</a>
+                                <a href="#">Campus Facilities</a>
+                                <div class="relative sub-dropdown">
+                                    <a href="#" class="inline-flex items-center justify-between w-full">
+                                        Library
+                                        <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                    <div class="sub-dropdown-menu">
+                                        <a href="#">About The Library</a>
+                                        <a href="http://dsck.bestbookbuddies.com/" target="_blank">Web OPAC</a>
+                                        <a href="#">Rules & Regulations</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="nirf.html" class="font-medium hover:text-yellow-300 transition-colors uppercase">NAAC</a>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="bg-yellow-500 text-blue-900 font-bold py-2 px-5 rounded-full hover:bg-yellow-400 transition-transform hover:scale-105">Apply Now</a>
+                        <button id="mobile-menu-button" class="lg:hidden p-2 text-white hover:text-yellow-300"><svg id="menu-open-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg><svg id="menu-close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden bg-blue-900 border-t border-blue-700 mt-2">
+                <div class="px-4 pt-4 pb-6 space-y-4">
+                    <a href="home.html" class="block text-white hover:text-yellow-300 font-medium uppercase">Home</a>
+                    <a href="#" class="block text-white hover:text-yellow-300 font-medium uppercase">About Us</a>
+                    <a href="#" class="block text-white hover:text-yellow-300 font-medium uppercase">Academics</a>
+                    <a href="#" class="block text-white hover:text-yellow-300 font-medium uppercase">Admissions</a>
+                    <a href="#" class="block text-white hover:text-yellow-300 font-medium uppercase">Student's Corner</a>
+                    <a href="#" class="block text-white hover:text-yellow-300 font-medium uppercase">Alumni Corner</a>
+                    <a href="#" class="block text-white hover:text-yellow-300 font-medium uppercase">Facilities</a>
+                    <a href="nirf.html" class="block text-white hover:text-yellow-300 font-medium uppercase">NAAC</a>
+                    <a href="#" class="mt-4 block w-full text-center bg-yellow-500 text-blue-900 font-bold py-2 px-5 rounded-full hover:bg-yellow-400">Apply Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-grow">
+        <section class="page-header-banner">
+            <h1 class="page-title">Mandatory Disclosure</h1>
+        </section>
+
+        <section class="bg-white py-12 sm:py-16">
+            <div class="container mx-auto px-4 max-w-6xl mandatory-disclosure-content">
+                <div class="vc_tta-container" data-vc-action="collapse">
+                    <div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-rounded vc_tta-spacing-1 vc_tta-tabs-position-top vc_tta-controls-align-left">
+                        <div class="vc_tta-tabs-container">
+                            <ul class="vc_tta-tabs-list">
+                                <li class="vc_tta-tab vc_active" data-vc-tab><a href="#mandatory-tab-1" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Mandatory Disclosure - Tab 1</span></a></li>
+                                <li class="vc_tta-tab" data-vc-tab><a href="#mandatory-tab-2" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Mandatory Disclosure - Tab 2</span></a></li>
+                                </ul>
+                        </div>
+                        <div class="vc_tta-panels-container">
+                            <div class="vc_tta-panels">
+                                <div class="vc_tta-panel vc_active" id="mandatory-tab-1" data-vc-content=".vc_tta-panel-body">
+                                    <div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#mandatory-tab-1" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Mandatory Disclosure - Tab 1 Content</span></a></h4></div>
+                                    <div class="vc_tta-panel-body">
+                                        <p>Please insert the content for Mandatory Disclosure Tab 1 here.</p>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Category</th>
+                                                    <th>Details</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>NIRF Ranking</td>
+                                                    <td>Available on NIRF page</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>NAAC Accreditation</td>
+                                                    <td>Grade A+</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="vc_tta-panel" id="mandatory-tab-2" data-vc-content=".vc_tta-panel-body">
+                                    <div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#mandatory-tab-2" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Mandatory Disclosure - Tab 2 Content</span></a></h4></div>
+                                    <div class="vc_tta-panel-body">
+                                        <p>Please insert the content for Mandatory Disclosure Tab 2 here.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-4 pt-16 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="md:col-span-2 lg:col-span-1"><h3 class="text-lg font-semibold text-white mb-4">About College</h3><p class="text-sm text-gray-400">Dyal Singh College, Karnal, as it stands today, is a premier co-educational centre of learning of Northern India. With a strength of 3693 students, the college has all the three streams of learning - Arts, Science and Commerce, with Post Graduate courses in English, Hindi, Political Science, Economics, Commerce and Chemistry, along with the add-on and vocational courses.  </p></div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Important Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://www.kuk.ac.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">KU, Kurukshetra</a></li>
+                        <li><a href="https://www.ugc.gov.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">UGC, New Delhi</a></li>
+                        <li><a href="https://www.highereduhry.ac.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">DGHE, Punchkula</a></li>
+                        <li><a href="https://www.education.gov.in/en" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">MHRD, New Delhi</a></li>
+                        <li><a href="http://naac.gov.in/index.php/en/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">NAAC, Bengaluru</a></li>
+                        <li><a href="https://nlist.inflibnet.ac.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">NLIST, Inflibnet</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
+                    <address class="not-italic space-y-3 text-sm text-gray-400"><p>Dyal Singh College,<br>Karnal-132001, Haryana</p><p><strong>Phone:</strong> <a href="tel:0184-2252030" class="hover:text-white transition-colors">0184-2252030</a></p><p><strong>Fax:</strong> <a href="tel:0184-2260700" class="hover:text-white transition-colors">0184-2260700</a></p><p><strong>Website:</strong> <a href="https://www.dsckarnal.ac.in/" class="hover:text-white transition-colors">dsckarnal.ac.in</a></p><p><strong>For Student's Verification:</strong> <a href="mailto:verifydscknl@gmail.com" class="hover:text-white transition-colors">verifydscknl@gmail.ac.in</a></p></address>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Our Location</h3>
+                    <div class="h-40 rounded-lg overflow-hidden border-2 border-gray-600"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.949323743411!2d76.9897198751515!3d29.692399875101614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e70f55d447679%3A0x8f22a7cf43e52d3!2sDyal%20Singh%20College!5e0!3m2!1sen!2sin!4v1719318182991!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-400">
+                <p>© 2025 Dyal Singh College, Karnal. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open-icon');
+        const menuCloseIcon = document.getElementById('menu-close-icon');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('hidden');
+        });
+
+        // Dropdown Menu JavaScript for improved stability and interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            let mainDropdownTimeoutId;
+            let subDropdownTimeoutId;
+
+            dropdowns.forEach(dropdown => {
+                const mainButton = dropdown.querySelector('button'); // Get the main button directly
+                const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+                if (mainButton && dropdownMenu) { // Ensure both exist
+                    // Show dropdown on mouse enter
+                    dropdown.addEventListener('mouseenter', () => {
+                        clearTimeout(mainDropdownTimeoutId); // Clear any pending hide for this main dropdown
+                        dropdownMenu.classList.add('is-active');
+                        mainButton.classList.add('is-active'); // Add active class to button for arrow rotation
+                    });
+
+                    // Hide dropdown on mouse leave with a delay
+                    dropdown.addEventListener('mouseleave', () => {
+                        mainDropdownTimeoutId = setTimeout(() => {
+                            dropdownMenu.classList.remove('is-active');
+                            mainButton.classList.remove('is-active'); // Remove active class from button
+                        }, 150); // Adjusted delay for main dropdown
+                    });
+                }
+
+                // Handle sub-dropdowns within this main dropdown
+                const subDropdowns = dropdown.querySelectorAll('.sub-dropdown');
+                subDropdowns.forEach(subDropdown => {
+                    const subTrigger = subDropdown.querySelector('a'); // Sub-dropdowns are triggered by <a>
+                    const subMenu = subDropdown.querySelector('.sub-dropdown-menu');
+
+                    if (subTrigger && subMenu) { // Ensure both exist
+                        subDropdown.addEventListener('mouseenter', () => {
+                            clearTimeout(subDropdownTimeoutId); // Clear any pending hide for this sub-dropdown
+                            subMenu.classList.add('is-active');
+                            subTrigger.classList.add('is-active'); // Add active class to sub-trigger for arrow rotation
+                        });
+
+                        subDropdown.addEventListener('mouseleave', () => {
+                            subDropdownTimeoutId = setTimeout(() => {
+                                subMenu.classList.remove('is-active');
+                                subTrigger.classList.remove('is-active'); // Remove active class from sub-trigger
+                            }, 100); // Adjusted delay for sub-dropdown
+                        });
+                    }
+                });
+            });
+        });
+
+        // JavaScript for the tabbed content within Mandatory Disclosure (if needed, currently empty body)
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.vc_tta-tab a'); // Assuming your tabs are now simplified
+            const tabPanels = document.querySelectorAll('.vc_tta-panel');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = button.getAttribute('href').substring(1); // Get target ID from href
+
+                    tabButtons.forEach(btn => btn.parentElement.classList.remove('vc_active'));
+                    tabPanels.forEach(panel => panel.classList.remove('vc_active'));
+
+                    button.parentElement.classList.add('vc_active');
+                    document.getElementById(targetId).classList.add('vc_active');
+                });
+            });
+
+            // Activate first tab on load if none is active
+            if (tabButtons.length > 0 && !document.querySelector('.vc_tta-tab.vc_active')) {
+                tabButtons[0].click();
+            }
+        });
+    </script>
+
+</body>
+</html>

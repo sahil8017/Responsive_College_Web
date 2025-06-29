@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Dyal Singh College, Karnal</title>
+    <meta name="description" content="Explore the administrative structure and governance of Dyal Singh College, Karnal.">
+    <meta name="keywords" content="Dyal Singh College, Karnal, NAAC A+, University of Kurukshetra, Higher Education">
+    <meta property="og:title" content="Administration - Dyal Singh College, Karnal">
+    <meta property="og:description" content="Discover the efficient administrative framework governing Dyal Singh College, Karnal.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dsckarnal.ac.in">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* --- Ticker Specific Styles --- */
+        .ticker-wrap {
+            width: 100%;
+            height: 50px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .ticker-label {
+            background-color: #dc2626;
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.125rem;
+            white-space: nowrap;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 20;
+            box-sizing: border-box;
+        }
+        .ticker-content-wrapper {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .ticker-inner-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: tickerScroll 60s linear infinite;
+            padding-left: 180px;
+            line-height: 50px;
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+        .ticker-inner-content:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes tickerScroll {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        /* --- END Ticker Specific Styles --- */
+
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            padding-bottom: 0.5rem;
+            padding-top: 0.5rem;
+            margin-bottom: -0.5rem;
+            margin-top: -0.5rem;
+            z-index: 20;
+        }
+
+        .dropdown-menu, .sub-dropdown-menu {
+            display: none !important;
+            position: absolute;
+            background-color: white !important;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.2s ease-out;
+            pointer-events: none;
+            top: auto;
+        }
+
+        .dropdown-menu {
+            margin-top: calc(0.75rem + 0.5rem) !important;
+            left: 0;
+        }
+
+        .sub-dropdown-menu {
+            min-width: 200px;
+            left: 100%;
+            top: -0.5rem !important;
+            margin-left: 0.5rem;
+            z-index: 101;
+        }
+
+        .dropdown-menu.is-active, .sub-dropdown-menu.is-active {
+            display: flex !important;
+            flex-direction: column;
+            opacity: 1 !important;
+            pointer-events: auto !important;
+        }
+
+        .dropdown-menu a, .sub-dropdown-menu a {
+            color: #1f2937 !important;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            transition: all 0.2s ease-in-out;
+            white-space: nowrap;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-menu a:hover, .sub-dropdown-menu a:hover {
+            background-color: #f97316 !important;
+            color: white !important;
+            padding-left: 1.5rem !important;
+        }
+
+        .nav-main a.font-medium, .nav-main button.font-medium {
+            color: white !important;
+        }
+        .nav-main a.font-medium:hover, .nav-main button.font-medium:hover {
+            color: #fcd34d !important;
+        }
+        
+        .dropdown > button {
+            display: inline-flex;
+            align-items: center;
+            color: white !important;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .dropdown > button:hover {
+            color: #fcd34d !important;
+        }
+
+        .dropdown > button svg {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .dropdown:hover > button svg,
+        .dropdown > button.is-active svg {
+            transform: rotate(180deg);
+        }
+
+        .sub-dropdown > a svg {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .sub-dropdown:hover > a svg,
+        .sub-dropdown > a.is-active svg {
+            transform: rotate(90deg);
+        }
+
+        /* Custom styles */
+        .top-utility-bar {
+            background-color: #f8f9fa;
+            color: #333;
+            font-size: 0.75rem;
+        }
+        .top-utility-bar a {
+            color: #333;
+            transition: color 0.2s ease-in-out;
+        }
+        .top-utility-bar a:hover {
+            color: #2563eb;
+        }
+
+        .main-header-content {
+            background-color: #111A3A;
+            color: white;
+            padding: 1rem 0;
+        }
+        .main-header-content .college-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .main-header-content .naac-accredited-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .nav-main {
+            background-color: #1a2a51;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Accessibility improvements */
+        .skip-to-content {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #000;
+            color: white;
+            padding: 0.5rem 1rem;
+            z-index: 9999;
+        }
+        .skip-to-content:focus {
+            left: 0;
+        }
+
+        /* Page specific header/banner for Administration */
+        .page-header-banner {
+            background-image: url('/images/banner-administration.jpg'); /* Placeholder image, replace with your actual banner */
+            background-size: cover;
+            background-position: center;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        .page-header-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.4); /* Dark overlay */
+        }
+        .page-header-banner h1 {
+            font-size: 2.5rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            z-index: 1;
+        }
+
+        /* Administration page content specific styles (tabs and text) */
+        .administration-tabs-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+            border-bottom: 2px solid #e5e7eb; /* gray-200 */
+        }
+        .administration-tab-button {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            border: 1px solid transparent;
+            border-bottom: none;
+            color: #4b5563; /* text-gray-700 */
+            background-color: #f9fafb; /* gray-50 */
+            transition: all 0.2s ease-in-out;
+            margin-right: 0.25rem;
+            margin-bottom: -2px; /* Pulls button slightly over the border */
+        }
+        .administration-tab-button.active {
+            color: #fff;
+            background-color: #1e73be; /* blue-700, similar to old WordPress active tab */
+            border-color: #1e73be;
+            border-bottom: 2px solid #1e73be; /* Active tab underline */
+            z-index: 1;
+        }
+        .administration-tab-button:hover:not(.active) {
+            color: #2563eb; /* blue-600 */
+            background-color: #eff6ff; /* blue-50 */
+        }
+        .administration-tab-content {
+            padding: 1.5rem 0;
+            display: none; /* Hidden by default */
+            border-top: 1px solid #e5e7eb; /* Separator after tabs */
+        }
+        .administration-tab-content.active {
+            display: block; /* Show active tab content */
+        }
+
+        .administration-content h4 {
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-size: 1.125rem; /* text-lg */
+        }
+        .administration-content p {
+            line-height: 1.6;
+            color: #374151;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .administration-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+        .administration-content ul li {
+            margin-bottom: 0.5rem;
+        }
+        .administration-content ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+        .administration-content ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        .trustee-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .trustee-card {
+            flex-basis: 100%; /* Default to full width on small screens */
+            max-width: 300px; /* Limit card width */
+            text-align: center;
+            padding: 1rem;
+        }
+        @media (min-width: 640px) { /* sm breakpoint */
+            .trustee-card {
+                flex-basis: calc(50% - 1rem); /* Two columns */
+            }
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .trustee-card {
+                flex-basis: calc(33.333% - 1.333rem); /* Three columns */
+            }
+        }
+        .trustee-card img {
+            width: 150px; /* Fixed size for circular images */
+            height: 150px;
+            object-fit: cover;
+            border-radius: 9999px; /* circle */
+            border: 1px solid #d1d5db; /* gray-300 border */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 0 auto 1rem; /* Center image */
+        }
+        .trustee-card p {
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            color: #374151;
+        }
+        .trustee-card p strong {
+            color: #1f2937;
+        }
+        .trustee-card p a {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+        .trustee-card p a:hover {
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <header class="bg-white shadow-md">
+        <div class="top-utility-bar py-2 px-4 md:px-8 border-b border-gray-200">
+            <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center text-xs">
+                <div class="flex items-center space-x-3 mb-2 sm:mb-0">
+                    <a href="https://www.facebook.com/dscknl" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+                        <img src="/images/social/facebook.png" alt="Facebook" class="inline-block h-4 w-4">
+                    </a>
+                    <a href="https://www.youtube.com/dsckarnal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+                        <img src="/images/social/youtube.png" alt="YouTube" class="inline-block h-4 w-4">
+                    </a>
+                    <a href="https://www.instagram.com/dsckarnal/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+                        <img src="/images/social/instagram.png" alt="Instagram" class="inline-block h-4 w-4">
+                    </a>
+                    <a href="https://x.com/KarnalDyal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+                        <img src="/images/social/twitter.png" alt="Twitter" class="inline-block h-4 w-4">
+                    </a>
+                    <a href="https://www.linkedin.com/school/dyal-singh-college-karnal" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+                        <img src="/images/social/linkedin.png" alt="LinkedIn" class="inline-block h-4 w-4">
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap justify-center items-center space-x-4">
+                    <a href="tel:0184-2252030" class="hover:text-blue-600 transition-colors">0184-2252030</a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="mailto:dsckarnal@dsckarnal.ac.in" class="hover:text-blue-600 transition-colors">dsckarnal@dsckarnal.ac.in</a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="iqac.html" class="hover:text-blue-600 transition-colors">IQAC</a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="nirf.html" class="hover:text-blue-600 transition-colors">NIRF</a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="rti.html" class="hover:text-blue-600 transition-colors">RTI</a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="feedback-reports.html" class="hover:text-blue-600 transition-colors">Feedback Reports</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header-content py-4 px-4 md:px-8">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+                <a href="home.html" class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <img src="/images/logo.png" alt="Dyal Singh College Logo" class="w-24 h-24 object-contain" loading="lazy">
+                    <div>
+                        <h1 class="college-title font-extrabold">DYAL SINGH COLLEGE, KARNAL</h1>
+                        <p class="naac-accredited-text font-semibold">NAAC Accredited Grade A+</p>
+                    </div>
+                </a>
+                <div class="flex-shrink-0">
+                    <img src="/images/110-years.png" alt="110 Years Anniversary" class="w-32 h-32 object-contain" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <div class="ticker-wrap" aria-live="polite">
+            <div class="ticker-label">NEWS / EVENTS</div>
+            <div class="ticker-content-wrapper">
+                <div class="ticker-inner-content">
+                    <span class="mx-4">Admission Related Counselling and Free Enrollment.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Department of Commerce, Dyal Singh College Karnal, is organising a One Day Workshop on 'Online Tax Filing' on 27th June 2025.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Department of Zoology starts a Value Added Course on 'Camera Trap Method in Wildlife Research' for the students of B.Sc.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Revised Date Sheet for KUK theory examination which were postponed due to heavy rain & flood.</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Online Registration Open for Admissions in various courses (2025-26).</span><span class="text-gray-300 mx-2">|</span>
+                    <span class="mx-4">Resource Management for Sustainable Future event on July 15th.</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-main py-3" aria-label="Main navigation">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="flex items-center justify-between">
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="home.html" class="font-medium hover:text-yellow-300 transition-colors uppercase">Home</a>
+
+                        <div class="dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase" aria-expanded="false" aria-haspopup="true">
+                                About Us
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu" aria-label="About Us submenu">
+                                <a href="college-profile.html">College Profile</a>
+                                <a href="history.html">History</a>
+                                <a href="vision-mission.html">Vision & Mission</a>
+                                <a href="official-logo.html">Official Logo</a>
+                                <a href="our-motto.html">Our Motto</a>
+                                <a href="/documents/Organogram.pdf" target="_blank">Organogram</a>
+                                <a href="administration.html">Administration</a>
+                                <div class="relative sub-dropdown">
+                                    <a href="staff-details.html" class="inline-flex items-center justify-between w-full">
+                                        Team
+                                        <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                    <div class="sub-dropdown-menu">
+                                        <a href="teaching-staff.html">Teaching Staff</a>
+                                        <a href="non-teaching-staff.html">Supporting Staff</a>
+                                        <a href="/documents/Roaster-Teaching-Staff.pdf" target="_blank">Roaster Teaching</a>
+                                        <a href="/documents/Roaster-Non-Teaching-Staff.pdf" target="_blank">Roaster Non-Teaching</a>
+                                    </div>
+                                </div>
+                                <a href="college-on-maps.html">College On Maps</a>
+                                <a href="quality-policy.html">Quality Policy</a>
+                                <a href="value-ethics.html">Value & Ethics</a>
+                                <a href="annual-reports.html">Annual Reports</a>
+                                <a href="mandatory-disclosure.html">Mandatory Disclosure</a>
+                                <a href="towards-the-future.html">Towards The Future</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase" aria-expanded="false" aria-haspopup="true">
+                                Academics
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu" aria-label="Academics submenu">
+                                <a href="academic-calendar.html">Academic Calendar</a>
+                                <a href="list-of-holidays.html">List of Holidays</a>
+                                <a href="timetable.html">Time Table</a>
+                                <a href="lesson-plans.html">Lesson Plans</a>
+                                <a href="faculty.html">Faculty</a>
+                                <a href="courses.html">Courses Offered</a>
+                                <a href="standing-committees.html">Standing Committees</a>
+                                <a href="mentorship-groups.html">Mentorship Groups</a>
+                                <a href="mentor-reports.html">Mentor Reports</a>
+                                <a href="mous.html">MOU’s</a>
+                                <a href="research.html">Research</a>
+                                <a href="guest-lectures.html">Guest Lectures</a>
+                                <a href="awards-recognition.html">Awards/Recognition</a>
+                                <a href="seminars-conferences.html">Seminars & Conferences</a>
+                                <div class="relative sub-dropdown">
+                                    <a href="publications.html" class="inline-flex items-center justify-between w-full">
+                                        Publications
+                                        <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                    <div class="sub-dropdown-menu">
+                                        <a href="journals.html">Journals</a>
+                                        <a href="magazine.html">Magazine</a>
+                                        <a href="proceedings-books.html">Proceedings/Books</a>
+                                        <a href="annual-reports.html">Annual Reports</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase" aria-expanded="false" aria-haspopup="true">
+                                Admissions
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu" aria-label="Admissions submenu">
+                                <a href="prospectus.html">Prospectus</a>
+                                <a href="https://admissions.highereduhry.ac.in/" target="_blank" rel="noopener noreferrer">Online Admissions</a>
+                                <a href="fee-structure.html">Fee Structure</a>
+                                <a href="https://www.studyinindia.gov.in/admission/registrations" target="_blank" rel="noopener noreferrer">International Student Registration</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase" aria-expanded="false" aria-haspopup="true">
+                                Student's Corner
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu" aria-label="Student's Corner submenu">
+                                <a href="students-registration-card.html">Students Registration Card 2024-25</a>
+                                <a href="whom-to-consult.html">Whom To Consult</a>
+                                <a href="student-grievances.html">Student Grievances</a>
+                                <a href="code-of-conduct.html">CODE OF CONDUCT</a>
+                                <a href="student-council.html">STUDENT COUNCIL</a>
+                                <a href="syllabus.html">Syllabus</a>
+                                <a href="examinations.html">Examinations</a>
+                                <div class="relative sub-dropdown">
+                                    <a href="#" class="inline-flex items-center justify-between w-full">
+                                        Student Support
+                                        <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                    <div class="sub-dropdown-menu">
+                                        <a href="pay-online.html">PAY ONLINE</a>
+                                        <a href="scholarships.html">Scholarships</a>
+                                        <a href="fee-concession.html">FEE CONCESSION</a>
+                                        <a href="earn-while-you-learn.html">EARN WHILE YOU LEARN</a>
+                                        <a href="smarth-scheme.html">SMARTH SCHEME</a>
+                                        <a href="book-bank-facility.html">BOOK BANK FACILITY</a>
+                                        <a href="stress-management.html">STRESS MANAGEMENT</a>
+                                    </div>
+                                </div>
+                                <a href="shining-stars.html">Our Shining Stars</a>
+                                <a href="atmanirbhar-haryana.html">ATAMNIRBHAR HARYANA</a>
+                                <a href="help-desk.html">HELP DESK</a>
+                                <div class="relative sub-dropdown">
+                                    <a href="forms.html" class="inline-flex items-center justify-between w-full">
+                                        Forms
+                                        <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                    <div class="sub-dropdown-menu">
+                                        <div class="relative sub-dropdown">
+                                            <a href="library-card.html" class="inline-flex items-center justify-between w-full">
+                                                LIBRARY CARD
+                                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                                </svg>
+                                            </a>
+                                            <div class="sub-dropdown-menu">
+                                                <a href="/documents/SECURITY-REFUND-FORM.docx" target="_blank">SECURITY REFUND</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="/documents/Anti-Ragging-Committee.pdf" target="_blank">Anti Ragging Committee</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase" aria-expanded="false" aria-haspopup="true">
+                                Alumni Corner
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu" aria-label="Alumni Corner submenu">
+                                <a href="alumni.html">Our Illustrious Alumni</a>
+                                <a href="office-bearers.html">Office Bearers</a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScExb42BN1RApEjvcBFMWZmPKj-gRDDxO2gMHV-J8Qhcjd_ZQ/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">Registration Form</a>
+                                <a href="alumni-gallery.html">Alumni Gallery</a>
+                                <a href="activities-alumni.html">Activities Alumni</a>
+                                <a href="/documents/Alumni-Registration-Certificate.pdf" target="_blank">Alumni Registration Certificate</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="font-medium transition-colors inline-flex items-center uppercase" aria-expanded="false" aria-haspopup="true">
+                                Facilities
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu" aria-label="Facilities submenu">
+                                <a href="academic-facilities.html">Academic Facilities</a>
+                                <a href="campus-facilities.html">Campus Facilities</a>
+                                <a href="students-facility.html">Students Facility</a>
+                                <a href="utilities.html">Utilities</a>
+                                <div class="relative sub-dropdown">
+                                    <a href="library.html" class="inline-flex items-center justify-between w-full">
+                                        Library
+                                        <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                    <div class="sub-dropdown-menu">
+                                        <a href="about-the-library.html">About The Library</a>
+                                        <a href="question-papers.html">Question Papers</a>
+                                        <a href="services-facilities.html">Services & Facilities</a>
+                                        <a href="resources.html">Resources</a>
+                                        <a href="http://dsck.bestbookbuddies.com/" target="_blank" rel="noopener noreferrer">Web OPAC</a>
+                                        <a href="inflibnet-contents.html">Inflibnet Contents</a>
+                                        <a href="library-rules.html">Rules & Regulations</a>
+                                        <a href="library-timings.html">Library Timings</a>
+                                        <a href="/documents/Purchases.pdf" target="_blank">Purchases</a>
+                                        <a href="new-arrival-books.html">New Arrival Books</a>
+                                        <a href="gallery.html">Gallery</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="naac.html" class="font-medium hover:text-yellow-300 transition-colors uppercase">NAAC</a>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <button id="mobile-menu-button" class="lg:hidden p-2 text-white hover:text-yellow-300" aria-label="Toggle mobile menu" aria-expanded="false">
+                            <svg id="menu-open-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                            <svg id="menu-close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden bg-blue-900 border-t border-blue-700 mt-2">
+                <div class="px-4 pt-4 pb-6 space-y-4">
+                    <a href="home.html" class="block text-white hover:text-yellow-300 font-medium uppercase">Home</a>
+                    
+                    <div class="dropdown-mobile">
+                        <button class="w-full flex justify-between items-center text-white hover:text-yellow-300 font-medium uppercase">
+                            About Us
+                            <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                            <a href="college-profile.html" class="block text-gray-300 hover:text-white">College Profile</a>
+                            <a href="history.html" class="block text-gray-300 hover:text-white">History</a>
+                            <a href="vision-mission.html" class="block text-gray-300 hover:text-white">Vision & Mission</a>
+                            <a href="official-logo.html" class="block text-gray-300 hover:text-white">Official Logo</a>
+                            <a href="our-motto.html" class="block text-gray-300 hover:text-white">Our Motto</a>
+                            <a href="/documents/Organogram.pdf" target="_blank" class="block text-gray-300 hover:text-white">Organogram</a>
+                            <a href="administration.html" class="block text-gray-300 hover:text-white">Administration</a>
+                            <div class="relative sub-dropdown-mobile">
+                                <button class="w-full flex justify-between items-center text-gray-300 hover:text-white">
+                                    Team
+                                    <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                                    <a href="teaching-staff.html" class="block text-gray-300 hover:text-white">Teaching Staff</a>
+                                    <a href="non-teaching-staff.html" class="block text-gray-300 hover:text-white">Supporting Staff</a>
+                                    <a href="/documents/Roaster-Teaching-Staff.pdf" target="_blank" class="block text-gray-300 hover:text-white">Roaster Teaching</a>
+                                    <a href="/documents/Roaster-Non-Teaching-Staff.pdf" target="_blank" class="block text-gray-300 hover:text-white">Roaster Non-Teaching</a>
+                                </div>
+                            </div>
+                            <a href="college-on-maps.html" class="block text-gray-300 hover:text-white">College On Maps</a>
+                            <a href="quality-policy.html" class="block text-gray-300 hover:text-white">Quality Policy</a>
+                            <a href="value-ethics.html" class="block text-gray-300 hover:text-white">Value & Ethics</a>
+                            <a href="annual-reports.html" class="block text-gray-300 hover:text-white">Annual Reports</a>
+                            <a href="mandatory-disclosure.html" class="block text-gray-300 hover:text-white">Mandatory Disclosure</a>
+                            <a href="towards-the-future.html" class="block text-gray-300 hover:text-white">Towards The Future</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown-mobile">
+                        <button class="w-full flex justify-between items-center text-white hover:text-yellow-300 font-medium uppercase">
+                            Academics
+                            <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                            <a href="academic-calendar.html" class="block text-gray-300 hover:text-white">Academic Calendar</a>
+                            <a href="list-of-holidays.html" class="block text-gray-300 hover:text-white">List of Holidays</a>
+                            <a href="timetable.html" class="block text-gray-300 hover:text-white">Time Table</a>
+                            <a href="lesson-plans.html" class="block text-gray-300 hover:text-white">Lesson Plans</a>
+                            <a href="faculty.html" class="block text-gray-300 hover:text-white">Faculty</a>
+                            <a href="courses.html" class="block text-gray-300 hover:text-white">Courses Offered</a>
+                            <a href="standing-committees.html" class="block text-gray-300 hover:text-white">Standing Committees</a>
+                            <a href="mentorship-groups.html" class="block text-gray-300 hover:text-white">Mentorship Groups</a>
+                            <a href="mentor-reports.html" class="block text-gray-300 hover:text-white">Mentor Reports</a>
+                            <a href="mous.html" class="block text-gray-300 hover:text-white">MOU’s</a>
+                            <a href="research.html" class="block text-gray-300 hover:text-white">Research</a>
+                            <a href="guest-lectures.html" class="block text-gray-300 hover:text-white">Guest Lectures</a>
+                            <a href="awards-recognition.html" class="block text-gray-300 hover:text-white">Awards/Recognition</a>
+                            <a href="seminars-conferences.html" class="block text-gray-300 hover:text-white">Seminars & Conferences</a>
+                            <div class="relative sub-dropdown-mobile">
+                                <button class="w-full flex justify-between items-center text-gray-300 hover:text-white">
+                                    Publications
+                                    <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                                    <a href="journals.html" class="block text-gray-300 hover:text-white">Journals</a>
+                                    <a href="magazine.html" class="block text-gray-300 hover:text-white">Magazine</a>
+                                    <a href="proceedings-books.html" class="block text-gray-300 hover:text-white">Proceedings/Books</a>
+                                    <a href="annual-reports.html" class="block text-gray-300 hover:text-white">Annual Reports</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown-mobile">
+                        <button class="w-full flex justify-between items-center text-white hover:text-yellow-300 font-medium uppercase">
+                            Admissions
+                            <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                            <a href="prospectus.html" class="block text-gray-300 hover:text-white">Prospectus</a>
+                            <a href="https://admissions.highereduhry.ac.in/" target="_blank" rel="noopener noreferrer" class="block text-gray-300 hover:text-white">Online Admissions</a>
+                            <a href="fee-structure.html" class="block text-gray-300 hover:text-white">Fee Structure</a>
+                            <a href="https://www.studyinindia.gov.in/admission/registrations" target="_blank" rel="noopener noreferrer" class="block text-gray-300 hover:text-white">International Student Registration</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown-mobile">
+                        <button class="w-full flex justify-between items-center text-white hover:text-yellow-300 font-medium uppercase">
+                            Student's Corner
+                            <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                            <a href="students-registration-card.html" class="block text-gray-300 hover:text-white">Students Registration Card 2024-25</a>
+                            <a href="whom-to-consult.html" class="block text-gray-300 hover:text-white">Whom To Consult</a>
+                            <a href="student-grievances.html" class="block text-gray-300 hover:text-white">Student Grievances</a>
+                            <a href="code-of-conduct.html" class="block text-gray-300 hover:text-white">CODE OF CONDUCT</a>
+                            <a href="student-council.html" class="block text-gray-300 hover:text-white">STUDENT COUNCIL</a>
+                            <a href="syllabus.html" class="block text-gray-300 hover:text-white">Syllabus</a>
+                            <a href="examinations.html" class="block text-gray-300 hover:text-white">Examinations</a>
+                            <div class="relative sub-dropdown-mobile">
+                                <button class="w-full flex justify-between items-center text-gray-300 hover:text-white">
+                                    Student Support
+                                    <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                                    <a href="pay-online.html" class="block text-gray-300 hover:text-white">PAY ONLINE</a>
+                                    <a href="scholarships.html" class="block text-gray-300 hover:text-white">Scholarships</a>
+                                    <a href="fee-concession.html" class="block text-gray-300 hover:text-white">FEE CONCESSION</a>
+                                    <a href="earn-while-you-learn.html" class="block text-gray-300 hover:text-white">EARN WHILE YOU LEARN</a>
+                                    <a href="smarth-scheme.html" class="block text-gray-300 hover:text-white">SMARTH SCHEME</a>
+                                    <a href="book-bank-facility.html" class="block text-gray-300 hover:text-white">BOOK BANK FACILITY</a>
+                                    <a href="stress-management.html" class="block text-gray-300 hover:text-white">STRESS MANAGEMENT</a>
+                                </div>
+                            </div>
+                            <a href="shining-stars.html" class="block text-gray-300 hover:text-white">Our Shining Stars</a>
+                            <a href="atmanirbhar-haryana.html" class="block text-gray-300 hover:text-white">ATAMNIRBHAR HARYANA</a>
+                            <a href="help-desk.html" class="block text-gray-300 hover:text-white">HELP DESK</a>
+                            <div class="relative sub-dropdown-mobile">
+                                <button class="w-full flex justify-between items-center text-gray-300 hover:text-white">
+                                    Forms
+                                    <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                                    <div class="relative sub-dropdown-mobile">
+                                        <button class="w-full flex justify-between items-center text-gray-300 hover:text-white">
+                                            LIBRARY CARD
+                                            <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                        </button>
+                                        <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                                            <a href="/documents/SECURITY-REFUND-FORM.docx" target="_blank" class="block text-gray-300 hover:text-white">SECURITY REFUND</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="/documents/Anti-Ragging-Committee.pdf" target="_blank" class="block text-gray-300 hover:text-white">Anti Ragging Committee</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-mobile">
+                        <button class="w-full flex justify-between items-center text-white hover:text-yellow-300 font-medium uppercase">
+                            Alumni Corner
+                            <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                            <a href="alumni.html" class="block text-gray-300 hover:text-white">Our Illustrious Alumni</a>
+                            <a href="office-bearers.html" class="block text-gray-300 hover:text-white">Office Bearers</a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScExb42BN1RApEjvcBFMWZmPKj-gRDDxO2gMHV-J8Qhcjd_ZQ/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="block text-gray-300 hover:text-white">Registration Form</a>
+                            <a href="alumni-gallery.html" class="block text-gray-300 hover:text-white">Alumni Gallery</a>
+                            <a href="activities-alumni.html" class="block text-gray-300 hover:text-white">Activities Alumni</a>
+                            <a href="/documents/Alumni-Registration-Certificate.pdf" target="_blank" class="block text-gray-300 hover:text-white">Alumni Registration Certificate</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-mobile">
+                        <button class="w-full flex justify-between items-center text-white hover:text-yellow-300 font-medium uppercase">
+                            Facilities
+                            <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                            <a href="academic-facilities.html" class="block text-gray-300 hover:text-white">Academic Facilities</a>
+                            <a href="campus-facilities.html" class="block text-gray-300 hover:text-white">Campus Facilities</a>
+                            <a href="students-facility.html" class="block text-gray-300 hover:text-white">Students Facility</a>
+                            <a href="utilities.html" class="block text-gray-300 hover:text-white">Utilities</a>
+                            <div class="relative sub-dropdown-mobile">
+                                <button class="w-full flex justify-between items-center text-gray-300 hover:text-white">
+                                    Library
+                                    <svg class="h-4 w-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div class="dropdown-menu-mobile hidden mt-2 pl-4 space-y-2">
+                                    <a href="about-the-library.html" class="block text-gray-300 hover:text-white">About The Library</a>
+                                    <a href="question-papers.html" class="block text-gray-300 hover:text-white">Question Papers</a>
+                                    <a href="services-facilities.html" class="block text-gray-300 hover:text-white">Services & Facilities</a>
+                                    <a href="resources.html" class="block text-gray-300 hover:text-white">Resources</a>
+                                    <a href="http://dsck.bestbookbuddies.com/" target="_blank" rel="noopener noreferrer" class="block text-gray-300 hover:text-white">Web OPAC</a>
+                                    <a href="inflibnet-contents.html" class="block text-gray-300 hover:text-white">Inflibnet Contents</a>
+                                    <a href="library-rules.html" class="block text-gray-300 hover:text-white">Rules & Regulations</a>
+                                    <a href="library-timings.html" class="block text-gray-300 hover:text-white">Library Timings</a>
+                                    <a href="/documents/Purchases.pdf" target="_blank" class="block text-gray-300 hover:text-white">Purchases</a>
+                                    <a href="new-arrival-books.html" class="block text-gray-300 hover:text-white">New Arrival Books</a>
+                                    <a href="gallery.html" class="block text-gray-300 hover:text-white">Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="naac.html" class="block text-white hover:text-yellow-300 font-medium uppercase">NAAC</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="flex-grow">
+        <section class="page-header-banner">
+            <h1 class="page-title">Administration</h1>
+        </section>
+
+        <section class="bg-white py-12 sm:py-16">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <p class="text-center text-lg mb-8 text-gray-700">Presently the college works under the able guidance of trusties:</p>
+
+                <div class="administration-tabs-container mb-6">
+                    <button class="administration-tab-button active" data-tab="the-trust">The Trust</button>
+                    <button class="administration-tab-button" data-tab="governing-body">Governing Body</button>
+                    <button class="administration-tab-button" data-tab="president-message">President's Message</button>
+                    <button class="administration-tab-button" data-tab="general-secretary-message">General Secretary's Message</button>
+                    <button class="administration-tab-button" data-tab="principal-message">Principal's Message</button>
+                </div>
+
+                <div id="the-trust" class="administration-tab-content active">
+                    <p class="text-justify mb-4">On 12<sup>th</sup> September, 1898, three days after Sardar Dyal Singh Majithia’s death, his Will was opened, on the application of his nearest male relation Sardar Gajendra Singh Majithia, and in the presence of Lala Harkishen Lal and Mr. Joginder Chandra Bose, by Mr. B. H. Bird, Acting Registrar of the District. The will assigned some of the property to Sardar Gajinder Singh, made certain arrangements for the decent maintenance of Rani Bhagwan Kaur, the second wife of the Sardar, and created three Trusts with specific Committees of Trustees and specific properties for the creation and maintenance of a first class Arts College and a Public Library and for the maintenance of the Tribune Press and Newspaper. The largest and the most valuable portion of the property was assigned for the College, the establishment of which on new lines of instruction had always been the dream of the Sardar.</p>
+                    <p class="font-bold mb-2">The clauses concerning the creation of the College ran as follows:</p>
+                    <ul class="list-disc ml-6 mb-4 text-gray-800">
+                        <li>(a) All proprietary rights including accessory and other rights and lands, gardens and houses in the following villages in the District of Amritsar, viz:</li>
+                        <ul class="list-disc ml-8 my-2  text-gray-700">
+                            <li>Dyalpore</li>
+                            <li>Burg (Nawabad)</li>
+                            <li>Ruk Bhangwan</li>
+                            <li>Putli</li>
+                            <li>Bhalapind</li>
+                        </ul>
+                        <li>(b) All my proprietary rights including accessory and other rights and lands, houses and gardens in the village of Mirzajan in the District of Gurdaspur.</li>
+                        <li>(c) All my houses and lands in Lahore and its suburbs, excepting the house called the “Exchange” now occupied by Messrs E. Gillon and Co. Ltd.</li>
+                        <li>(d) My house property in the city of Karachi, Sind.</li>
+                        <li>(e) Any other land and houses that may hereafter be acquired by me in Lahore, Karachi or any other place.</li>
+                        <li>(f) The eighty shares belonging to me and standing in my name in the Delhi Cotton Mills Company Ltd, and the forty shares belonging to me and standing in my name in the Krishna Mills Company Ltd., Delhi.</li>
+                        <li>(g) All my shares in the Punjab National Bank, Lahore.</li>
+                        <li>(h) All current and fixed deposits to my credit in the Alliance Bank of Simla, Lahore, in the Agra Bank, Lahore, in the Bank of Bengal at Lahore and Calcutta, and with Messrs Latham and Co. of Karachi.</li>
+                        <li>(i) All sums of money due to me on promissory notes, bonds, hundis or cheques.</li>
+                        <li>(j) Two gold necklaces set with pearls, rubies and diamonds now in the custody of my cashier Bhanga Singh at Amritsar.</li>
+                        <li>(k) Furniture, books and book-shelves at my residential house at Lahore and books and book-shelves at my residential house at Amritsar.</li>
+                    </ul>
+                    <p class="font-bold mb-2">That the said Committee of Trustees shall consist of the following members, viz.</p>
+                    <ol class="list-decimal ml-6 mb-4 text-gray-800">
+                        <li>Babu Jogendra Chandra Bose, M.A., B. L., Pleader, Chief Court, Lahore.</li>
+                        <li>Babu Sasi Bhushan Mukerjee, M.A. BL Professor Govt. College, Lahore.</li>
+                        <li>Dewan Narendra Nath, M.A., District Magistrate, Montgomery.</li>
+                        <li>Mr. Charles Golak Nath, B.A., LL.B., Barrister-at-Law, Lahore.</li>
+                        <li>Mr. Harkrishen Lal, B.A., Barrister-at-Law, Lahore.</li>
+                        <li>Lala Ruchi Ram, M.A., Assistant Professor, Government College, Lahore.</li>
+                        <li>Mr. Golak Nath Chatterji, B.A., Assistant Professor, Govt. College. Lahore.</li>
+                        <li>Lala Sunder Das Suri, M.A. Asstt. Superintendent, Training College, Lahore.</li>
+                        <li>Babu Abinas Chandra Mazumdar of the North Western Railway Office, Lahore.</li>
+                    </ol>
+                    <p class="text-justify">On 3rd May, 1910 Dyal Singh College, Lahore was opened. Dewan Anand Kumar re-established Dyal Singh College and Dyal Singh Library in Karnal, Haryana on September 09, 1949, which were founded on the excellent vision and will of Sardar Dyal Singh Majithia.</p>
+                </div>
+
+                <div id="governing-body" class="administration-tab-content">
+                    <h3 class="text-xl font-bold mb-4">Governing Body</h3>
+                    <img src="/images/GB-24-27_page-0001.jpg" alt="Governing Body Structure" class="max-w-full h-auto mx-auto shadow-md rounded-lg" loading="lazy" />
+                    <div class="trustee-card-container">
+                        <div class="trustee-card">
+                            <img src="/images/trustees/01-1.jpg" alt="Sh. D.K. Raina" loading="lazy" />
+                            <p><strong>Sh. D.K. Raina</strong><br>
+                            <strong>Former Corporate Manager,<br>
+                            BOC India Ltd., New Delhi</strong><br>
+                            <strong>President, Dyal Singh College Trust Society</strong></p>
+                        </div>
+                        <div class="trustee-card">
+                            <img src="/images/trustees/02.jpg" alt="Vice Admiral Satish Soni" loading="lazy" />
+                            <p><strong>Vice Admiral Satish Soni (Retd.),<br>
+                            PVSM, AVSM, NM<br>
+                            Honorary Secretary, Dyal Singh College Trust Society</strong></p>
+                        </div>
+                        <div class="trustee-card">
+                            <img src="/images/trustees/raina-3-100x100.jpg" alt="Mrs. Anita Raina" loading="lazy" />
+                            <p><strong>Mrs. Anita Raina</strong><br>
+                            <strong>Treasurer, Dyal Singh College Trust Society</strong></p>
+                        </div>
+                        <div class="trustee-card">
+                            <img src="/images/trustees/rc-sh-204x300.jpg" alt="Sh. R.C. Sharma" loading="lazy" />
+                            <p><strong>Sh. R.C. Sharma, IPS(Retd.)</strong><br>
+                            <strong>Former Director CBI,<br>
+                            Govt. of India.<br>
+                            Trustee</strong></p>
+                        </div>
+                        <div class="trustee-card">
+                            <img src="/images/trustees/05-e1702029348703.jpg" alt="Justice Ashok Bhan" loading="lazy" />
+                            <p><strong>Justice Ashok Bhan,(Retd.),</strong><br>
+                            <strong>Former Supreme Court Judge</strong><br>
+                            <strong>Former President, National Consumer Disputes Redressal Commission</strong><br>
+                            <strong>Trustee</strong></p>
+                        </div>
+                        <div class="trustee-card">
+                            <img src="/images/trustees/06-219x300.jpg" alt="Sh. Arvind Kaul" loading="lazy" />
+                            <p><strong>Sh. Arvind Kaul, IAS (Retd.)</strong><br>
+                            <strong>Formerly Chairman H.P.P.S.C. Shimla</strong><br>
+                            <strong>Formerly Chief Secretary Himachal Pradesh Commission,</strong><br>
+                            <strong>Trustee</strong></p>
+                        </div>
+                        <div class="trustee-card">
+                            <img src="/images/trustees/sk-mishra-e1702025481171-700x700.jpg" alt="Justice Sudershan Kumar Mishra" loading="lazy" />
+                            <p><strong>Justice Sudershan Kumar Mishra(Retd.),</strong><br>
+                            <strong>Former Justice</strong><br>
+                            <strong>High Court, Delhi</strong><br>
+                            <strong>Trustee</strong></p>
+                        </div>
+                        <div class="trustee-card">
+                            <img src="/images/trustees/pc-sharma-273x300.jpg" alt="Sh. P.C. Sharma" loading="lazy" />
+                            <p><strong>Sh. P.C. Sharma (Retd.),</strong><br>
+                            <strong>Former Director CBI,</strong><br>
+                            <strong>Govt. of India</strong><br>
+                            <strong>Trustee</strong></p>
+                        </div>
+                        <div class="trustee-card">
+                            <img src="/images/trustees/rahil-new-285x300.jpg" alt="Sh. Rahul Sharma" loading="lazy" />
+                            <p><strong>Sh. Rahul Sharma,</strong><br>
+                            <strong>Former M.D Masonite India</strong><br>
+                            <strong>Former Director Honeywell</strong><br>
+                            <strong>Trustee</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="president-message" class="administration-tab-content">
+                    <div class="flex justify-center mb-4">
+                        <img src="/images/trustees/01-240x300.jpg" alt="President D.K. Raina" class="w-48 h-auto rounded-full shadow-md" loading="lazy" />
+                    </div>
+                    <p class="text-justify"><strong>Dyal Singh College,</strong> Karnal enjoys the prestige of being one of the oldest higher education institutes in independent India. Continuing the legacy of Dyal Singh College, Lahore, established by the great academician, entrepreneur, visionary, and philanthropist, Sardar Dyal Singh Majithia, it was established in Karnal in 1949 by the great academic enthusiast, Dewan Anand Kumar Ji. Since its inception, the college has proceeded to attain high and higher destinations both in academic and co-curricular activities. Its dynamism, which is the result of the esteemed members of its managing committee, has enabled the college to keep up with the latest requirements in the academic sphere. Adapting itself to the evolving environment with increasing role of technology in education, the college has smoothly and easily encountered every new challenge.</p>
+                    <p class="text-justify">The college provides its students the best of training in graduate and post-graduate courses in the streams of Science, Commerce, and Humanities. The dedicated teaching faculty, with a deep sense of commitment and sincerity, tries to develop various skills of students in their respective fields. The college, along with academic excellence, aims to instill in its students social, cultural and moral values so that they may contribute towards the betterment of the society, and the nation. We are proud that our students occupy top positions in different spheres of life and are men and women of consequence.</p>
+                    <p class="text-justify">I assure all those who join this college that their dormant talents will find a fertile soil to bloom and they will become well-equipped, responsible human beings by the time they leave the portals of the college. My best wishes for all those who choose to take admission in this college.</p>
+                    <p><strong>D.K. Raina</strong><br>
+                    <strong>President</strong></p>
+                </div>
+
+                <div id="general-secretary-message" class="administration-tab-content">
+                    <div class="flex justify-center mb-4">
+                        <img src="/images/trustees/02-300x225.jpg" alt="General Secretary Satish Soni" class="w-48 h-auto rounded-full shadow-md" loading="lazy" />
+                    </div>
+                    <p class="text-justify">I extend my greetings and blessings to all the students who have joined various streams in Dyal Singh College, Karnal. All of you must have joined this premier institute with dreams in your eyes, aspirations in your mind, and confidence in your hearts. I am sure that your aspirations and dreams will be nourished adequately in this renowned institute which has helped the youth in realizing their destinations for more than seven decades. Dyal Singh College provides an enviably amicable environment where the talents of students are developed by the most earnest faculty, the dynamic Principal, and illustrious members of the managing committee.</p>
+                    <p class="text-justify">The college has earned fame because of its high benchmark in academic sphere as well as extra-curricular activities. I wish that all of you should carry on the tradition of excellence. But there is no shortcut to excellence. It requires a tireless toil and honest efforts. If you put in your efforts, no obstruction can stop your ceaseless journey. I want all of you to channelize your energies properly because you are at the prime of your lives and any aim is achievable at this stage. Only you have to direct yourselves on to the path of right acts. And your seasoned, learned teachers are there to provide this direction. Under their efficient guidance, dedicate yourselves to your intellectual, mental, physical and moral development. And then, move on to make for yourselves a place of prestige in this competitive world.</p>
+                    <p>My heartiest blessings for all of you, young scholars!<br>
+                    With best wishes…</p>
+                    <p><strong>Satish Soni</strong><br>
+                    <strong> Honorary Secretary</strong></p>
+                </div>
+
+                <div id="principal-message" class="administration-tab-content">
+                    <div class="flex justify-center mb-4">
+                        <img src="/images/trustees/1.-Ashima-Patron.jpg" alt="Principal Ashima Gakhar" class="w-48 h-auto rounded-full shadow-md" loading="lazy" />
+                    </div>
+                    <p class="text-justify"><strong>Dyal Singh College, Karnal</strong> has been serving humanity since 1949 by imparting quality education in all the three streams namely Science, Commerce and Arts. Located in the heart of the city Karnal, the college boasts of a historically significant building which is a beautiful amalgamation of ancient and modern architecture. Ours is a NAAC accredited A+ grade, coeducational institute. The college is committed to a holistic development of students by providing them with a conducive environment. The highly qualified, dedicated faculty put in their earnest efforts to make teaching interesting, career-oriented, and thought-provoking. The amiable teacher-taught relationship creates a cordial ambience for the full blooming of their personalities. The progressive and encouraging attitude of the esteemed members of the management has resulted in the consistently rising bar both in academic and co-curricular activities of the college. The college has a caring environment with zero tolerance for indiscipline, ragging, gender-bias, and racism. The state-of-the-art infrastructure consists of well-equipped lecture rooms, laboratories, vast playgrounds, richly-laden library with an entire section dedicated to rare books on one hand and e-section on the other. The college organizes an array of round the year activities through various clubs and societies such as NSS, NCC, Cultural Committee, Sports Club, Women Development Cell, Eco-club etc. We go an extra mile to build MOUs with various institutes and industries to enhance the employability skills of our students. The chief emphasis is not only on nurturing the intellectual faculties of the students but also to turn them into responsible, disciplined and useful citizens with human values.</p>
+                    <p class="text-justify">I accord a warm welcome to all those who are aspiring to join the Dyal Singh family.</p>
+                    <p>With best wishes…</p>
+                    <p><strong>Ashima Gakhar</strong><br>
+                    <strong>Principal</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-4 pt-16 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="md:col-span-2 lg:col-span-1">
+                    <h3 class="text-lg font-semibold text-white mb-4">About College</h3>
+                    <p class="text-sm text-gray-400">Dyal Singh College, Karnal, as it stands today, is a premier co-educational centre of learning of Northern India. With a strength of 3693 students, the college has all the three streams of learning - Arts, Science and Commerce, with Post Graduate courses in English, Hindi, Political Science, Economics, Commerce and Chemistry, along with the add-on and vocational courses.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Important Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://www.kuk.ac.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">KU, Kurukshetra</a></li>
+                        <li><a href="https://www.ugc.gov.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">UGC, New Delhi</a></li>
+                        <li><a href="https://www.highereduhry.ac.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">DGHE, Punchkula</a></li>
+                        <li><a href="https://www.education.gov.in/en" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">MHRD, New Delhi</a></li>
+                        <li><a href="http://naac.gov.in/index.php/en/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">NAAC, Bengaluru</a></li>
+                        <li><a href="https://nlist.inflibnet.ac.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">NLIST, Inflibnet</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
+                    <address class="not-italic space-y-3 text-sm text-gray-400">
+                        <p>Dyal Singh College,<br>Karnal-132001, Haryana</p>
+                        <p><strong>Phone:</strong> <a href="tel:0184-2252030" class="hover:text-white transition-colors">0184-2252030</a></p>
+                        <p><strong>Fax:</strong> <a href="tel:0184-2260700" class="hover:text-white transition-colors">0184-2260700</a></p>
+                        <p><strong>Website:</strong> <a href="https://www.dsckarnal.ac.in/" class="hover:text-white transition-colors">dsckarnal.ac.in</a></p>
+                        <p><strong>For Student's Verification:</strong> <a href="mailto:verifydscknl@gmail.com" class="hover:text-white transition-colors">verifydscknl@gmail.com</a></p>
+                    </address>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Our Location</h3>
+                    <div class="h-40 rounded-lg overflow-hidden border-2 border-gray-600">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.949323743411!2d76.9897198751515!3d29.692399875101614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e70f55d447679%3A0x8f22a7cf43e52d3!2sDyal%20Singh%20College!5e0!3m2!1sen!2sin!4v1719318182991!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dyal Singh College Location Map"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-400">
+                <p>© 2025 Dyal Singh College, Karnal. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open-icon');
+        const menuCloseIcon = document.getElementById('menu-close-icon');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenu.classList.toggle('hidden');
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Mobile dropdown toggles
+        document.querySelectorAll('.dropdown-mobile button').forEach(button => {
+            button.addEventListener('click', () => {
+                const menu = button.nextElementSibling;
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                
+                // Close all other dropdowns
+                document.querySelectorAll('.dropdown-menu-mobile').forEach(m => {
+                    if (m !== menu) {
+                        m.classList.add('hidden');
+                        m.previousElementSibling.setAttribute('aria-expanded', 'false');
+                        m.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+                    }
+                });
+                
+                // Toggle current
+                menu.classList.toggle('hidden');
+                button.setAttribute('aria-expanded', !isExpanded);
+                button.querySelector('svg').classList.toggle('rotate-180');
+            });
+        });
+
+        // Animated Counter Script (not directly used on Administration page but kept for consistency)
+        document.addEventListener('DOMContentLoaded', () => {
+            const statsSection = document.getElementById('stats-section'); // This element isn't on administration.html
+            if (statsSection) {
+                const counters = statsSection.querySelectorAll('h3[data-target]');
+                const animateCounters = (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            counters.forEach(counter => {
+                                const target = +counter.getAttribute('data-target');
+                                let startTime = null;
+                                const duration = 2500;
+                                const step = (currentTime) => {
+                                    if (!startTime) startTime = currentTime;
+                                    const progress = currentTime - startTime;
+                                    const percentage = Math.min(progress / duration, 1);
+                                    const currentNumber = Math.floor(percentage * target);
+                                    counter.innerText = currentNumber.toLocaleString();
+                                    if (progress < duration) {
+                                        requestAnimationFrame(step);
+                                    } else {
+                                        counter.innerText = target.toLocaleString() + (target >= 100 ? '+' : '');
+                                    }
+                                };
+                                requestAnimationFrame(step);
+                            });
+                            observer.unobserve(statsSection);
+                        }
+                    });
+                };
+                const observer = new IntersectionObserver(animateCounters, { threshold: 0.8 });
+                observer.observe(statsSection);
+            }
+
+            // Dropdown Menu JavaScript for desktop navigation
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const button = dropdown.querySelector('button');
+                const menu = dropdown.querySelector('.dropdown-menu');
+
+                // Add mouseenter/mouseleave for hover functionality
+                if (button && menu) { // Ensure button and menu exist
+                    let mainDropdownTimeoutId;
+                    dropdown.addEventListener('mouseenter', () => {
+                        clearTimeout(mainDropdownTimeoutId);
+                        menu.classList.add('is-active');
+                        button.classList.add('is-active'); // For arrow rotation
+                        button.setAttribute('aria-expanded', 'true');
+                    });
+                    dropdown.addEventListener('mouseleave', () => {
+                        mainDropdownTimeoutId = setTimeout(() => {
+                            menu.classList.remove('is-active');
+                            button.classList.remove('is-active'); // For arrow rotation
+                            button.setAttribute('aria-expanded', 'false');
+                        }, 150); // Small delay to allow moving to sub-menu
+                    });
+                }
+            });
+
+            // Sub-dropdown handling for desktop navigation (using mouseenter/mouseleave)
+            document.querySelectorAll('.sub-dropdown').forEach(subDropdown => {
+                const subTrigger = subDropdown.querySelector('a'); // The <a> that triggers the sub-dropdown
+                const subMenu = subDropdown.querySelector('.sub-dropdown-menu');
+
+                if (subTrigger && subMenu) {
+                    let subDropdownTimeoutId;
+                    subDropdown.addEventListener('mouseenter', () => {
+                        clearTimeout(subDropdownTimeoutId);
+                        subMenu.classList.add('is-active');
+                        subTrigger.classList.add('is-active'); // For arrow rotation
+                    });
+                    subDropdown.addEventListener('mouseleave', () => {
+                        subDropdownTimeoutId = setTimeout(() => {
+                            subMenu.classList.remove('is-active');
+                            subTrigger.classList.remove('is-active'); // For arrow rotation
+                        }, 100); // Shorter delay for sub-menus
+                    });
+                }
+            });
+
+
+            // Close dropdowns when clicking outside (global listener, unchanged)
+            document.addEventListener('click', (event) => {
+                // Close main dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(m => {
+                    const button = m.previousElementSibling; // This assumes button is direct sibling
+                    // Check if the click was outside the dropdown menu AND its trigger button
+                    if (button && button.tagName === 'BUTTON' && !button.contains(event.target) && !m.contains(event.target)) {
+                        m.classList.remove('is-active');
+                        button.classList.remove('is-active');
+                        button.setAttribute('aria-expanded', 'false');
+                    }
+                });
+                // Close sub-dropdowns
+                document.querySelectorAll('.sub-dropdown-menu').forEach(m => {
+                    const link = m.previousElementSibling;
+                    // Check if the click was outside the sub-dropdown menu AND its trigger link
+                    if (link && !link.contains(event.target) && !m.contains(event.target)) {
+                        m.classList.remove('is-active');
+                        link.classList.remove('is-active');
+                    }
+                });
+            });
+
+            // Prevent dropdown from closing when clicking inside itself
+            document.querySelectorAll('.dropdown-menu, .sub-dropdown-menu').forEach(menu => {
+                menu.addEventListener('click', e => e.stopPropagation());
+            });
+            
+            // Mobile dropdown toggles for nested sub-menus (remains as is)
+            document.querySelectorAll('.dropdown-mobile .sub-dropdown-mobile button').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevent the parent dropdown from closing
+                    const menu = button.nextElementSibling;
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                    // Toggle current sub-menu
+                    menu.classList.toggle('hidden');
+                    button.setAttribute('aria-expanded', !isExpanded);
+                    button.querySelector('svg').classList.toggle('rotate-180');
+                });
+            });
+
+
+            // Administration Tabs JavaScript (with console logs for debugging)
+            console.log("Administration Tabs Script: DOMContentLoaded triggered.");
+            const tabButtons = document.querySelectorAll('.administration-tab-button');
+            const tabContents = document.querySelectorAll('.administration-tab-content');
+
+            console.log("Administration Tabs Script: Found", tabButtons.length, "buttons and", tabContents.length, "contents.");
+
+            tabButtons.forEach((button, index) => {
+                console.log(`Administration Tabs Script: Attaching listener to button ${index} with data-tab="${button.dataset.tab}"`);
+                button.addEventListener('click', () => {
+                    console.log(`Administration Tabs Script: Button ${button.dataset.tab} clicked.`);
+                    // Deactivate all buttons and hide all content
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Activate clicked button
+                    button.classList.add('active');
+
+                    // Show corresponding content
+                    const targetTabId = button.dataset.tab;
+                    const targetContent = document.getElementById(targetTabId);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                        console.log(`Administration Tabs Script: Content ${targetTabId} activated.`);
+                    } else {
+                        console.log(`Administration Tabs Script: Content with ID "${targetTabId}" NOT found.`);
+                    }
+                });
+            });
+
+            // Activate the first tab by default on page load
+            if (tabButtons.length > 0) {
+                console.log("Administration Tabs Script: Activating first tab by default.");
+                tabButtons[0].click(); // Programmatically click the first tab
+            } else {
+                console.log("Administration Tabs Script: No tab buttons found to activate.");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-4 pt-16 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="md:col-span-2 lg:col-span-1">
+                    <h3 class="text-lg font-semibold text-white mb-4">About College</h3>
+                    <p class="text-sm text-gray-400">Dyal Singh College, Karnal, as it stands today, is a premier co-educational centre of learning of Northern India. With a strength of 3693 students, the college has all the three streams of learning - Arts, Science and Commerce, with Post Graduate courses in English, Hindi, Political Science, Economics, Commerce and Chemistry, along with the add-on and vocational courses.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Important Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://www.kuk.ac.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">KU, Kurukshetra</a></li>
+                        <li><a href="https://www.ugc.gov.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">UGC, New Delhi</a></li>
+                        <li><a href="https://www.highereduhry.ac.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">DGHE, Punchkula</a></li>
+                        <li><a href="https://www.education.gov.in/en" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">MHRD, New Delhi</a></li>
+                        <li><a href="http://naac.gov.in/index.php/en/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">NAAC, Bengaluru</a></li>
+                        <li><a href="https://nlist.inflibnet.ac.in/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">NLIST, Inflibnet</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
+                    <address class="not-italic space-y-3 text-sm text-gray-400">
+                        <p>Dyal Singh College,<br>Karnal-132001, Haryana</p>
+                        <p><strong>Phone:</strong> <a href="tel:0184-2252030" class="hover:text-white transition-colors">0184-2252030</a></p>
+                        <p><strong>Fax:</strong> <a href="tel:0184-2260700" class="hover:text-white transition-colors">0184-2260700</a></p>
+                        <p><strong>Website:</strong> <a href="https://www.dsckarnal.ac.in/" class="hover:text-white transition-colors">dsckarnal.ac.in</a></p>
+                        <p><strong>For Student's Verification:</strong> <a href="mailto:verifydscknl@gmail.com" class="hover:text-white transition-colors">verifydscknl@gmail.com</a></p>
+                    </address>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Our Location</h3>
+                    <div class="h-40 rounded-lg overflow-hidden border-2 border-gray-600">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.949323743411!2d76.9897198751515!3d29.692399875101614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390e70f55d447679%3A0x8f22a7cf43e52d3!2sDyal%20Singh%20College!5e0!3m2!1sen!2sin!4v1719318182991!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dyal Singh College Location Map"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-400">
+                <p>© 2025 Dyal Singh College, Karnal. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open-icon');
+        const menuCloseIcon = document.getElementById('menu-close-icon');
+        
+        // Check if elements exist before adding listeners to avoid errors on pages where they might not be present
+        if (mobileMenuButton && mobileMenu && menuOpenIcon && menuCloseIcon) {
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenu.classList.toggle('hidden');
+                menuOpenIcon.classList.toggle('hidden');
+                menuCloseIcon.classList.toggle('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            });
+        }
+
+        // Mobile dropdown toggles
+        document.querySelectorAll('.dropdown-mobile button').forEach(button => {
+            button.addEventListener('click', () => {
+                const menu = button.nextElementSibling;
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                
+                // Close all other dropdowns
+                document.querySelectorAll('.dropdown-menu-mobile').forEach(m => {
+                    if (m !== menu) {
+                        m.classList.add('hidden');
+                        m.previousElementSibling.setAttribute('aria-expanded', 'false');
+                        m.previousElementSibling.querySelector('svg').classList.remove('rotate-180');
+                    }
+                });
+                
+                // Toggle current
+                menu.classList.toggle('hidden');
+                button.setAttribute('aria-expanded', !isExpanded);
+                button.querySelector('svg').classList.toggle('rotate-180');
+            });
+        });
+
+        // Animated Counter Script
+        // This script will only run if an element with ID 'stats-section' is present.
+        document.addEventListener('DOMContentLoaded', () => {
+            const statsSection = document.getElementById('stats-section'); 
+            if (statsSection) {
+                const counters = statsSection.querySelectorAll('h3[data-target]');
+                const animateCounters = (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            counters.forEach(counter => {
+                                const target = +counter.getAttribute('data-target');
+                                let startTime = null;
+                                const duration = 2500;
+                                const step = (currentTime) => {
+                                    if (!startTime) startTime = currentTime;
+                                    const progress = currentTime - startTime;
+                                    const percentage = Math.min(progress / duration, 1);
+                                    const currentNumber = Math.floor(percentage * target);
+                                    counter.innerText = currentNumber.toLocaleString();
+                                    if (progress < duration) {
+                                        requestAnimationFrame(step);
+                                    } else {
+                                        counter.innerText = target.toLocaleString() + (target >= 100 ? '+' : '');
+                                    }
+                                };
+                                requestAnimationFrame(step);
+                            });
+                            observer.unobserve(statsSection);
+                        }
+                    });
+                };
+                const observer = new IntersectionObserver(animateCounters, { threshold: 0.8 });
+                observer.observe(statsSection);
+            }
+
+            // Dropdown Menu JavaScript for desktop navigation (Hover functionality)
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            dropdowns.forEach(dropdown => {
+                const button = dropdown.querySelector('button');
+                const menu = dropdown.querySelector('.dropdown-menu');
+
+                // Add mouseenter/mouseleave for hover functionality
+                if (button && menu) { // Ensure button and menu exist
+                    let mainDropdownTimeoutId;
+                    dropdown.addEventListener('mouseenter', () => {
+                        clearTimeout(mainDropdownTimeoutId);
+                        menu.classList.add('is-active');
+                        button.classList.add('is-active'); // For arrow rotation
+                        button.setAttribute('aria-expanded', 'true');
+                    });
+                    dropdown.addEventListener('mouseleave', () => {
+                        mainDropdownTimeoutId = setTimeout(() => {
+                            menu.classList.remove('is-active');
+                            button.classList.remove('is-active'); // For arrow rotation
+                            button.setAttribute('aria-expanded', 'false');
+                        }, 150); // Small delay to allow moving to sub-menu
+                    });
+                }
+            });
+
+            // Sub-dropdown handling for desktop navigation (using mouseenter/mouseleave)
+            document.querySelectorAll('.sub-dropdown').forEach(subDropdown => {
+                const subTrigger = subDropdown.querySelector('a'); // The <a> that triggers the sub-dropdown
+                const subMenu = subDropdown.querySelector('.sub-dropdown-menu');
+
+                if (subTrigger && subMenu) {
+                    let subDropdownTimeoutId;
+                    subDropdown.addEventListener('mouseenter', () => {
+                        clearTimeout(subDropdownTimeoutId);
+                        subMenu.classList.add('is-active');
+                        subTrigger.classList.add('is-active'); // For arrow rotation
+                    });
+                    subDropdown.addEventListener('mouseleave', () => {
+                        subDropdownTimeoutId = setTimeout(() => {
+                            subMenu.classList.remove('is-active');
+                            subTrigger.classList.remove('is-active'); // For arrow rotation
+                        }, 100); // Shorter delay for sub-menus
+                    });
+                }
+            });
+
+
+            // Close dropdowns when clicking outside (global listener)
+            document.addEventListener('click', (event) => {
+                // Close main dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(m => {
+                    const button = m.previousElementSibling; // This assumes button is direct sibling
+                    // Check if the click was outside the dropdown menu AND its trigger button
+                    if (button && button.tagName === 'BUTTON' && !button.contains(event.target) && !m.contains(event.target)) {
+                        m.classList.remove('is-active');
+                        button.classList.remove('is-active');
+                        button.setAttribute('aria-expanded', 'false');
+                    }
+                });
+                // Close sub-dropdowns
+                document.querySelectorAll('.sub-dropdown-menu').forEach(m => {
+                    const link = m.previousElementSibling;
+                    // Check if the click was outside the sub-dropdown menu AND its trigger link
+                    if (link && !link.contains(event.target) && !m.contains(event.target)) {
+                        m.classList.remove('is-active');
+                        link.classList.remove('is-active');
+                    }
+                });
+            });
+
+            // Prevent dropdown from closing when clicking inside itself
+            document.querySelectorAll('.dropdown-menu, .sub-dropdown-menu').forEach(menu => {
+                menu.addEventListener('click', e => e.stopPropagation());
+            });
+            
+            // Mobile dropdown toggles for nested sub-menus 
+            document.querySelectorAll('.dropdown-mobile .sub-dropdown-mobile button').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevent the parent dropdown from closing
+                    const menu = button.nextElementSibling;
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                    // Toggle current sub-menu
+                    menu.classList.toggle('hidden');
+                    button.setAttribute('aria-expanded', !isExpanded);
+                    button.querySelector('svg').classList.toggle('rotate-180');
+                });
+            });
+
+            // Administration Tabs JavaScript 
+            // This script should only run on pages that have the administration tabs.
+            // It uses 'DOMContentLoaded' which is fine since the content will be in the main section.
+            const tabButtons = document.querySelectorAll('.administration-tab-button');
+            const tabContents = document.querySelectorAll('.administration-tab-content');
+
+            if (tabButtons.length > 0 && tabContents.length > 0) {
+                tabButtons.forEach((button) => {
+                    button.addEventListener('click', () => {
+                        // Deactivate all buttons and hide all content
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        tabContents.forEach(content => content.classList.remove('active'));
+
+                        // Activate clicked button
+                        button.classList.add('active');
+
+                        // Show corresponding content
+                        const targetTabId = button.dataset.tab;
+                        const targetContent = document.getElementById(targetTabId);
+                        if (targetContent) {
+                            targetContent.classList.add('active');
+                        }
+                    });
+                });
+
+                // Activate the first tab by default on page load
+                // This will run correctly as it's within DOMContentLoaded and finds the elements.
+                tabButtons[0].click(); 
+            }
+        });
+    </script>
+</body>
+</html>
