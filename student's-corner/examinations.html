@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examinations | Dyal Singh College, Karnal</title>
+    <meta name="description" content="Access all examination-related resources for Dyal Singh College, Karnal, including forms, admit cards, date sheets, results, and previous year question papers.">
+    <meta name="keywords" content="Examinations, Dyal Singh College, Karnal, Admit Card, Date Sheet, KUK Results, Exam Form">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #f9fafb;
+        }
+        .exam-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+        .exam-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .exam-card .card-content {
+            flex-grow: 1;
+        }
+        .table-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .table-link:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <main id="main-content">
+        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2074&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-blue-900/70"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Examination Portal</h1>
+                <p class="text-lg md:text-xl max-w-3xl mt-4">Your central hub for all examination-related information and resources.</p>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-4">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div class="exam-card">
+                        <div class="card-content">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Examination Form</h3>
+                            <p class="text-gray-600 mb-4">Register and fill your online examination form on the official KUK portal.</p>
+                            <p class="text-sm text-gray-500"><strong>Instructions:</strong> Register > Login > Fill Exam Form</p>
+                        </div>
+                        <a href="http://examforms.kuk.ac.in/" target="_blank" class="mt-6 w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">Go to KUK Exam Portal</a>
+                    </div>
+                    <div class="exam-card">
+                        <div class="card-content">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Admit Card</h3>
+                            <p class="text-gray-600 mb-4">Download your admit card for the upcoming semester examinations.</p>
+                             <p class="text-sm text-gray-500"><strong>Instructions:</strong> Login > Application Status > Download Admit Card</p>
+                        </div>
+                        <a href="https://examforms.kuk.ac.in/" target="_blank" class="mt-6 w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">Go to KUK Exam Portal</a>
+                    </div>
+                    <div class="exam-card">
+                        <div class="card-content">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Date Sheet</h3>
+                            <p class="text-gray-600 mb-4">Access the latest theory and practical examination date sheets.</p>
+                            <p class="text-sm text-gray-500"><strong>Instructions:</strong> Navigate to the "Datesheets (theory)" section.</p>
+                        </div>
+                        <a href="http://kuk.ac.in/" target="_blank" class="mt-6 w-full text-center bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">Go to KUK Website</a>
+                    </div>
+                     <div class="exam-card">
+                        <div class="card-content">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Results</h3>
+                            <p class="text-gray-600 mb-4">Check your semester examination results directly on the KUK website.</p>
+                            <p class="text-sm text-gray-500"><strong>Instructions:</strong> Navigate to the "Results" section.</p>
+                        </div>
+                        <a href="http://kuk.ac.in/results" target="_blank" class="mt-6 w-full text-center bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">Go to KUK Website</a>
+                    </div>
+                </div>
+
+                <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-lg">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-bold text-gray-800">Previous Year Question Papers</h2>
+                        <p class="mt-4 text-lg text-gray-600">
+                           Access our archive of question papers to aid in your exam preparation.
+                        </p>
+                    </div>
+                     <div class="overflow-x-auto border border-gray-200 rounded-lg">
+                        <table class="w-full text-left table-auto">
+                            <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
+                                <tr>
+                                    <th class="p-4 font-semibold">S.No.</th>
+                                    <th class="p-4 font-semibold">Title</th>
+                                    <th class="p-4 font-semibold text-center">Download Link</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700">
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="p-4 font-medium">1.</td>
+                                    <td class="p-4 font-medium">Previous Year Papers (2023-24)</td>
+                                    <td class="p-4 text-center">
+                                        <a href="https://drive.google.com/drive/folders/1r8ssYLRGzjq76We-2qtlafjytoBXpeTF?usp=drive_link" target="_blank" class="table-link">Open Drive Folder</a>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="p-4 font-medium">2.</td>
+                                    <td class="p-4 font-medium">Previous Year Papers (2020-22)</td>
+                                    <td class="p-4 text-center">
+                                        <a href="https://drive.google.com/drive/folders/1dSJo1Sv_Dawz-mZB_NYYVc4l7gVzlwa4?usp=sharing" target="_blank" class="table-link">Open Drive Folder</a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="p-4 font-medium">3.</td>
+                                    <td class="p-4 font-medium">Previous Year Papers (2013-20)</td>
+                                    <td class="p-4 text-center">
+                                        <a href="https://drive.google.com/drive/folders/1j1wiROUko9AwU7k38NDjeXPpLf8SOPj" target="_blank" class="table-link">Open Drive Folder</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <div id="footer"></div>
+
+    <script>
+        // Inject Header
+        fetch('../header.html').then(r => r.ok ? r.text() : Promise.reject('err')).then(d => { document.getElementById('header').innerHTML = d; if(typeof initializeHeaderScripts === 'function') initializeHeaderScripts(); }).catch(e => console.error('Error loading header:', e));
+        // Inject Footer
+        fetch('../footer.html').then(r => r.ok ? r.text() : Promise.reject('err')).then(d => { document.getElementById('footer').innerHTML = d; if(typeof initializeFooterScripts === 'function') initializeFooterScripts(); }).catch(e => console.error('Error loading footer:', e));
+    </script>
+    <script src="../header-scripts.js" defer></script>
+    <script src="../footer-scripts.js" defer></script>
+
+</body>
+</html>

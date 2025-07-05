@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Profile | Dyal Singh College, Karnal</title>
+    <meta name="description" content="Dyal Singh College, Karnal is a premier co-educational centre of learning in Northern India with a rich history and a commitment to academic excellence.">
+    <meta name="keywords" content="College Profile, Dyal Singh College, Karnal, About DSCK, Higher Education, NAAC A+">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #f8f9fa; /* Light gray background */
+        }
+        .prose a {
+            color: #2563eb;
+        }
+        .prose a:hover {
+            color: #1d4ed8;
+        }
+        .prose {
+            color: #374151; /* gray-700 */
+        }
+        .highlight-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            text-align: center;
+            border-left: 4px solid #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <main id="main-content">
+        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2086&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-blue-900/70"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">College Profile</h1>
+                <p class="text-lg md:text-xl max-w-3xl mt-4">A Century-Old Fortress of Learning and Education.</p>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    
+                    <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-lg">
+                        <img width="577" height="384" src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/Dyal-Singh-College.png" class="vc_single_image-img attachment-full w-full h-auto max-w-2xl mx-auto rounded-xl shadow-md mb-10" alt="Dyal Singh College, Karnal Campus Building" loading="lazy">
+                        
+                        <article class="prose max-w-none lg:prose-lg text-justify">
+                            <p>
+                                Dyal Singh College, Karnal, as it stands today, is a premier co-educational centre of learning of Northern India. With a strength of over 3,600 students, the college has all the three streams of learning – Arts, Science and Commerce, with Post Graduate courses in English, Hindi, Political Science, Commerce, and Chemistry, along with various add-on and vocational courses. The college also offers a 5-year Integrated Course, M.Sc. Forensic Science, under an innovative programme sponsored by the UGC.
+                            </p>
+                            <p>
+                                The college is making progress under the esteemed guidance of its leadership, maintaining a tradition of Spirituality and Scientific temper in a world of diminishing human values. It focuses on inculcating a harmonious blend of the “Wisdom of the East and West” in young minds. True to the Will of our Illustrious Founder, Late Sardar Dyal Singh Majithia, the path of Wisdom, Morality, and Ethics has been the kindling force all along.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="mt-16">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">At a Glance</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                            <div class="highlight-card">
+                                <p class="text-3xl font-extrabold text-blue-800">A+</p>
+                                <p class="mt-2 font-semibold text-gray-600">NAAC Accredited</p>
+                            </div>
+                            <div class="highlight-card">
+                                <p class="text-3xl font-extrabold text-blue-800">3600+</p>
+                                <p class="mt-2 font-semibold text-gray-600">Students</p>
+                            </div>
+                             <div class="highlight-card">
+                                <p class="text-3xl font-extrabold text-blue-800">1910</p>
+                                <p class="mt-2 font-semibold text-gray-600">Year of Establishment</p>
+                            </div>
+                            <div class="highlight-card">
+                                <p class="text-3xl font-extrabold text-blue-800">3</p>
+                                <p class="mt-2 font-semibold text-gray-600">Streams (Arts, Sci, Com)</p>
+                            </div>
+                            <div class="highlight-card">
+                                <p class="text-3xl font-extrabold text-blue-800">6</p>
+                                <p class="mt-2 font-semibold text-gray-600">Post-Graduate Courses</p>
+                            </div>
+                             <div class="highlight-card">
+                                <p class="text-3xl font-extrabold text-blue-800">25+</p>
+                                <p class="mt-2 font-semibold text-gray-600">Acres of Campus</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="footer"></div>
+
+    <script>
+        // Inject Header
+        fetch('../header.html')
+            .then(response => response.ok ? response.text() : Promise.reject('Header not found'))
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                if (typeof initializeHeaderScripts === 'function') {
+                    initializeHeaderScripts();
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Inject Footer
+        fetch('../footer.html')
+            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+                 if (typeof initializeFooterScripts === 'function') {
+                    initializeFooterScripts();
+                }
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    <script src="../header-scripts.js" defer></script>
+    <script src="../footer-scripts.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Policy | Dyal Singh College, Karnal</title>
+    <meta name="description" content="The quality policy of Dyal Singh College, Karnal, outlining our commitment to excellence in education, research, and continuous improvement.">
+    <meta name="keywords" content="Quality Policy, Dyal Singh College, Karnal, IQAC, Quality Objectives, Educational Excellence">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #f9fafb;
+        }
+        .policy-section h2 {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .policy-list li {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1.25rem;
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #4b5563; /* gray-600 */
+        }
+        .policy-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            font-weight: 900;
+            color: #1d4ed8; /* blue-800 */
+            background-color: #e0e7ff; /* indigo-100 */
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header will be injected here -->
+    <div id="header"></div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-blue-900/70"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Our Commitment to Quality</h1>
+                <p class="text-lg md:text-xl max-w-3xl mt-4">Pursuing excellence in education and research for nation-building.</p>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-lg space-y-12">
+
+                    <!-- Quality Policy Statement -->
+                    <div class="policy-section">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Quality Policy</h2>
+                        <p class="text-lg text-gray-700 text-justify leading-relaxed">
+                            We at <strong>Dyal Singh College, Karnal</strong> are committed to the pursuit of excellence in the field of education and research in order to lead to the development of a competent workforce and contribute to nation-building. We endeavor to achieve this by continually improving our quality management systems. For this purpose, our Internal Quality Assurance Cell (IQAC) works tirelessly for quality assurance and improvement.
+                        </p>
+                    </div>
+
+                    <!-- Quality Objectives -->
+                    <div class="policy-section">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Quality Objectives</h2>
+                        <ul class="policy-list">
+                            <li>To increase stakeholder satisfaction, annually measured by the Research and Innovation surveys.</li>
+                            <li>To implement at least one major improvement in each core and support process.</li>
+                            <li>To implement transformation initiatives each year.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Quality Initiatives & Measures -->
+                    <div class="policy-section">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Quality Initiatives & Measures</h2>
+                        <ul class="policy-list">
+                            <li>Conformity to the regulatory requirements of UGC, Kurukshetra University, and the Government of Haryana.</li>
+                            <li>Well-defined codes of conduct for teaching, non-teaching staff, and students.</li>
+                            <li>Maintaining state-of-the-art infrastructure and a congenial learning environment.</li>
+                            <li>Up-gradation of faculty through staff development programmes, industry interaction, seminars, and educational tours.</li>
+                            <li>Measuring stakeholder satisfaction periodically through feedback, placements, and achievements.</li>
+                            <li>Adoption of innovative teaching methods and quality control mechanisms.</li>
+                            <li>Inculcating moral and ethical values among students and staff.</li>
+                            <li>Collaborating with industry and other institutions for holistic development.</li>
+                            <li>Disseminating knowledge through continuing education and extension activities.</li>
+                            <li>Promoting, transmitting, and preserving our culture and heritage.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be injected here -->
+    <div id="footer"></div>
+
+    <script>
+        // Inject Header
+        fetch('../header.html')
+            .then(response => response.ok ? response.text() : Promise.reject('Header not found'))
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                if (typeof initializeHeaderScripts === 'function') {
+                    initializeHeaderScripts();
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Inject Footer
+        fetch('../footer.html')
+            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+                 if (typeof initializeFooterScripts === 'function') {
+                    initializeFooterScripts();
+                }
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+    <script src="../header-scripts.js" defer></script>
+    <script src="../footer-scripts.js" defer></script>
+
+</body>
+</html>

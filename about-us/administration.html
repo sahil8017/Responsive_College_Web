@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration | Dyal Singh College, Karnal</title>
+    <meta name="description" content="Meet the administration of Dyal Singh College, Karnal, including the Trust, Governing Body, President, General Secretary, and Principal.">
+    <meta name="keywords" content="Administration, Dyal Singh College, Karnal, Governing Body, College Trust, Principal">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #f9fafb; /* Lighter gray */
+        }
+        .profile-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .profile-card img {
+            width: 112px; /* 7rem */
+            height: 112px; /* 7rem */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e5e7eb; /* gray-200 */
+            flex-shrink: 0;
+        }
+        .message-section .prose {
+            text-align: justify;
+        }
+        .sidebar-nav a.active {
+            background-color: #1d4ed8;
+            color: white;
+            font-weight: 600;
+        }
+        .sidebar-nav a {
+            transition: background-color 0.2s, color 0.2s;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header will be injected here -->
+    <div id="header"></div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-blue-900/70"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Our Leadership</h1>
+                <p class="text-lg md:text-xl max-w-3xl mt-4">Guiding the institution with vision, dedication, and excellence.</p>
+            </div>
+        </section>
+
+        <!-- Main Content with Sidebar -->
+        <section class="py-16 sm:py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+
+                    <!-- Sidebar Navigation -->
+                    <aside class="lg:col-span-3 lg:sticky top-8 self-start">
+                         <div class="bg-white p-5 rounded-lg shadow-md">
+                            <h2 class="text-xl font-bold mb-4 text-gray-800 border-b pb-3">Administration</h2>
+                            <nav class="sidebar-nav space-y-2 mt-4">
+                                <a href="#president-message" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100">President's Message</a>
+                                <a href="#secretary-message" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100">Secretary's Message</a>
+                                <a href="#principal-message" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100">Principal's Message</a>
+                                <a href="#governing-body" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100">Governing Body</a>
+                                <a href="#the-trust" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100">The Trust</a>
+                            </nav>
+                        </div>
+                    </aside>
+
+                    <!-- Content Area -->
+                    <div class="lg:col-span-9">
+                        <div class="space-y-16">
+
+                            <!-- President's Message -->
+                            <article id="president-message" class="message-section bg-white p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-8">
+                                <div class="flex-shrink-0 text-center md:w-1/3">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/01-1.jpg" alt="Sh. D.K. Raina" class="w-40 h-40 object-cover rounded-full mx-auto shadow-md">
+                                    <h3 class="mt-4 text-xl font-bold text-gray-900">Sh. D.K. Raina</h3>
+                                    <p class="text-gray-600">President</p>
+                                </div>
+                                <div class="prose max-w-none md:w-2/3">
+                                    <h2 class="!text-2xl !font-bold !text-gray-800">President's Message</h2>
+                                    <p>Dyal Singh College, Karnal enjoys the prestige of being one of the oldest higher education institutes in independent India. The college, along with academic excellence, aims to instill in its students social, cultural and moral values so that they may contribute towards the betterment of the society, and the nation. I assure all those who join this college that their dormant talents will find a fertile soil to bloom. My best wishes for all.</p>
+                                </div>
+                            </article>
+                            
+                            <!-- General Secretary's Message -->
+                            <article id="secretary-message" class="message-section bg-white p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-8">
+                                <div class="flex-shrink-0 text-center md:w-1/3">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/02.jpg" alt="Vice Admiral Satish Soni (Retd.)" class="w-40 h-40 object-cover rounded-full mx-auto shadow-md">
+                                    <h3 class="mt-4 text-xl font-bold text-gray-900">Vice Admiral Satish Soni (Retd.)</h3>
+                                    <p class="text-gray-600">Honorary Secretary</p>
+                                </div>
+                                <div class="prose max-w-none md:w-2/3">
+                                    <h2 class="!text-2xl !font-bold !text-gray-800">General Secretary's Message</h2>
+                                    <p>I extend my greetings to all the students who have joined Dyal Singh College, Karnal. I am sure that your aspirations and dreams will be nourished adequately in this renowned institute. There is no shortcut to excellence. It requires tireless toil and honest efforts. If you put in your efforts, no obstruction can stop your ceaseless journey. My heartiest blessings for all of you, young scholars!</p>
+                                </div>
+                            </article>
+
+                            <!-- Principal's Message -->
+                            <article id="principal-message" class="message-section bg-white p-8 rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-8">
+                                <div class="flex-shrink-0 text-center md:w-1/3">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/1.-Ashima-Patron.jpg" alt="Dr. Ashima Gakhar" class="w-40 h-40 object-cover rounded-full mx-auto shadow-md">
+                                    <h3 class="mt-4 text-xl font-bold text-gray-900">Dr. Ashima Gakhar</h3>
+                                    <p class="text-gray-600">Principal</p>
+                                </div>
+                                <div class="prose max-w-none md:w-2/3">
+                                    <h2 class="!text-2xl !font-bold !text-gray-800">Principal's Message</h2>
+                                    <p>Dyal Singh College, Karnal has been serving humanity since 1949 by imparting quality education. The college is committed to a holistic development of students. The highly qualified, dedicated faculty put in their earnest efforts to make teaching interesting and thought-provoking. The chief emphasis is not only on nurturing the intellectual faculties of the students but also to turn them into responsible, disciplined and useful citizens. I accord a warm welcome to all aspiring to join the Dyal Singh family.</p>
+                                </div>
+                            </article>
+
+                            <!-- Governing Body Section -->
+                            <article id="governing-body" class="bg-white p-8 rounded-xl shadow-lg">
+                                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Governing Body (2024-2027)</h2>
+                                <div class="max-w-4xl mx-auto">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/08/GB-24-27_page-0001.jpg" alt="Governing Body Members List" class="w-full h-auto rounded-lg border shadow-md">
+                                </div>
+                            </article>
+
+                            <!-- The Trust Section -->
+                            <article id="the-trust" class="bg-white p-8 rounded-xl shadow-lg">
+                                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">The Trust</h2>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                                    <!-- Profile cards for trustees -->
+                                    <div class="profile-card">
+                                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/01-1.jpg" alt="Sh. D.K. Raina">
+                                        <h4 class="mt-4 font-bold text-gray-800">Sh. D.K. Raina</h4>
+                                        <p class="text-sm text-gray-500">President</p>
+                                    </div>
+                                    <div class="profile-card">
+                                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/02.jpg" alt="Vice Admiral Satish Soni (Retd.)">
+                                        <h4 class="mt-4 font-bold text-gray-800">V. Adm. Satish Soni (Retd.)</h4>
+                                        <p class="text-sm text-gray-500">Honorary Secretary</p>
+                                    </div>
+                                    <div class="profile-card">
+                                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/raina-3-100x100.jpg" alt="Mrs. Anita Raina">
+                                        <h4 class="mt-4 font-bold text-gray-800">Mrs. Anita Raina</h4>
+                                        <p class="text-sm text-gray-500">Treasurer</p>
+                                    </div>
+                                    <div class="profile-card">
+                                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/rc-sh.jpg" alt="Sh. R.C. Sharma, IPS(Retd.)">
+                                        <h4 class="mt-4 font-bold text-gray-800">Sh. R.C. Sharma, IPS(Retd.)</h4>
+                                        <p class="text-sm text-gray-500">Trustee</p>
+                                    </div>
+                                    <div class="profile-card">
+                                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/05-e1702029348703.jpg" alt="Justice Ashok Bhan, (Retd.)">
+                                        <h4 class="mt-4 font-bold text-gray-800">Justice Ashok Bhan, (Retd.)</h4>
+                                        <p class="text-sm text-gray-500">Trustee</p>
+                                    </div>
+                                    <div class="profile-card">
+                                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/06.jpg" alt="Sh. Arvind Kaul, IAS (Retd.)">
+                                        <h4 class="mt-4 font-bold text-gray-800">Sh. Arvind Kaul, IAS (Retd.)</h4>
+                                        <p class="text-sm text-gray-500">Trustee</p>
+                                    </div>
+                                    <div class="profile-card">
+                                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/sk-mishra-e1702025481171.jpg" alt="Justice Sudershan Kumar Mishra(Retd.)">
+                                        <h4 class="mt-4 font-bold text-gray-800">Justice S. K. Mishra (Retd.)</h4>
+                                        <p class="text-sm text-gray-500">Trustee</p>
+                                    </div>
+                                    <div class="profile-card">
+                                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/pc-sharma.jpg" alt="Sh. P.C. Sharma (Retd.)">
+                                        <h4 class="mt-4 font-bold text-gray-800">Sh. P.C. Sharma (Retd.)</h4>
+                                        <p class="text-sm text-gray-500">Trustee</p>
+                                    </div>
+                                     <div class="profile-card">
+                                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/rahil-new.jpg" alt="Sh. Rahul Sharma">
+                                        <h4 class="mt-4 font-bold text-gray-800">Sh. Rahul Sharma</h4>
+                                        <p class="text-sm text-gray-500">Trustee</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be injected here -->
+    <div id="footer"></div>
+
+    <script>
+        // Inject Header
+        fetch('../header.html')
+            .then(response => response.ok ? response.text() : Promise.reject('Header not found'))
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                if (typeof initializeHeaderScripts === 'function') {
+                    initializeHeaderScripts();
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Inject Footer
+        fetch('../footer.html')
+            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+                 if (typeof initializeFooterScripts === 'function') {
+                    initializeFooterScripts();
+                }
+            })
+            .catch(error => console.error('Error loading footer:', error));
+
+        // Sidebar Active State on Scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('article[id]');
+            const navLinks = document.querySelectorAll('.sidebar-nav a');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                        });
+                    }
+                });
+            }, { 
+                rootMargin: "-30% 0px -60% 0px", // Adjust margins to trigger when section is more central
+                threshold: 0 
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+    <script src="../header-scripts.js" defer></script>
+    <script src="../footer-scripts.js" defer></script>
+
+</body>
+</html>

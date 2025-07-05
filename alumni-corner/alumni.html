@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni | Dyal Singh College, Karnal</title>
+    <meta name="description" content="Connect with the Dyal Singh College Alumni Association. Celebrate our illustrious alumni and stay engaged with our vibrant network.">
+    <meta name="keywords" content="Alumni, Dyal Singh College, Karnal, Alumni Association, Notable Alumni, Graduates">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #f9fafb;
+        }
+        .alumni-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem;
+            text-align: center;
+            height: 100%;
+        }
+        .alumni-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .alumni-card img {
+            width: 144px; /* 9rem */
+            height: 144px; /* 9rem */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e5e7eb; /* gray-200 */
+            flex-shrink: 0;
+            background-color: #f3f4f6;
+        }
+        .alumni-card h4 {
+            margin-top: 1rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        .alumni-card p {
+            font-size: 0.875rem;
+            color: #4b5563;
+            line-height: 1.4;
+        }
+        .action-card {
+            background-color: #eff6ff; /* blue-50 */
+            border: 2px dashed #93c5fd; /* blue-300 */
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .action-card:hover {
+            background-color: #dbeafe; /* blue-100 */
+            border-color: #60a5fa; /* blue-400 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header will be injected here -->
+    <div id="header"></div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?q=80&w=2070&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-blue-900/70"></div>
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Our Alumni Network</h1>
+                <p class="text-lg md:text-xl max-w-3xl mt-4">Celebrating the achievements of our graduates and fostering a lifelong connection.</p>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section class="py-16 sm:py-24">
+            <div class="container mx-auto px-4">
+                
+                <!-- Illustrious Alumni Section -->
+                <div class="mb-20">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Our Illustrious Alumni</h2>
+                        <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">We are proud of our alumni who have made significant contributions in various fields across the globe.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                        <div class="alumni-card">
+                            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Kalpana_Chawla_NASA_photo_portrait_in_orange_suit.jpg" alt="Dr. Kalpana Chawla">
+                            <h4>Dr. Kalpana Chawla</h4>
+                            <p>Indian-American Astronaut & Aerospace Engineer</p>
+                        </div>
+                        <div class="alumni-card">
+                            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Dr.-Rajan-Kumar-Lamba.jpg" alt="Dr. Rajan Kumar Lamba">
+                            <h4>Dr. Rajan Kumar Lamba</h4>
+                            <p>Principal, Tagore Bal Niketan Sr. Sec. School</p>
+                        </div>
+                        <div class="alumni-card">
+                            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Sushma-Arya.png" alt="Ms. Sushma Arya">
+                            <h4>Ms. Sushma Arya</h4>
+                            <p>President’s Guide Awardee</p>
+                        </div>
+                        <div class="alumni-card">
+                            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Dr.-Sukhwant-S.-Bindra.jpg" alt="Prof. (Dr.) Sukhwant S. Bindra">
+                            <h4>Prof. (Dr.) Sukhwant S. Bindra</h4>
+                            <p>Director Research, Amity Institute of International Studies</p>
+                        </div>
+                        <div class="alumni-card">
+                            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Nipun-CFO-Nokia.jpg" alt="Mr. Nipun">
+                            <h4>Mr. Nipun</h4>
+                            <p>CFO, Finance Department, Nokia India (CA, CWA)</p>
+                        </div>
+                         <div class="alumni-card">
+                            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Sapna-PO-Canara-Bank.jpg" alt="Ms. Sapna">
+                            <h4>Ms. Sapna</h4>
+                            <p>Probationary Officer, Canara Bank</p>
+                        </div>
+                         <div class="alumni-card">
+                            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Sagar-Singh.jpg" alt="Mr. Sagar Singh">
+                            <h4>Mr. Sagar Singh</h4>
+                            <p>Ph.D Scholar – Chemistry, TIFR Hyderabad</p>
+                        </div>
+                         <div class="alumni-card">
+                            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/CA-Renu.jpg" alt="CA Renu">
+                            <h4>CA Renu</h4>
+                            <p>Qualified Chartered Accountant (2022)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alumni Association Section -->
+                <div>
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Join the Alumni Association</h2>
+                        <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Reconnect with classmates, expand your professional network, and give back to your alma mater. Register today to become a part of our growing community.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScExb42BN1RApEjvcBFMWZmPKj-gRDDxO2gMHV-J8Qhcjd_ZQ/viewform?usp=sf_link" target="_blank" class="action-card p-6 rounded-lg text-center">
+                            <h4 class="text-xl font-bold text-blue-800">Register Now</h4>
+                            <p class="text-blue-700 mt-2">Fill out the online form to officially join the Alumni Association.</p>
+                        </a>
+                        <a href="office-bearers.html" class="action-card p-6 rounded-lg text-center">
+                            <h4 class="text-xl font-bold text-blue-800">Office Bearers</h4>
+                            <p class="text-blue-700 mt-2">Meet the team leading the Alumni Association.</p>
+                        </a>
+                        <a href="alumni-gallery.html" class="action-card p-6 rounded-lg text-center">
+                            <h4 class="text-xl font-bold text-blue-800">Alumni Gallery</h4>
+                            <p class="text-blue-700 mt-2">Explore photos from past alumni events and reunions.</p>
+                        </a>
+                        <a href="activities-alumni.html" class="action-card p-6 rounded-lg text-center">
+                            <h4 class="text-xl font-bold text-blue-800">Activities & Events</h4>
+                            <p class="text-blue-700 mt-2">Stay updated on upcoming alumni activities and gatherings.</p>
+                        </a>
+                        <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/12/Alumni-Registration-Certificate.pdf" target="_blank" class="action-card p-6 rounded-lg text-center">
+                            <h4 class="text-xl font-bold text-blue-800">Registration Certificate</h4>
+                            <p class="text-blue-700 mt-2">View the official registration certificate of the association.</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer will be injected here -->
+    <div id="footer"></div>
+
+    <script>
+        // Inject Header
+        fetch('../header.html').then(r => r.ok ? r.text() : Promise.reject('err')).then(d => { document.getElementById('header').innerHTML = d; if(typeof initializeHeaderScripts === 'function') initializeHeaderScripts(); }).catch(e => console.error('Error loading header:', e));
+        // Inject Footer
+        fetch('../footer.html').then(r => r.ok ? r.text() : Promise.reject('err')).then(d => { document.getElementById('footer').innerHTML = d; if(typeof initializeFooterScripts === 'function') initializeFooterScripts(); }).catch(e => console.error('Error loading footer:', e));
+    </script>
+    <script src="../header-scripts.js" defer></script>
+    <script src="../footer-scripts.js" defer></script>
+
+</body>
+</html>
