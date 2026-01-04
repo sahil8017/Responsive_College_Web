@@ -5,152 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses Offered | Dyal Singh College, Karnal</title>
     <meta name="description" content="Explore the diverse range of undergraduate, postgraduate, and value-added certificate courses offered at Dyal Singh College, Karnal.">
-    <meta name="keywords" content="Courses, Programs, Dyal Singh College, Karnal, Undergraduate, Postgraduate, BA, BSc, BCom, MA, MSc, MCom">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            background-color: #f9fafb;
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        
         .sidebar-nav a.active {
-            background-color: #1d4ed8;
+            background-color: #1d4ed8; /* blue-700 */
             color: white;
             font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-        .table-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.125rem 0.625rem;
             border-radius: 9999px;
-            font-weight: 500;
             font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
         }
-        .table-badge-aided {
-            background-color: #dbeafe; /* blue-100 */
-            color: #1e40af; /* blue-800 */
-        }
-        .table-badge-sf {
-            background-color: #d1fae5; /* green-100 */
-            color: #065f46; /* green-800 */
-        }
+        .badge-aided { background-color: #dbeafe; color: #1e40af; } /* Blue */
+        .badge-sf { background-color: #dcfce7; color: #166534; } /* Green */
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
     <div id="header"></div>
 
-    <main id="main-content">
-        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-blue-900/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Our Academic Programs</h1>
-                <p class="text-lg md:text-xl max-w-3xl mt-4">Explore a diverse range of courses designed to build your future.</p>
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative h-[50vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">
+                    Our Academic Programs
+                </h1>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mb-6 rounded-full shadow-sm"></div>
+                <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-2xl mx-auto">
+                    Explore a diverse range of courses designed to build your future.
+                </p>
             </div>
         </section>
 
-        <section class="py-16 sm:py-20">
+        <section class="py-16">
             <div class="container mx-auto px-4">
-                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+                <div class="grid lg:grid-cols-12 gap-10">
 
-                    <aside class="lg:col-span-3 lg:sticky top-8 self-start">
-                         <div class="bg-white p-5 rounded-lg shadow-md">
-                            <h2 class="text-xl font-bold mb-4 text-gray-800 border-b pb-3">Program Levels</h2>
-                            <nav class="sidebar-nav space-y-2 mt-4">
-                                <a href="#ug-courses" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100 transition-colors">Undergraduate Courses</a>
-                                <a href="#pg-courses" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100 transition-colors">Postgraduate Courses</a>
-                                <a href="#value-added-courses" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100 transition-colors">Value Added Courses</a>
+                    <aside class="lg:col-span-3">
+                         <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 sticky top-8 sidebar-nav">
+                            <h2 class="text-lg font-bold mb-4 text-gray-900 uppercase tracking-wide border-b pb-2">Program Levels</h2>
+                            <nav class="space-y-1">
+                                <a href="#ug-courses" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Undergraduate</a>
+                                <a href="#pg-courses" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Postgraduate</a>
+                                <a href="#diploma-courses" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">PG Diplomas</a>
+                                <a href="#value-added" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Value Added Courses</a>
                             </nav>
                         </div>
                     </aside>
 
-                    <div class="lg:col-span-9">
-                        <div class="space-y-16">
+                    <div class="lg:col-span-9 space-y-12">
 
-                            <article id="ug-courses" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-6">Undergraduate Courses</h2>
-                                <div class="overflow-x-auto">
-                                    <table class="w-full text-left table-auto">
-                                        <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
-                                            <tr>
-                                                <th class="p-3">Course Name</th>
-                                                <th class="p-3">Type</th>
-                                                <th class="p-3 text-center">Seats</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="divide-y divide-gray-200 text-gray-700">
-                                            <tr><td class="p-3 font-medium">B.A.</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">400</td></tr>
-                                            <tr><td class="p-3 font-medium">B.A. (Hons) Economics</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">30</td></tr>
-                                            <tr><td class="p-3 font-medium">B.A. (Hons) English</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">40</td></tr>
-                                            <tr><td class="p-3 font-medium">B.A. (Hons) Pol. Science</td><td class="p-3"><span class="table-badge table-badge-sf">Self-Financing</span></td><td class="p-3 text-center">40</td></tr>
-                                            <tr><td class="p-3 font-medium">B.Com.</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">160</td></tr>
-                                            <tr><td class="p-3 font-medium">B.Com. (Vocational)</td><td class="p-3"><span class="table-badge table-badge-sf">Self-Financing</span></td><td class="p-3 text-center">80</td></tr>
-                                            <tr><td class="p-3 font-medium">B.Com. (Hons)</td><td class="p-3"><span class="table-badge table-badge-sf">Self-Financing</span></td><td class="p-3 text-center">60</td></tr>
-                                            <tr><td class="p-3 font-medium">B.Sc. (Non-Medical)</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">240</td></tr>
-                                            <tr><td class="p-3 font-medium">B.Sc. (Medical)</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">120</td></tr>
-                                            <tr><td class="p-3 font-medium">BCA</td><td class="p-3"><span class="table-badge table-badge-sf">Self-Financing</span></td><td class="p-3 text-center">80</td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </article>
+                        <article id="ug-courses" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                                <span class="w-1.5 h-8 bg-blue-600 rounded-full"></span>
+                                Undergraduate Courses
+                            </h2>
+                            <div class="overflow-hidden rounded-xl border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                    <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
+                                        <tr>
+                                            <th class="p-4 border-b font-bold">Course Name</th>
+                                            <th class="p-4 border-b font-bold">Type</th>
+                                            <th class="p-4 border-b font-bold text-center">Seats</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-600 divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">Bachelor of Arts (B.A.)</td><td class="p-4"><span class="badge badge-aided">Aided</span></td><td class="p-4 text-center font-bold">520</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">B.A. with Major in Economics</td><td class="p-4"><span class="badge badge-aided">Aided</span></td><td class="p-4 text-center font-bold">30</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">B.A. with Major in English</td><td class="p-4"><span class="badge badge-aided">Aided</span></td><td class="p-4 text-center font-bold">40</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">B.A. with Major in Pol. Science</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">40</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">Bachelor of Commerce (B.Com)</td><td class="p-4"><span class="badge badge-aided">Aided</span></td><td class="p-4 text-center font-bold">160</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">B.Com (Vocational) - Tax Procedures</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">80</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">B.Com (Honours)</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">60</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">B.Sc. Physical Sciences (Non-Medical)</td><td class="p-4"><span class="badge badge-aided">Aided</span></td><td class="p-4 text-center font-bold">240</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">B.Sc. Life Sciences (Medical)</td><td class="p-4"><span class="badge badge-aided">Aided</span></td><td class="p-4 text-center font-bold">120</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">Bachelor of Computer Application (BCA)</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">120</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">Bachelor of Business Admin (BBA)</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">120</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">M.Sc. Forensic Science (Integrated 5-Year)</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">30</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
 
-                            <article id="pg-courses" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-6">Postgraduate Courses</h2>
-                                <div class="overflow-x-auto">
-                                    <table class="w-full text-left table-auto">
-                                        <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
-                                            <tr>
-                                                <th class="p-3">Course Name</th>
-                                                <th class="p-3">Type</th>
-                                                <th class="p-3 text-center">Seats</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="divide-y divide-gray-200 text-gray-700">
-                                            <tr><td class="p-3 font-medium">M.A. (English)</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">60</td></tr>
-                                            <tr><td class="p-3 font-medium">M.A. (Hindi)</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">60</td></tr>
-                                            <tr><td class="p-3 font-medium">M.A. (Pol. Science)</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">60</td></tr>
-                                            <tr><td class="p-3 font-medium">M.Com.</td><td class="p-3"><span class="table-badge table-badge-sf">Self-Financing</span></td><td class="p-3 text-center">60</td></tr>
-                                            <tr><td class="p-3 font-medium">M.Sc (Chemistry)</td><td class="p-3"><span class="table-badge table-badge-sf">Self-Financing</span></td><td class="p-3 text-center">40</td></tr>
-                                            <tr><td class="p-3 font-medium">M.Sc. (Forensic Science) - 5 Yrs Integrated</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">30</td></tr>
-                                            <tr><td class="p-3 font-medium">M.Sc. (Forensic Science) - 2 Yrs Lateral Entry</td><td class="p-3"><span class="table-badge table-badge-aided">Aided</span></td><td class="p-3 text-center">As Per Availability</td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </article>
+                        <article id="pg-courses" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                                <span class="w-1.5 h-8 bg-blue-600 rounded-full"></span>
+                                Postgraduate Courses
+                            </h2>
+                            <div class="overflow-hidden rounded-xl border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                    <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
+                                        <tr>
+                                            <th class="p-4 border-b font-bold">Course Name</th>
+                                            <th class="p-4 border-b font-bold">Type</th>
+                                            <th class="p-4 border-b font-bold text-center">Seats</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-600 divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">Master of Arts (English)</td><td class="p-4"><span class="badge badge-aided">Aided</span></td><td class="p-4 text-center font-bold">60</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">Master of Arts (Hindi)</td><td class="p-4"><span class="badge badge-aided">Aided</span></td><td class="p-4 text-center font-bold">60</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">Master of Arts (Political Science)</td><td class="p-4"><span class="badge badge-aided">Aided</span></td><td class="p-4 text-center font-bold">60</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">Master of Commerce (M.Com)</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">60</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">Master of Science (Chemistry)</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">40</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">M.Sc. Forensic Science (Lateral Entry)</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">20</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
 
-                            <article id="value-added-courses" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-6">Value Added Certificate Courses</h2>
-                                <div class="overflow-x-auto">
-                                     <table class="w-full text-left table-auto">
-                                        <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
-                                            <tr>
-                                                <th class="p-3">Department</th>
-                                                <th class="p-3">Course Name</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="divide-y divide-gray-200 text-gray-700">
-                                            <tr><td class="p-3 font-medium">Commerce</td><td class="p-3">An Intermediate Guide to Finance Planning</td></tr>
-                                            <tr><td class="p-3 font-medium">Commerce</td><td class="p-3">Filling of Income Tax Return</td></tr>
-                                            <tr><td class="p-3 font-medium">Commerce</td><td class="p-3">Interview Skills and Personality Development</td></tr>
-                                            <tr><td class="p-3 font-medium">Economics</td><td class="p-3">Introductory Statistics</td></tr>
-                                            <tr><td class="p-3 font-medium">Botany</td><td class="p-3">Basic Techniques in Mushroom Cultivation and Post-harvest Management</td></tr>
-                                            <tr><td class="p-3 font-medium">Zoology</td><td class="p-3">Feed Formulation for Aquaculture</td></tr>
-                                            <tr><td class="p-3 font-medium">Political Science</td><td class="p-3">The Constitutional Bodies In India</td></tr>
-                                            <tr><td class="p-3 font-medium">Mathematics</td><td class="p-3">MATLAB Software – Fuzzy Logic and Neural Network Toolbox</td></tr>
-                                            <tr><td class="p-3 font-medium">English</td><td class="p-3">English Grammar For Competitive Exams</td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </article>
+                        <article id="diploma-courses" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                                <span class="w-1.5 h-8 bg-blue-600 rounded-full"></span>
+                                PG Diplomas & Certificate Courses
+                            </h2>
+                            <div class="overflow-hidden rounded-xl border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                    <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
+                                        <tr>
+                                            <th class="p-4 border-b font-bold">Course Name</th>
+                                            <th class="p-4 border-b font-bold">Type</th>
+                                            <th class="p-4 border-b font-bold text-center">Seats</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-600 divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">PG Diploma in Cyber Security</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">20</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">PG Diploma in Hospitality Mgmt</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">20</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">PG Diploma in Retail Management</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">20</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">PG Diploma in Software Development</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">20</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-medium">Certificate in Personality Development</td><td class="p-4"><span class="badge badge-sf">Self-Financing</span></td><td class="p-4 text-center font-bold">20</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
 
-                        </div>
+                        <article id="value-added" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                                <span class="w-1.5 h-8 bg-blue-600 rounded-full"></span>
+                                Value Added Certificate Courses
+                            </h2>
+                            <div class="overflow-hidden rounded-xl border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                    <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
+                                        <tr>
+                                            <th class="p-4 border-b font-bold w-1/3">Department</th>
+                                            <th class="p-4 border-b font-bold">Course Title</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-600 divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-semibold text-blue-700">Commerce</td><td class="p-4">An Intermediate Guide to Finance Planning</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-semibold text-blue-700">Commerce</td><td class="p-4">Filing of Income Tax Return</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-semibold text-blue-700">Commerce</td><td class="p-4">Interview Skills and Personality Development</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-semibold text-blue-700">Economics</td><td class="p-4">Introductory Statistics</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-semibold text-blue-700">Botany</td><td class="p-4">Mushroom Cultivation & Post-harvest Management</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-semibold text-blue-700">Zoology</td><td class="p-4">Feed Formulation for Aquaculture</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-semibold text-blue-700">Political Science</td><td class="p-4">The Constitutional Bodies In India</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-semibold text-blue-700">Mathematics</td><td class="p-4">MATLAB Software – Fuzzy Logic & Neural Network</td></tr>
+                                        <tr class="hover:bg-gray-50"><td class="p-4 font-semibold text-blue-700">English</td><td class="p-4">English Grammar For Competitive Exams</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+
                     </div>
-
                 </div>
             </div>
         </section>
@@ -159,51 +192,35 @@
     <div id="footer"></div>
 
     <script>
-        // Inject Header
-        fetch('../header.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Header not found'))
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                if (typeof initializeHeaderScripts === 'function') {
-                    initializeHeaderScripts();
-                }
-            })
-            .catch(error => console.error('Error loading header:', error));
+        // Header Injection
+        fetch('../header.html').then(res => res.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+            if (typeof initializeHeaderScripts === 'function') initializeHeaderScripts();
+        });
 
-        // Inject Footer
-        fetch('../footer.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-                 if (typeof initializeFooterScripts === 'function') {
-                    initializeFooterScripts();
-                }
-            })
-            .catch(error => console.error('Error loading footer:', error));
+        // Footer Injection
+        fetch('../footer.html').then(res => res.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+            if (typeof initializeFooterScripts === 'function') initializeFooterScripts();
+        });
 
-        // Sidebar Active State on Scroll
+        // Smart Sidebar highlighting
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('article[id]');
             const navLinks = document.querySelectorAll('.sidebar-nav a');
-
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
                         navLinks.forEach(link => {
-                            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
                         });
                     }
                 });
-            }, { rootMargin: "-30% 0px -60% 0px", threshold: 0 });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+            }, { rootMargin: "-30% 0px -70% 0px" });
+            sections.forEach(s => observer.observe(s));
         });
     </script>
     <script src="../header-scripts.js" defer></script>
     <script src="../footer-scripts.js" defer></script>
-
 </body>
 </html>

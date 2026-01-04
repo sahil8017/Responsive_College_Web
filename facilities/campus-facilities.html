@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Facilities | Dyal Singh College, Karnal</title>
-    <meta name="description" content="Discover the wide range of campus facilities at Dyal Singh College, Karnal, including a Wi-Fi enabled campus, auditorium, cafeteria, medical services, and more.">
-    <meta name="keywords" content="Campus Facilities, Dyal Singh College, Karnal, Wi-Fi, Auditorium, Cafeteria, Medical Room">
+    <title>Academic Facilities | Dyal Singh College, Karnal</title>
+    <meta name="description" content="Explore the academic infrastructure at Dyal Singh College, Karnal, featuring Smart Classrooms, Advanced Laboratories, Botanical Gardens, and Museums.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,192 +12,197 @@
     <style>
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #f9fafb; }
-        .sidebar-nav a.active { background-color: #1d4ed8; color: white; font-weight: 600; }
-        .facility-card img {
-            border-radius: 0.5rem;
-            transition: transform 0.3s ease;
+        
+        /* Sidebar Styling */
+        .sidebar-nav a.active {
+            background-color: #1d4ed8; /* blue-700 */
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-        .facility-card:hover img {
+
+        /* Image Hover Effect */
+        .facility-img-container {
+            overflow: hidden;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .facility-img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .facility-img-container:hover .facility-img {
             transform: scale(1.05);
         }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
-    <!-- Header will be injected here -->
     <div id="header"></div>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1576495199011-b81714b62d43?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-blue-900/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Campus Life & Facilities</h1>
-                <p class="text-lg md:text-xl max-w-3xl mt-4">A supportive and well-equipped environment to enhance your college experience.</p>
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative h-[50vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/class1-1024x768.jpg');">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">
+                    Academic Facilities
+                </h1>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mb-6 rounded-full shadow-sm"></div>
+                <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-2xl mx-auto">
+                    World-class infrastructure designed to foster learning, innovation, and practical knowledge.
+                </p>
             </div>
         </section>
 
-        <!-- Main Content with Sidebar -->
-        <section class="py-16 sm:py-20">
+        <section class="py-16">
             <div class="container mx-auto px-4">
-                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+                <div class="grid lg:grid-cols-12 gap-10">
 
-                    <!-- Sidebar Navigation -->
-                    <aside class="lg:col-span-3 lg:sticky top-8 self-start">
-                         <div class="bg-white p-5 rounded-lg shadow-md">
-                            <h2 class="text-xl font-bold mb-4 text-gray-800 border-b pb-3">Campus Facilities</h2>
-                            <nav class="sidebar-nav space-y-1 mt-4">
-                                <a href="#wifi" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Wi-Fi Campus</a>
-                                <a href="#auditorium" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Auditorium</a>
-                                <a href="#seminar-hall" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Seminar Hall</a>
-                                <a href="#medical" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Medical Room</a>
-                                <a href="#cafeteria" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Cafeteria</a>
-                                <a href="#bank-atm" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Bank & ATM</a>
-                                <a href="#parking" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Parking Area</a>
-                                <a href="#staff-room" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Staff Room</a>
-                                <a href="#qr-plants" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">QR Coded Plants</a>
-                                <a href="#cctv" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">CCTV Security</a>
-                                <a href="#pa-system" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Public Announcement System</a>
+                    <aside class="lg:col-span-3">
+                         <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 sticky top-8 sidebar-nav">
+                            <h2 class="text-lg font-bold mb-4 text-gray-900 uppercase tracking-wide border-b pb-2">Facilities</h2>
+                            <nav class="space-y-1">
+                                <a href="#classrooms" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Classrooms</a>
+                                <a href="#smart-classrooms" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Smart Classrooms</a>
+                                <a href="#laboratories" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Laboratories</a>
+                                <a href="#dark-room" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Dark Room</a>
+                                <a href="#botanical-garden" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Botanical Garden</a>
+                                <a href="#zoological-museum" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Zoological Museum</a>
                             </nav>
                         </div>
                     </aside>
 
-                    <!-- Content Area -->
-                    <div class="lg:col-span-9">
-                        <div class="space-y-16">
-                            
-                            <article id="wifi" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">Wi-Fi Enabled Campus</h2>
-                                <p class="text-gray-600 mb-8">The entire campus is Wi-Fi enabled, providing high-speed internet access to students and faculty. This connectivity supports e-learning, research, and seamless access to online academic resources from anywhere on campus.</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/e0f2fe/0891b2?text=Wi-Fi+Zone" alt="Wi-Fi Zone"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/e0f2fe/0891b2?text=Student+Access" alt="Student using Wi-Fi"></div>
+                    <div class="lg:col-span-9 space-y-16">
+                        
+                        <article id="classrooms" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Classrooms</h2>
+                                <p class="mt-2 text-gray-600">Spacious, well-ventilated, and well-lit classrooms designed to provide a comfortable learning environment for students.</p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="facility-img-container h-64">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/class1-1024x768.jpg" alt="Classroom View" class="facility-img">
                                 </div>
-                            </article>
-                            
-                             <article id="auditorium" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">Auditorium</h2>
-                                <p class="text-gray-600 mb-8">Our state-of-the-art auditorium is equipped with modern audio-visual technology and has a large seating capacity. It serves as the venue for major college events, including national seminars, conferences, cultural festivals, and guest lectures.</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/f3e8ff/6b21a8?text=Auditorium+Stage" alt="Auditorium Stage"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/f3e8ff/6b21a8?text=Seating+Area" alt="Auditorium Seating"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/f3e8ff/6b21a8?text=Event+in+Progress" alt="Event in Auditorium"></div>
-                                </div>
-                            </article>
-                            
-                             <article id="seminar-hall" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">Seminar Hall</h2>
-                                <p class="text-gray-600 mb-8">The college has a well-furnished seminar hall, ideal for departmental workshops, presentations, and smaller academic gatherings. It is equipped with a projector and sound system to facilitate interactive sessions.</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/fefce8/854d0e?text=Seminar+Hall+Interior" alt="Seminar Hall"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/fefce8/854d0e?text=Presentation+Setup" alt="Presentation in Seminar Hall"></div>
-                                </div>
-                            </article>
+                            </div>
+                        </article>
 
-                             <article id="medical" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">Medical Room</h2>
-                                <p class="text-gray-600 mb-8">The health and well-being of our students and staff are a priority. The campus has a dedicated medical room with first-aid facilities and a qualified professional to attend to any immediate medical needs.</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/fee2e2/b91c1c?text=Medical+Room" alt="Medical Room"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/fee2e2/b91c1c?text=First-Aid+Kit" alt="First Aid Supplies"></div>
+                        <article id="smart-classrooms" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Smart Classrooms</h2>
+                                <p class="mt-2 text-gray-600">Equipped with projectors, smart boards, and audio-visual aids to facilitate interactive and digital learning experiences.</p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="facility-img-container h-48">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/Picture1.jpg" alt="Smart Class 1" class="facility-img">
                                 </div>
-                            </article>
-
-                            <article id="cafeteria" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">Cafeteria</h2>
-                                <p class="text-gray-600 mb-8">The college cafeteria offers a variety of hygienic and delicious food options at affordable prices. It's a popular spot for students to relax, socialize, and grab a bite between classes.</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/fff7ed/c2410c?text=Cafeteria+Interior" alt="Cafeteria Seating"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/fff7ed/c2410c?text=Food+Counter" alt="Cafeteria Food Counter"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/fff7ed/c2410c?text=Students+Dining" alt="Students in Cafeteria"></div>
+                                <div class="facility-img-container h-48">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/smart2-1024x768.jpg" alt="Smart Class 2" class="facility-img">
                                 </div>
-                            </article>
-
-                            <article id="bank-atm" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">Bank & ATM</h2>
-                                <p class="text-gray-600 mb-8">For the convenience of students and staff, a nationalized bank branch and an ATM are available within the campus premises, facilitating easy financial transactions.</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/f0f9ff/0284c7?text=Bank+Branch" alt="Bank Branch on Campus"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/f0f9ff/0284c7?text=ATM+Machine" alt="ATM Facility"></div>
+                                <div class="facility-img-container h-48">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/smart4-1024x768.jpg" alt="Smart Class 3" class="facility-img">
                                 </div>
-                            </article>
-
-                            <article id="parking" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">Parking Area</h2>
-                                <p class="text-gray-600 mb-8">The college provides a spacious and secure parking area for students, staff, and visitors. The facility is well-managed to ensure the safety of vehicles.</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/f1f5f9/475569?text=Parking+Area" alt="Campus Parking"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/f1f5f9/475569?text=Two-Wheeler+Parking" alt="Bike Parking"></div>
+                                <div class="facility-img-container h-48">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/smart1-1024x768.jpg" alt="Smart Class 4" class="facility-img">
                                 </div>
-                            </article>
-
-                            <article id="staff-room" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">Staff Room</h2>
-                                <p class="text-gray-600 mb-8">Comfortable and well-furnished staff rooms are provided for faculty members, offering a quiet space for academic preparation, discussions, and relaxation.</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/faf5ff/7e22ce?text=Staff+Room" alt="Faculty Staff Room"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/faf5ff/7e22ce?text=Faculty+Workstations" alt="Faculty Workstations"></div>
+                                <div class="facility-img-container h-48">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/smart-class-473x1024.jpg" alt="Smart Class Vertical" class="facility-img object-top">
                                 </div>
-                            </article>
+                            </div>
+                        </article>
 
-                             <article id="qr-plants" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">QR Coded Plants & Trees</h2>
-                                <p class="text-gray-600 mb-8">In a unique initiative to blend technology with nature, many plants and trees on our campus are tagged with QR codes. Students can scan these codes with their smartphones to instantly access information about each species, promoting interactive and environmental learning.</p>
-                                <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/plants-new.pdf" target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">
-                                    <span>View Document on QR Coded Plants</span>
-                                </a>
-                            </article>
+                        <article id="laboratories" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Laboratories</h2>
+                                <p class="mt-2 text-gray-600">State-of-the-art laboratories for Physics, Chemistry, Zoology, Botany, and Computer Science, enabling hands-on practical learning.</p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="facility-img-container h-48"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/phy2-1024x768.jpg" class="facility-img" alt="Physics Lab"></div>
+                                <div class="facility-img-container h-48"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/zoo1-1024x756.jpg" class="facility-img" alt="Zoology Lab"></div>
+                                <div class="facility-img-container h-48"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/phy3-1024x768.jpg" class="facility-img" alt="Physics Lab 2"></div>
+                                <div class="facility-img-container h-48"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/comp1-1024x576.jpg" class="facility-img" alt="Computer Lab 1"></div>
+                                <div class="facility-img-container h-48"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/lab2-768x1024.jpg" class="facility-img object-top" alt="Lab Vertical"></div>
+                                <div class="facility-img-container h-48"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/computer-2.jpg" class="facility-img" alt="Computer Lab 3"></div>
+                            </div>
+                        </article>
 
-                            <article id="cctv" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">CCTV Enabled Campus</h2>
-                                <p class="text-gray-600 mb-8">To ensure the safety and security of our students and staff, the entire campus is under CCTV surveillance. This system helps maintain discipline and provides a secure environment for all.</p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/f1f5f9/334155?text=CCTV+Camera" alt="CCTV Camera"></div>
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/f1f5f9/334155?text=Surveillance+Area" alt="Campus Surveillance"></div>
-                                </div>
-                            </article>
+                        <article id="dark-room" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Dark Room</h2>
+                                <p class="mt-2 text-gray-600">Dedicated facility for optics experiments and physics research requiring controlled lighting conditions.</p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="facility-img-container h-64"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/dark2-1024x768.jpg" class="facility-img" alt="Dark Room 1"></div>
+                                <div class="facility-img-container h-64"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/dark1-1024x768.jpg" class="facility-img" alt="Dark Room 2"></div>
+                            </div>
+                        </article>
 
-                            <article id="pa-system" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-4">Public Announcement System</h2>
-                                <p class="text-gray-600 mb-8">A centralized Public Announcement (PA) system is installed across the campus. It is used to broadcast important notices, announcements, and emergency information to all students and staff efficiently.</p>
-                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div class="facility-card"><img src="https://placehold.co/600x400/f0f9ff/075985?text=PA+System+Speaker" alt="PA System Speaker"></div>
-                                </div>
-                            </article>
+                        <article id="botanical-garden" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Botanical Garden</h2>
+                                <p class="mt-2 text-gray-600">A lush green space maintained by the Botany department, featuring a variety of medicinal and rare plant species for study and research.</p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="facility-img-container h-64"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/bot1-1024x768.jpg" class="facility-img" alt="Botanical Garden 1"></div>
+                                <div class="facility-img-container h-64"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/bot2-1024x768.jpg" class="facility-img" alt="Botanical Garden 2"></div>
+                            </div>
+                        </article>
 
-                        </div>
+                        <article id="zoological-museum" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Zoological Museum</h2>
+                                <p class="mt-2 text-gray-600">The department boasts a rich museum with an extensive collection of specimens, models, and charts for detailed biological study.</p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="facility-img-container h-64"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/m4-768x1024.jpg" class="facility-img object-top" alt="Specimen Jar"></div>
+                                <div class="facility-img-container h-64"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/m3-1024x768.jpg" class="facility-img" alt="Museum Display"></div>
+                                <div class="facility-img-container h-64"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/m6-1024x768.jpg" class="facility-img" alt="Museum Skeleton"></div>
+                                <div class="facility-img-container h-64"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/m2-768x1024.jpg" class="facility-img object-top" alt="Specimen Collection"></div>
+                                <div class="facility-img-container h-64"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/05/museum1-1024x303.jpg" class="facility-img" alt="Museum Overview"></div>
+                            </div>
+                        </article>
+
                     </div>
-
                 </div>
             </div>
         </section>
     </main>
     
-    <!-- Footer will be injected here -->
     <div id="footer"></div>
 
     <script>
-        // Inject Header
-        fetch('../header.html').then(r => r.ok ? r.text() : Promise.reject('err')).then(d => { document.getElementById('header').innerHTML = d; if(typeof initializeHeaderScripts === 'function') initializeHeaderScripts(); }).catch(e => console.error('Error loading header:', e));
-        // Inject Footer
-        fetch('../footer.html').then(r => r.ok ? r.text() : Promise.reject('err')).then(d => { document.getElementById('footer').innerHTML = d; if(typeof initializeFooterScripts === 'function') initializeFooterScripts(); }).catch(e => console.error('Error loading footer:', e));
-        // Sidebar Active State on Scroll
+        // Header Injection
+        fetch('../header.html').then(res => res.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+            if (typeof initializeHeaderScripts === 'function') initializeHeaderScripts();
+        });
+
+        // Footer Injection
+        fetch('../footer.html').then(res => res.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+            if (typeof initializeFooterScripts === 'function') initializeFooterScripts();
+        });
+
+        // Smart Sidebar highlighting
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('article[id]');
             const navLinks = document.querySelectorAll('.sidebar-nav a');
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
-                        navLinks.forEach(link => { link.classList.toggle('active', link.getAttribute('href') === `#${id}`); });
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+                        });
                     }
                 });
-            }, { rootMargin: "-20% 0px -70% 0px", threshold: 0 });
-            sections.forEach(section => { observer.observe(section); });
+            }, { rootMargin: "-20% 0px -70% 0px" });
+            sections.forEach(s => observer.observe(s));
         });
     </script>
     <script src="../header-scripts.js" defer></script>
     <script src="../footer-scripts.js" defer></script>
-
 </body>
 </html>

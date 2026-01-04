@@ -5,122 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NIRF | Dyal Singh College, Karnal</title>
     <meta name="description" content="National Institutional Ranking Framework (NIRF) data and reports for Dyal Singh College, Karnal.">
-    <meta name="keywords" content="NIRF, Dyal Singh College, Karnal, MHRD, Ranking, Higher Education">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            background-color: #f8f9fa; /* Light gray background */
-        }
-        .prose h2 {
-            font-size: 1.875rem; /* 30px */
-            font-weight: 700;
-            color: #1f2937; /* gray-800 */
-            margin-bottom: 1.5rem;
-        }
-        .prose p {
-            font-size: 1.125rem; /* 18px */
-            line-height: 1.75;
-            color: #4b5563; /* gray-600 */
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
         .table-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: #2563eb; /* blue-600 */
-            font-weight: 600;
-            transition: all 0.2s ease-in-out;
+            color: #dc2626; font-weight: 600;
+            padding: 0.5rem 1rem; border-radius: 0.5rem;
+            background-color: #fef2f2; transition: all 0.2s;
         }
-        .table-link:hover {
-            color: #1d4ed8; /* blue-800 */
-            text-decoration: underline;
-        }
+        .table-link:hover { background-color: #dc2626; color: white; }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
-    <!-- Header will be injected here -->
     <div id="header"></div>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-blue-900/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">National Institutional Ranking Framework (NIRF)</h1>
-                <p class="text-lg md:text-xl max-w-3xl mt-4">Committed to transparency and excellence in higher education.</p>
+    <main id="main-content" class="flex-grow">
+        <section class="relative h-[50vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('https://www.dsckarnal.ac.in/wp-content/uploads/2020/08/college1.jpg');">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">
+                    NIRF Ranking
+                </h1>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mb-6 rounded-full shadow-sm"></div>
+                <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-2xl mx-auto">
+                    National Institutional Ranking Framework Reports
+                </p>
             </div>
         </section>
 
-        <!-- Main Content Section -->
-        <section class="py-16 sm:py-24">
+        <section class="py-16">
             <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-lg">
+                <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-gray-100">
                     
-                    <!-- About NIRF -->
-                    <article class="prose max-w-none mb-12">
-                        <h2>About the NIRF</h2>
-                        <p>
-                            The National Institutional Ranking Framework (NIRF) was established in September 2015 by the Ministry of Human Resource Development, Government of India. It provides a methodology to rank higher education institutions across the country based on a set of objective parameters.
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">About NIRF</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            The National Institutional Ranking Framework (NIRF) was approved by the MHRD and launched by Honourable Minister of Human Resource Development on 29th September 2015. This framework outlines a methodology to rank institutions across the country.
                         </p>
-                        <p>
-                            The parameters broadly cover “Teaching, Learning and Resources,” “Research and Professional Practices,” “Graduation Outcomes,” “Outreach and Inclusivity,” and “Perception.” This framework helps students and stakeholders make informed choices and encourages institutions to strive for excellence.
-                        </p>
-                    </article>
+                    </div>
 
-                    <!-- NIRF Reports Table -->
                     <div class="mt-10">
-                        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">College NIRF Reports</h2>
-                        <div class="overflow-x-auto border border-gray-200 rounded-lg">
-                            <table class="w-full text-left table-auto">
-                                <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                            <span class="w-1.5 h-6 bg-blue-600 rounded-full"></span>
+                            College NIRF Reports
+                        </h3>
+                        <div class="overflow-hidden rounded-xl border border-gray-200">
+                            <table class="w-full text-left border-collapse">
+                                <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
                                     <tr>
-                                        <th class="p-4 font-semibold">S.No.</th>
-                                        <th class="p-4 font-semibold">Report Title</th>
-                                        <th class="p-4 font-semibold text-center">Download</th>
+                                        <th class="p-5 border-b font-bold w-16">S.No.</th>
+                                        <th class="p-5 border-b font-bold">Report Title</th>
+                                        <th class="p-5 border-b font-bold text-center w-40">Download</th>
                                     </tr>
                                 </thead>
-                                <tbody class="text-gray-700">
-                                    <tr class="border-b border-gray-200 hover:bg-gray-50">
-                                        <td class="p-4 font-medium">1.</td>
-                                        <td class="p-4 font-medium">NIRF Report 2025</td>
-                                        <td class="p-4 text-center">
-                                            <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2025/02/NIRF-2025-31.1.2025.pdf" target="_blank" class="table-link">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                                </svg>
-                                                <span>View PDF</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr class="border-b border-gray-200 hover:bg-gray-50">
-                                        <td class="p-4 font-medium">2.</td>
-                                        <td class="p-4 font-medium">NIRF Report 2024</td>
-                                        <td class="p-4 text-center">
-                                            <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/NIRF_2024.pdf" target="_blank" class="table-link">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                                </svg>
-                                                <span>View PDF</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr class="hover:bg-gray-50">
-                                        <td class="p-4 font-medium">3.</td>
-                                        <td class="p-4 font-medium">NIRF Report 2023</td>
-                                        <td class="p-4 text-center">
-                                            <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/nirf.pdf" target="_blank" class="table-link">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                                </svg>
-                                                <span>View PDF</span>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                <tbody class="text-gray-700 divide-y divide-gray-100">
+                                    <tr class="hover:bg-gray-50"><td class="p-5">1.</td><td class="p-5 font-medium">NIRF Report 2025</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2025/02/NIRF-2025-31.1.2025.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td></tr>
+                                    <tr class="hover:bg-gray-50"><td class="p-5">2.</td><td class="p-5 font-medium">NIRF Report 2024</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/NIRF_2024.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td></tr>
+                                    <tr class="hover:bg-gray-50"><td class="p-5">3.</td><td class="p-5 font-medium">NIRF Report 2023</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/nirf.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -131,34 +80,12 @@
         </section>
     </main>
     
-    <!-- Footer will be injected here -->
     <div id="footer"></div>
-
     <script>
-        // Inject Header
-        fetch('../header.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Header not found'))
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                if (typeof initializeHeaderScripts === 'function') {
-                    initializeHeaderScripts();
-                }
-            })
-            .catch(error => console.error('Error loading header:', error));
-
-        // Inject Footer
-        fetch('../footer.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-                 if (typeof initializeFooterScripts === 'function') {
-                    initializeFooterScripts();
-                }
-            })
-            .catch(error => console.error('Error loading footer:', error));
+        fetch('../header.html').then(r=>r.text()).then(d=>{document.getElementById('header').innerHTML=d;if(typeof initializeHeaderScripts==='function')initializeHeaderScripts();});
+        fetch('../footer.html').then(r=>r.text()).then(d=>{document.getElementById('footer').innerHTML=d;if(typeof initializeFooterScripts==='function')initializeFooterScripts();});
     </script>
     <script src="../header-scripts.js" defer></script>
     <script src="../footer-scripts.js" defer></script>
-
 </body>
 </html>

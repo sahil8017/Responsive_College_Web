@@ -5,54 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Official Logo | Dyal Singh College, Karnal</title>
     <meta name="description" content="The official logo and motto of Dyal Singh College, Karnal, representing our guiding principle: 'From darkness, lead me to the light.'">
-    <meta name="keywords" content="Official Logo, Motto, Dyal Singh College, Karnal, Tamaso Ma Jyotirgamaya, Emblem">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@1,700&family=Noto+Sans+Devanagari:wght@700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            background-color: #f8f9fa; /* Light gray background */
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .sanskrit-text { font-family: 'Noto Sans Devanagari', sans-serif; }
+        .english-motto { font-family: 'Merriweather', serif; }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
     <div id="header"></div>
 
-    <main id="main-content">
-        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1593111953927-a69c27702951?q=80&w=1932&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-blue-900/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">The Emblem of Our Identity</h1>
-                <p class="text-lg md:text-xl max-w-3xl mt-4">Representing our core values and enduring legacy since 1910.</p>
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative h-[50vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('https://www.dsckarnal.ac.in/wp-content/uploads/2020/08/college1.jpg');">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">
+                    Official Logo
+                </h1>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mb-6 rounded-full shadow-sm"></div>
+                <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-2xl mx-auto">
+                    The visual symbol of our heritage, values, and enduring legacy since 1910.
+                </p>
             </div>
         </section>
 
-        <section class="py-16 sm:py-24">
+        <section class="py-16">
             <div class="container mx-auto px-4">
-                <div class="max-w-2xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-lg text-center">
+                <div class="max-w-3xl mx-auto bg-white p-10 sm:p-14 rounded-2xl shadow-sm border border-gray-100 text-center relative overflow-hidden">
                     
-                    <h2 class="text-3xl font-bold text-gray-800">Our Official Logo & Motto</h2>
-                    
-                    <div class="my-8">
-                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/01/motto.jpg" alt="Official Logo of Dyal Singh College, Karnal" class="w-48 h-48 mx-auto rounded-full shadow-xl border-4 border-gray-100">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700"></div>
+
+                    <div class="mb-12 relative inline-block group">
+                        <div class="absolute inset-0 bg-blue-100 rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+                        <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/01/motto.jpg"  alt="Official Logo of Dyal Singh College, Karnal" class="relative w-56 h-56 mx-auto rounded-full shadow-xl border-4 border-white object-cover transform group-hover:scale-105 transition-transform duration-500">
                     </div>
 
-                    <div class="space-y-4">
-                        <h3 class="text-4xl font-bold text-gray-800" style="font-family: 'Noto Sans Devanagari', sans-serif;">
-                            तमसो मा ज्योतिर्गमय
-                        </h3>
-                        <p class="text-xl font-medium text-gray-600 italic">
-                            (Tamaso Mā Jyotirgamaya)
-                        </p>
-                        <p class="text-2xl font-semibold text-blue-800 pt-2">
-                            “From darkness, lead me to the light.”
-                        </p>
-                        <p class="text-lg text-gray-700 max-w-lg mx-auto pt-4">
-                            This profound verse from the Brihadaranyaka Upanishad serves as our guiding principle. It encapsulates our mission to dispel the darkness of ignorance with the light of knowledge, wisdom, and truth, empowering our students to become enlightened citizens.
+                    <div class="space-y-6">
+                        <div>
+                            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2 sanskrit-text leading-tight">
+                                तमसो मा ज्योतिर्गमय
+                            </h2>
+                            <p class="text-lg text-gray-500 italic font-medium">
+                                (Tamaso Mā Jyotirgamaya)
+                            </p>
+                        </div>
+
+                        <div class="h-px w-16 bg-blue-200 mx-auto my-6"></div>
+
+                        <div>
+                            <p class="text-2xl font-bold text-blue-800 english-motto italic">
+                                “From darkness, lead me to the light.”
+                            </p>
+                        </div>
+
+                        <p class="text-lg text-gray-600 leading-relaxed pt-4">
+                            This profound verse from the <strong>Brihadaranyaka Upanishad</strong> serves as our guiding principle. It encapsulates our mission to dispel the darkness of ignorance with the light of knowledge, wisdom, and truth, empowering our students to become enlightened and responsible citizens.
                         </p>
                     </div>
 
@@ -64,30 +77,19 @@
     <div id="footer"></div>
 
     <script>
-        // Inject Header
-        fetch('../header.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Header not found'))
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                if (typeof initializeHeaderScripts === 'function') {
-                    initializeHeaderScripts();
-                }
-            })
-            .catch(error => console.error('Error loading header:', error));
+        // Header Injection
+        fetch('../header.html').then(res => res.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+            if (typeof initializeHeaderScripts === 'function') initializeHeaderScripts();
+        });
 
-        // Inject Footer
-        fetch('../footer.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-                 if (typeof initializeFooterScripts === 'function') {
-                    initializeFooterScripts();
-                }
-            })
-            .catch(error => console.error('Error loading footer:', error));
+        // Footer Injection
+        fetch('../footer.html').then(res => res.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+            if (typeof initializeFooterScripts === 'function') initializeFooterScripts();
+        });
     </script>
     <script src="../header-scripts.js" defer></script>
     <script src="../footer-scripts.js" defer></script>
-
 </body>
 </html>

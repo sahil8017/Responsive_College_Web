@@ -5,229 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Values & Ethics | Dyal Singh College, Karnal</title>
     <meta name="description" content="The core values, code of conduct, and professional ethics that guide the Dyal Singh College, Karnal community.">
-    <meta name="keywords" content="Values, Ethics, Dyal Singh College, Karnal, Code of Conduct, Core Values, Professional Ethics">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            background-color: #f9fafb;
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        
         .sidebar-nav a.active {
-            background-color: #1d4ed8;
+            background-color: #1d4ed8; /* blue-700 */
             color: white;
             font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-        .prose h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-top: 1.5em;
-            margin-bottom: 0.5em;
+        
+        .table-btn {
+            display: inline-flex; align-items: center; gap: 0.25rem;
+            color: #dc2626; font-weight: 500; font-size: 0.875rem;
+            padding: 0.25rem 0.75rem; border-radius: 0.375rem;
+            background-color: #fef2f2; transition: all 0.2s;
         }
-        .prose p, .prose li {
-            text-align: justify;
-            color: #4b5563;
-        }
-        .prose ul {
-            list-style-position: inside;
-        }
-        .prose ul > li::marker {
-            color: #2563eb;
-        }
-        .table-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #2563eb;
-            font-weight: 600;
-            transition: all 0.2s ease-in-out;
-        }
-        .table-link:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
-        }
+        .table-btn:hover { background-color: #dc2626; color: white; }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
-    <!-- Header will be injected here -->
     <div id="header"></div>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-blue-900/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Our Values & Ethics</h1>
-                <p class="text-lg md:text-xl max-w-3xl mt-4">The principles that define our character and guide our actions.</p>
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative h-[50vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('https://www.dsckarnal.ac.in/wp-content/uploads/2020/08/college1.jpg');">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">
+                    Values & Ethics
+                </h1>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mb-6 rounded-full shadow-sm"></div>
+                <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-2xl mx-auto">
+                    The principles that define our character and guide our actions.
+                </p>
             </div>
         </section>
 
-        <!-- Main Content with Sidebar -->
-        <section class="py-16 sm:py-20">
+        <section class="py-16">
             <div class="container mx-auto px-4">
-                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+                <div class="grid lg:grid-cols-12 gap-10">
 
-                    <!-- Sidebar Navigation -->
-                    <aside class="lg:col-span-3 lg:sticky top-8 self-start">
-                         <div class="bg-white p-5 rounded-lg shadow-md">
-                            <h2 class="text-xl font-bold mb-4 text-gray-800 border-b pb-3">Guiding Principles</h2>
-                            <nav class="sidebar-nav space-y-2 mt-4">
-                                <a href="#core-values" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100 transition-colors">Core Values</a>
-                                <a href="#human-values" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100 transition-colors">Human Values</a>
-                                <a href="#professional-ethics" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100 transition-colors">Professional Ethics</a>
-                                <a href="#code-of-conduct" class="block p-3 rounded-lg text-gray-700 hover:bg-blue-100 transition-colors">Code of Conduct</a>
+                    <aside class="lg:col-span-3">
+                         <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 sticky top-8 sidebar-nav">
+                            <h2 class="text-lg font-bold mb-4 text-gray-900 uppercase tracking-wide border-b pb-2">Guiding Principles</h2>
+                            <nav class="space-y-1">
+                                <a href="#core-values" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Core Values</a>
+                                <a href="#human-values" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Human Values</a>
+                                <a href="#professional-ethics" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Professional Ethics</a>
+                                <a href="#code-of-conduct" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Code of Conduct</a>
                             </nav>
                         </div>
                     </aside>
 
-                    <!-- Content Area -->
-                    <div class="lg:col-span-9">
-                        <div class="space-y-16">
+                    <div class="lg:col-span-9 space-y-12">
 
-                            <!-- Core Values Section -->
-                            <article id="core-values" class="prose max-w-none bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="!text-3xl !font-bold !text-gray-800">Core Values</h2>
+                        <article id="core-values" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6">Core Values</h2>
+                            <div class="prose max-w-none text-gray-600 leading-relaxed space-y-6">
                                 <p>The Dyal Singh College community is committed to a set of enduring Core Values that guide our Vision and Mission. These values are focused on the sustainable development of the institution and serve as a compass through changing times.</p>
-                                <h3>Inspiring In-Campus Environment</h3>
-                                <p>Taking inspiration from our founders, we preserve a serene cultural and aesthetic environment that is welcoming, secure, and well-suited for young scholars.</p>
-                                <h3>Value-Based Education</h3>
-                                <p>We value a student-centered teaching process focused on outcomes, discipline, punctuality, and social justice. We strive to inculcate good human and social values in our employees and students.</p>
-                                <h3>Transformational Learning</h3>
-                                <p>We promote multi-disciplinary research, creativity, innovation, and critical thinking. We value learning as a lifelong process of transformational growth.</p>
-                                <h3>Continuous Enrichment</h3>
-                                <p>We commit to fair, honest, and objective practices. Feedback is utilized for improvement, and we persistently interact with various organizations to expose faculty and students to the professional world.</p>
-                                <h3>Environmental Sustainability</h3>
-                                <p>We value and adopt practices to protect the environment for future generations and share these values with others.</p>
-                                <h3>Student Centric System</h3>
-                                <p>We are committed to fostering the professional and personal growth of all students. These interests are the primary focus of college decisions and activities.</p>
-                                <h3>Educational Competence</h3>
-                                <p>Our college focuses on making students good human beings and successful professionals through strategic teaching of both theoretical and practical aspects of education.</p>
-                            </article>
-
-                            <!-- Human Values Section -->
-                            <article id="human-values" class="prose max-w-none bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="!text-3xl !font-bold !text-gray-800">Human Values</h2>
-                                <p>Basic human values are at the core of being human and include truth, honesty, loyalty, love, and peace. They bring out the fundamental goodness of human beings and society at large.</p>
-                                <h3>Importance of Human Values:</h3>
-                                <ul>
-                                    <li>Provide understanding of attitudes, motivation, and behaviors.</li>
-                                    <li>Influence our perception of the world around us.</li>
-                                    <li>Represent the interpretation of “right and wrong.”</li>
-                                    <li>Provide a way to understand humans and organizations.</li>
-                                </ul>
-                                <p>The five core human values we uphold are: Right Conduct, Peace, Truth, Peaceful Co-existence, and Discipline. These values are an integral part of one's personality and affect the employability quotient. Dyal Singh College is committed to the core human values mentioned in the Human Rights Charter.</p>
-                            </article>
-
-                            <!-- Professional Ethics Section -->
-                            <article id="professional-ethics" class="prose max-w-none bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="!text-3xl !font-bold !text-gray-800">Professional Ethics</h2>
-                                <p>The college upholds a strict code of professional ethics for all its members to ensure a respectful, responsible, and cooperative environment.</p>
-                                <h3>For Teachers:</h3>
-                                <p>Teachers are expected to adhere to a responsible pattern of conduct, seek continuous professional growth, perform their duties with dedication, and deal justly and impartially with students. They should respect students' rights, encourage their development, and maintain positive relationships with colleagues, authorities, and guardians.</p>
-                                <h3>For Non-Teaching Staff:</h3>
-                                <p>Non-teaching staff must adhere to a responsible pattern of conduct, maintain up-to-date records, and operate with transparency and accountability. They are expected to cooperate with colleagues, assist students with administrative matters, and treat all members of the college community with respect and professionalism.</p>
-                            </article>
-
-                            <!-- Code of Conduct Section -->
-                            <article id="code-of-conduct" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Code of Conduct</h2>
-                                <div class="overflow-x-auto border border-gray-200 rounded-lg">
-                                    <table class="w-full text-left table-auto">
-                                        <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
-                                            <tr>
-                                                <th class="p-4 font-semibold">S.No.</th>
-                                                <th class="p-4 font-semibold">Document Title</th>
-                                                <th class="p-4 font-semibold text-center">Download</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-gray-700">
-                                            <tr class="border-b border-gray-200 hover:bg-gray-50">
-                                                <td class="p-4 font-medium">1.</td>
-                                                <td class="p-4 font-medium">Code of Conduct for Teaching Staff</td>
-                                                <td class="p-4 text-center">
-                                                    <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/Code-of-Conduct-For-Teacher.png" target="_blank" class="table-link">View Document</a>
-                                                </td>
-                                            </tr>
-                                            <tr class="hover:bg-gray-50">
-                                                <td class="p-4 font-medium">2.</td>
-                                                <td class="p-4 font-medium">Code of Conduct for Non-Teaching Staff</td>
-                                                <td class="p-4 text-center">
-                                                    <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/Code-of-conduct-for-non-tea.png" target="_blank" class="table-link">View Document</a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                        <h3 class="font-bold text-gray-900 mb-2">Inspiring Environment</h3>
+                                        <p class="text-sm">We preserve a serene cultural and aesthetic environment that is welcoming, secure, and well-suited for young scholars.</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                        <h3 class="font-bold text-gray-900 mb-2">Value-Based Education</h3>
+                                        <p class="text-sm">We focus on outcomes, discipline, punctuality, and social justice, striving to inculcate good human values.</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                        <h3 class="font-bold text-gray-900 mb-2">Transformational Learning</h3>
+                                        <p class="text-sm">We promote multi-disciplinary research, creativity, innovation, and critical thinking as a lifelong process.</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                        <h3 class="font-bold text-gray-900 mb-2">Continuous Enrichment</h3>
+                                        <p class="text-sm">We commit to fair, honest practices and utilize feedback for improvement and professional exposure.</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                        <h3 class="font-bold text-gray-900 mb-2">Environmental Sustainability</h3>
+                                        <p class="text-sm">We value and adopt practices to protect the environment for future generations.</p>
+                                    </div>
+                                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                                        <h3 class="font-bold text-gray-900 mb-2">Student Centric System</h3>
+                                        <p class="text-sm">Fostering the professional and personal growth of all students is our primary focus.</p>
+                                    </div>
                                 </div>
-                            </article>
+                            </div>
+                        </article>
 
-                        </div>
+                        <article id="human-values" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6">Human Values</h2>
+                            <div class="prose max-w-none text-gray-600 leading-relaxed">
+                                <p class="mb-4">Basic human values are at the core of being human and include truth, honesty, loyalty, love, and peace. They bring out the fundamental goodness of human beings and society at large.</p>
+                                
+                                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 mb-6">
+                                    <h3 class="font-bold text-blue-900 mb-3">Importance of Human Values</h3>
+                                    <ul class="list-disc list-inside space-y-2 text-sm text-blue-800">
+                                        <li>Provide understanding of attitudes, motivation, and behaviors.</li>
+                                        <li>Influence our perception of the world around us.</li>
+                                        <li>Represent the interpretation of “right and wrong.”</li>
+                                        <li>Provide a way to understand humans and organizations.</li>
+                                    </ul>
+                                </div>
+                                <p>The five core human values we uphold are: <strong>Right Conduct, Peace, Truth, Peaceful Co-existence, and Discipline.</strong></p>
+                            </div>
+                        </article>
+
+                        <article id="professional-ethics" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6">Professional Ethics</h2>
+                            <div class="space-y-6 text-gray-600">
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                        <span class="w-2 h-2 bg-blue-600 rounded-full"></span> For Teachers
+                                    </h3>
+                                    <p class="text-sm leading-relaxed pl-4 border-l-2 border-gray-100">Teachers are expected to adhere to a responsible pattern of conduct, seek continuous professional growth, perform their duties with dedication, and deal justly and impartially with students. They should respect students' rights and encourage their development.</p>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
+                                        <span class="w-2 h-2 bg-green-600 rounded-full"></span> For Non-Teaching Staff
+                                    </h3>
+                                    <p class="text-sm leading-relaxed pl-4 border-l-2 border-gray-100">Non-teaching staff must adhere to a responsible pattern of conduct, maintain up-to-date records, and operate with transparency and accountability. They are expected to cooperate with colleagues and assist students professionally.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id="code-of-conduct" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-6">Code of Conduct</h2>
+                            <div class="overflow-hidden rounded-xl border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                    <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
+                                        <tr>
+                                            <th class="p-4 border-b font-bold w-16">S.No.</th>
+                                            <th class="p-4 border-b font-bold">Document Title</th>
+                                            <th class="p-4 border-b font-bold text-center w-40">Download</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-600 divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="p-4">1.</td>
+                                            <td class="p-4 font-medium">Code of Conduct for Teaching Staff</td>
+                                            <td class="p-4 text-center">
+                                                <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/Code-of-Conduct-For-Teacher.png" target="_blank" class="table-btn">
+                                                    View Image
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50">
+                                            <td class="p-4">2.</td>
+                                            <td class="p-4 font-medium">Code of Conduct for Non-Teaching Staff</td>
+                                            <td class="p-4 text-center">
+                                                <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/Code-of-conduct-for-non-tea.png" target="_blank" class="table-btn">
+                                                    View Image
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+
                     </div>
-
                 </div>
             </div>
         </section>
     </main>
     
-    <!-- Footer will be injected here -->
     <div id="footer"></div>
 
     <script>
-        // Inject Header
-        fetch('../header.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Header not found'))
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                if (typeof initializeHeaderScripts === 'function') {
-                    initializeHeaderScripts();
-                }
-            })
-            .catch(error => console.error('Error loading header:', error));
+        // Header Injection
+        fetch('../header.html').then(res => res.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+            if (typeof initializeHeaderScripts === 'function') initializeHeaderScripts();
+        });
 
-        // Inject Footer
-        fetch('../footer.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-                 if (typeof initializeFooterScripts === 'function') {
-                    initializeFooterScripts();
-                }
-            })
-            .catch(error => console.error('Error loading footer:', error));
+        // Footer Injection
+        fetch('../footer.html').then(res => res.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+            if (typeof initializeFooterScripts === 'function') initializeFooterScripts();
+        });
 
-        // Sidebar Active State on Scroll
+        // Smart Sidebar highlighting
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('article[id]');
             const navLinks = document.querySelectorAll('.sidebar-nav a');
-
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
                         navLinks.forEach(link => {
-                            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
                         });
                     }
                 });
-            }, { 
-                rootMargin: "-30% 0px -60% 0px",
-                threshold: 0 
-            });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+            }, { rootMargin: "-30% 0px -70% 0px" });
+            sections.forEach(s => observer.observe(s));
         });
     </script>
     <script src="../header-scripts.js" defer></script>
     <script src="../footer-scripts.js" defer></script>
-
 </body>
 </html>

@@ -5,135 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Reports | Dyal Singh College, Karnal</title>
     <meta name="description" content="Feedback Analysis and Action Taken Reports from various stakeholders at Dyal Singh College, Karnal.">
-    <meta name="keywords" content="Feedback Reports, Dyal Singh College, Karnal, Stakeholder Feedback, Action Taken Report, AQAR">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            background-color: #f8f9fa; /* Light gray background */
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
         .table-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: #2563eb; /* blue-600 */
+            color: #dc2626; /* Red-600 */
             font-weight: 600;
             transition: all 0.2s ease-in-out;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: #fef2f2; /* Red-50 */
         }
         .table-link:hover {
-            color: #1d4ed8; /* blue-800 */
-            text-decoration: underline;
+            background-color: #dc2626;
+            color: white;
         }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
     <div id="header"></div>
 
-    <main id="main-content">
-        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-blue-900/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Stakeholder Feedback</h1>
-                <p class="text-lg md:text-xl max-w-3xl mt-4">Analyzing feedback for continuous institutional improvement and excellence.</p>
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative h-[50vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('https://www.dsckarnal.ac.in/wp-content/uploads/2020/08/college1.jpg');">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">
+                    Stakeholder Feedback
+                </h1>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mb-6 rounded-full shadow-sm"></div>
+                <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-2xl mx-auto">
+                    Analyzing feedback for continuous institutional improvement and excellence.
+                </p>
             </div>
         </section>
 
-        <section class="py-16 sm:py-24">
+        <section class="py-16">
             <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-lg">
+                <div class="max-w-5xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                     
-                    <div class="text-center mb-10">
-                        <h2 class="text-3xl font-bold text-gray-800">Feedback Analysis & Action Taken Reports</h2>
-                        <p class="mt-4 text-lg text-gray-600">
+                    <div class="mb-10 border-b border-gray-100 pb-6">
+                        <h2 class="text-2xl font-bold text-gray-900">Feedback Analysis & Action Taken Reports</h2>
+                        <p class="mt-2 text-gray-600 text-lg leading-relaxed">
                             We value the feedback from our stakeholders. Below are the consolidated analysis and action taken reports for various academic sessions.
                         </p>
                     </div>
 
-                    <div class="overflow-x-auto border border-gray-200 rounded-lg">
-                        <table class="w-full text-left table-auto">
-                            <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
+                    <div class="overflow-hidden rounded-xl border border-gray-200">
+                        <table class="w-full text-left border-collapse">
+                            <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
                                 <tr>
-                                    <th class="p-4 font-semibold">S.No.</th>
-                                    <th class="p-4 font-semibold">Report Title</th>
-                                    <th class="p-4 font-semibold text-center">Download</th>
+                                    <th class="p-5 font-bold border-b border-gray-200 w-16">S.No.</th>
+                                    <th class="p-5 font-bold border-b border-gray-200">Report Title / Session</th>
+                                    <th class="p-5 font-bold border-b border-gray-200 text-center w-40">Download</th>
                                 </tr>
                             </thead>
-                            <tbody class="text-gray-700">
-                                <tr class="border-b border-gray-200 hover:bg-gray-50">
-                                    <td class="p-4 font-medium">1.</td>
-                                    <td class="p-4 font-medium">Feedback Analysis & Action Taken Report (2023-24)</td>
-                                    <td class="p-4 text-center">
+                            <tbody class="text-gray-700 divide-y divide-gray-100">
+                                
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="p-5 font-medium text-gray-500">1.</td>
+                                    <td class="p-5 font-semibold text-gray-900">Feedback Analysis & Action Taken Report (2023-24)</td>
+                                    <td class="p-5 text-center">
                                         <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2024/12/Feedback-Report-2023-24_compressed.pdf" target="_blank" class="table-link">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                                            <span>View PDF</span>
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                            <span class="text-sm">PDF</span>
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50">
-                                    <td class="p-4 font-medium">2.</td>
-                                    <td class="p-4 font-medium">Feedback Analysis & Action Taken Report (2022-23)</td>
-                                    <td class="p-4 text-center">
+
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="p-5 font-medium text-gray-500">2.</td>
+                                    <td class="p-5 font-semibold text-gray-900">Feedback Analysis & Action Taken Report (2022-23)</td>
+                                    <td class="p-5 text-center">
                                         <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/Feedbackreport.pdf" target="_blank" class="table-link">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                                            <span>View PDF</span>
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                            <span class="text-sm">PDF</span>
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50">
-                                    <td class="p-4 font-medium">3.</td>
-                                    <td class="p-4 font-medium">Feedback Analysis & Action Taken Report (2021-22)</td>
-                                    <td class="p-4 text-center">
+
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="p-5 font-medium text-gray-500">3.</td>
+                                    <td class="p-5 font-semibold text-gray-900">Feedback Analysis & Action Taken Report (2021-22)</td>
+                                    <td class="p-5 text-center">
                                         <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/feedback-21-22.pdf" target="_blank" class="table-link">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                                            <span>View PDF</span>
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                            <span class="text-sm">PDF</span>
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50">
-                                    <td class="p-4 font-medium">4.</td>
-                                    <td class="p-4 font-medium">Feedback Analysis & Action Taken Report (2020-21)</td>
-                                    <td class="p-4 text-center">
+
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="p-5 font-medium text-gray-500">4.</td>
+                                    <td class="p-5 font-semibold text-gray-900">Feedback Analysis & Action Taken Report (2020-21)</td>
+                                    <td class="p-5 text-center">
                                         <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/feedback-2020-2021.pdf" target="_blank" class="table-link">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                                            <span>View PDF</span>
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                            <span class="text-sm">PDF</span>
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50">
-                                    <td class="p-4 font-medium">5.</td>
-                                    <td class="p-4 font-medium">Feedback Analysis & Action Taken Report (2019-20)</td>
-                                    <td class="p-4 text-center">
+
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="p-5 font-medium text-gray-500">5.</td>
+                                    <td class="p-5 font-semibold text-gray-900">Feedback Analysis & Action Taken Report (2019-20)</td>
+                                    <td class="p-5 text-center">
                                         <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/feedback-19-20.pdf" target="_blank" class="table-link">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                                            <span>View PDF</span>
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                            <span class="text-sm">PDF</span>
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50">
-                                    <td class="p-4 font-medium">6.</td>
-                                    <td class="p-4 font-medium">Feedback Analysis & Action Taken Report (2018-19)</td>
-                                    <td class="p-4 text-center">
+
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="p-5 font-medium text-gray-500">6.</td>
+                                    <td class="p-5 font-semibold text-gray-900">Feedback Analysis & Action Taken Report (2018-19)</td>
+                                    <td class="p-5 text-center">
                                         <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/feedback-18-19.pdf" target="_blank" class="table-link">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                                            <span>View PDF</span>
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                            <span class="text-sm">PDF</span>
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="p-4 font-medium">7.</td>
-                                    <td class="p-4 font-medium">Feedback Analysis & Action Taken Report (2017-18)</td>
-                                    <td class="p-4 text-center">
+
+                                <tr class="hover:bg-gray-50 transition-colors">
+                                    <td class="p-5 font-medium text-gray-500">7.</td>
+                                    <td class="p-5 font-semibold text-gray-900">Feedback Analysis & Action Taken Report (2017-18)</td>
+                                    <td class="p-5 text-center">
                                         <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/feedback-17-18.pdf" target="_blank" class="table-link">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                                            <span>View PDF</span>
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                            <span class="text-sm">PDF</span>
                                         </a>
                                     </td>
                                 </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -146,30 +159,19 @@
     <div id="footer"></div>
 
     <script>
-        // Inject Header
-        fetch('../header.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Header not found'))
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                if (typeof initializeHeaderScripts === 'function') {
-                    initializeHeaderScripts();
-                }
-            })
-            .catch(error => console.error('Error loading header:', error));
+        // Header Injection
+        fetch('../header.html').then(res => res.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+            if (typeof initializeHeaderScripts === 'function') initializeHeaderScripts();
+        });
 
-        // Inject Footer
-        fetch('../footer.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-                 if (typeof initializeFooterScripts === 'function') {
-                    initializeFooterScripts();
-                }
-            })
-            .catch(error => console.error('Error loading footer:', error));
+        // Footer Injection
+        fetch('../footer.html').then(res => res.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+            if (typeof initializeFooterScripts === 'function') initializeFooterScripts();
+        });
     </script>
     <script src="../header-scripts.js" defer></script>
     <script src="../footer-scripts.js" defer></script>
-
 </body>
 </html>

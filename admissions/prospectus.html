@@ -3,65 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prospectus | Dyal Singh College, Karnal</title>
-    <meta name="description" content="View and download the official college prospectus for Dyal Singh College, Karnal. Find detailed information about admissions, courses, and campus life.">
-    <meta name="keywords" content="Prospectus, Dyal Singh College, Karnal, Admissions, Courses, College Brochure">
+    <title>Prospectus 2024-25 | Dyal Singh College, Karnal</title>
+    <meta name="description" content="Download the official Dyal Singh College, Karnal Prospectus for the academic session 2024-25. View admission guidelines, fee structure, and course details.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            background-color: #f9fafb;
-        }
-        .pdf-container {
-            width: 100%;
-            height: 80vh; /* 80% of the viewport height */
-            border: 1px solid #d1d5db; /* gray-300 */
-            border-radius: 0.5rem;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .hover-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
-    <!-- Header will be injected here -->
     <div id="header"></div>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2073&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-blue-900/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">College Prospectus</h1>
-                <p class="text-lg md:text-xl max-w-3xl mt-4">Your comprehensive guide to admissions, academic programs, and life at DSC Karnal.</p>
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative h-[50vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('https://www.dsckarnal.ac.in/wp-content/uploads/2020/08/college1.jpg');">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">
+                    College Prospectus
+                </h1>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mb-6 rounded-full shadow-sm"></div>
+                <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-2xl mx-auto">
+                    Your comprehensive guide to admissions, academic programs, and campus life at DSC Karnal.
+                </p>
             </div>
         </section>
 
-        <!-- Main Content Section -->
-        <section class="py-16 sm:py-24">
+        <section class="py-16">
             <div class="container mx-auto px-4">
-                <div class="max-w-5xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-lg">
+                <div class="grid lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
                     
-                    <div class="text-center mb-10">
-                        <h2 class="text-3xl font-bold text-gray-800">Prospectus 2022-23</h2>
-                        <p class="mt-4 text-lg text-gray-600">
-                            Below you can view the college prospectus directly or download the PDF for offline access.
-                        </p>
-                        <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/07/Pros2022-23-for-College-website-reduced.pdf" target="_blank" class="mt-6 inline-flex items-center gap-2 bg-blue-700 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-800 transition-colors text-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                            </svg>
-                            <span>Download PDF</span>
-                        </a>
+                    <div class="lg:col-span-5 space-y-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-2 bg-blue-600"></div>
+                            
+                            <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon" class="w-20 h-20 mx-auto mb-6 opacity-90">
+                            
+                            <h2 class="text-2xl font-bold text-gray-900 mb-2">Prospectus 2024-25</h2>
+                            <p class="text-gray-600 mb-8">Official Information Bulletin for Undergraduate & Postgraduate Admissions.</p>
+                            
+                            <a href="https://www.dsckarnal.ac.in/prospectus/" target="_blank" class="block w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
+                                <span>Download PDF</span>
+                                <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            </a>
+                            
+                            <p class="text-xs text-gray-400 mt-4">File size: approx. 4MB • Format: PDF</p>
+                        </div>
+
+                        <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                            <h3 class="font-bold text-blue-900 mb-3 flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Need Help?
+                            </h3>
+                            <ul class="space-y-2 text-sm text-blue-800">
+                                <li>• <a href="online-admissions.html" class="hover:underline">Online Admission Portal</a></li>
+                                <li>• <a href="fee-structure.html" class="hover:underline">Check Fee Structure</a></li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <!-- Embedded PDF Viewer -->
-                    <div>
-                        <iframe src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/07/Pros2022-23-for-College-website-reduced.pdf" class="pdf-container" title="Dyal Singh College Prospectus 2022-23">
-                            <p>Your browser does not support embedded PDFs. You can <a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/07/Pros2022-23-for-College-website-reduced.pdf" target="_blank">download the PDF to view it.</a></p>
-                        </iframe>
+                    <div class="lg:col-span-7">
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 h-full">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-4">Inside the Prospectus</h3>
+                            
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div class="hover-card bg-gray-50 p-5 rounded-xl border border-gray-100">
+                                    <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mb-4 text-yellow-600">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                                    </div>
+                                    <h4 class="font-bold text-gray-900">College Profile</h4>
+                                    <p class="text-sm text-gray-600 mt-2">Information about our NAAC A+ accreditation, history, and legacy since 1910.</p>
+                                </div>
+
+                                <div class="hover-card bg-gray-50 p-5 rounded-xl border border-gray-100">
+                                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4 text-green-600">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                    </div>
+                                    <h4 class="font-bold text-gray-900">Courses Offered</h4>
+                                    <p class="text-sm text-gray-600 mt-2">Details on BA, B.Com, B.Sc (Medical/Non-Medical), and PG courses available.</p>
+                                </div>
+
+                                <div class="hover-card bg-gray-50 p-5 rounded-xl border border-gray-100">
+                                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mb-4 text-purple-600">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                    </div>
+                                    <h4 class="font-bold text-gray-900">Rules & Regulations</h4>
+                                    <p class="text-sm text-gray-600 mt-2">Important guidelines regarding attendance, discipline, and anti-ragging policies.</p>
+                                </div>
+
+                                <div class="hover-card bg-gray-50 p-5 rounded-xl border border-gray-100">
+                                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mb-4 text-red-600">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </div>
+                                    <h4 class="font-bold text-gray-900">Fee Structure</h4>
+                                    <p class="text-sm text-gray-600 mt-2">Comprehensive breakdown of semester-wise fees for all academic streams.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -69,34 +113,22 @@
         </section>
     </main>
     
-    <!-- Footer will be injected here -->
     <div id="footer"></div>
 
     <script>
-        // Inject Header
-        fetch('../header.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Header not found'))
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                if (typeof initializeHeaderScripts === 'function') {
-                    initializeHeaderScripts();
-                }
-            })
-            .catch(error => console.error('Error loading header:', error));
+        // Header Injection
+        fetch('../header.html').then(res => res.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+            if (typeof initializeHeaderScripts === 'function') initializeHeaderScripts();
+        });
 
-        // Inject Footer
-        fetch('../footer.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-                 if (typeof initializeFooterScripts === 'function') {
-                    initializeFooterScripts();
-                }
-            })
-            .catch(error => console.error('Error loading footer:', error));
+        // Footer Injection
+        fetch('../footer.html').then(res => res.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+            if (typeof initializeFooterScripts === 'function') initializeFooterScripts();
+        });
     </script>
     <script src="../header-scripts.js" defer></script>
     <script src="../footer-scripts.js" defer></script>
-
 </body>
 </html>

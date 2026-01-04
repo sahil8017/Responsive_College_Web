@@ -5,127 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAAC | Dyal Singh College, Karnal</title>
     <meta name="description" content="Access NAAC related documents for Dyal Singh College, Karnal, including Peer Team Reports, Self Study Reports (SSR), Annual Quality Assurance Reports (AQAR), and certificates.">
-    <meta name="keywords" content="NAAC, Dyal Singh College, Karnal, SSR, AQAR, Peer Team Report, NAAC Certificate">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #f9fafb; }
-        .sidebar-nav a.active { background-color: #1d4ed8; color: white; font-weight: 600; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #f8f9fa; }
+        
+        .sidebar-nav a.active {
+            background-color: #1d4ed8; /* blue-700 */
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
         .table-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: #2563eb;
+            color: #dc2626; /* Red-600 */
             font-weight: 600;
             transition: all 0.2s ease-in-out;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: #fef2f2; /* Red-50 */
         }
         .table-link:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
+            background-color: #dc2626;
+            color: white;
         }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
     <div id="header"></div>
 
-    <main id="main-content">
-        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-blue-900/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">NAAC Accreditation</h1>
-                <p class="text-lg md:text-xl max-w-3xl mt-4">Our commitment to quality and continuous improvement as recognized by the National Assessment and Accreditation Council.</p>
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative h-[50vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('https://www.dsckarnal.ac.in/wp-content/uploads/2020/08/college1.jpg');">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">
+                    NAAC Accreditation
+                </h1>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mb-6 rounded-full shadow-sm"></div>
+                <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-2xl mx-auto">
+                    Our commitment to quality and continuous improvement as recognized by the National Assessment and Accreditation Council.
+                </p>
             </div>
         </section>
 
-        <section class="py-16 sm:py-20">
+        <section class="py-16">
             <div class="container mx-auto px-4">
-                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+                <div class="grid lg:grid-cols-12 gap-10">
 
-                    <aside class="lg:col-span-3 lg:sticky top-8 self-start">
-                         <div class="bg-white p-5 rounded-lg shadow-md">
-                            <h2 class="text-xl font-bold mb-4 text-gray-800 border-b pb-3">NAAC Documents</h2>
-                            <nav class="sidebar-nav space-y-1 mt-4">
-                                <a href="#peer-team-report" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Peer Team Report</a>
-                                <a href="#ssr" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Self Study Report (SSR)</a>
-                                <a href="#aqar" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">AQAR</a>
-                                <a href="#certificates" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Certificates</a>
+                    <aside class="lg:col-span-3">
+                         <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 sticky top-8 sidebar-nav">
+                            <h2 class="text-lg font-bold mb-4 text-gray-900 uppercase tracking-wide border-b pb-2">Documents</h2>
+                            <nav class="space-y-1">
+                                <a href="#peer-team-report" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Peer Team Report</a>
+                                <a href="#ssr" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Self Study Report (SSR)</a>
+                                <a href="#aqar" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">AQAR</a>
+                                <a href="#certificates" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Certificates</a>
                             </nav>
                         </div>
                     </aside>
 
-                    <div class="lg:col-span-9">
-                        <div class="space-y-16">
-                            
-                            <article id="peer-team-report" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-6">Peer Team Reports</h2>
-                                <div class="overflow-x-auto border border-gray-200 rounded-lg">
-                                    <table class="w-full text-left table-auto">
-                                        <thead class="bg-gray-100 text-gray-700 uppercase text-sm"><tr><th class="p-3">Cycle</th><th class="p-3 text-center">View Document</th></tr></thead>
-                                        <tbody class="divide-y divide-gray-200 text-gray-700">
-                                            <tr><td class="p-3 font-medium">Cycle-I (2004)</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/NAAC-REPORT-CYCLE-I.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">Cycle-II (2017)</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/NAAC-REPORT-CYCLE-II.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">Cycle-III (2023)</td><td class="p-3 text-center"><a href="../wp-content/uploads/2023/12/Peer-Team-Report-2023.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
+                    <div class="lg:col-span-9 space-y-12">
+                        
+                        <article id="peer-team-report" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Peer Team Reports</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="overflow-hidden rounded-xl border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                    <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
+                                        <tr>
+                                            <th class="p-5 font-bold border-b border-gray-200">Cycle / Year</th>
+                                            <th class="p-5 font-bold border-b border-gray-200 text-center w-40">Document</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-700 divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">Cycle-I (2004)</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2022/10/NAAC-REPORT-CYCLE-I.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">Cycle-II (2017)</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2022/10/NAAC-REPORT-CYCLE-II.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">Cycle-III (2023)</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2023/12/Peer-Team-Report-2023.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                        
+                        <article id="ssr" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Self Study Reports (SSR) & IIQA</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="overflow-hidden rounded-xl border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                    <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
+                                        <tr>
+                                            <th class="p-5 font-bold border-b border-gray-200">Report Title</th>
+                                            <th class="p-5 font-bold border-b border-gray-200 text-center w-40">Document</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-700 divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">SSR (2017-18)</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2022/10/SSR-2017-18.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">SSR (May 2021-22)</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2023/12/SSR-submitted-2023.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">IIQA</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2024/01/iiqa2022.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                        
+                        <article id="aqar" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Annual Quality Assurance Reports (AQAR)</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="overflow-hidden rounded-xl border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                    <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
+                                        <tr>
+                                            <th class="p-5 font-bold border-b border-gray-200">Academic Session</th>
+                                            <th class="p-5 font-bold border-b border-gray-200 text-center w-40">Document</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-700 divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">2022-23</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2024/10/aqar2022-23.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">2021-22</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2023/12/AQAR2021-22.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">2020-21</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2022/10/AQAR-2020-2021.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
                                         </tbody>
-                                    </table>
-                                </div>
-                            </article>
-                            
-                             <article id="ssr" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-6">Self Study Reports (SSR) & IIQA</h2>
-                                <div class="overflow-x-auto border border-gray-200 rounded-lg">
-                                    <table class="w-full text-left table-auto">
-                                        <thead class="bg-gray-100 text-gray-700 uppercase text-sm"><tr><th class="p-3">Title</th><th class="p-3 text-center">View Document</th></tr></thead>
-                                        <tbody class="divide-y divide-gray-200 text-gray-700">
-                                            <tr><td class="p-3 font-medium">SSR (2017-18)</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/SSR-2017-18.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">SSR (May 2021-22)</td><td class="p-3 text-center"><a href="../wp-content/uploads/2023/12/SSR-submitted-2023.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">IIQA</td><td class="p-3 text-center"><a href="../wp-content/uploads/2024/01/iiqa2022.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </article>
-                            
-                             <article id="aqar" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-6">Annual Quality Assurance Reports (AQAR)</h2>
-                                <div class="overflow-x-auto border border-gray-200 rounded-lg">
-                                    <table class="w-full text-left table-auto">
-                                        <thead class="bg-gray-100 text-gray-700 uppercase text-sm"><tr><th class="p-3">Session</th><th class="p-3 text-center">View Document</th></tr></thead>
-                                        <tbody class="divide-y divide-gray-200 text-gray-700">
-                                            <tr><td class="p-3 font-medium">2022-23</td><td class="p-3 text-center"><a href="../wp-content/uploads/2024/10/aqar2022-23.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">2021-22</td><td class="p-3 text-center"><a href="../wp-content/uploads/2023/12/AQAR2021-22.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">2020-21</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/AQAR-2020-2021.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">2019-20</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/DSC-AQAR-2019-20.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">2018-19</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/DSC-AQAR-2018-19-Final.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">2017-18</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/DSC-AQAR-2017-18.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">2016-17</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/AQAR-2016-17.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">2015-16</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/AQAR-2015-16.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">2014-15</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/AQAR-2014-15.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">2013-14</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/AQAR-2013-14.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </article>
+                                </table>
+                            </div>
+                        </article>
 
-                            <article id="certificates" class="bg-white p-8 rounded-xl shadow-lg">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-6">NAAC Certificates</h2>
-                                <div class="overflow-x-auto border border-gray-200 rounded-lg">
-                                    <table class="w-full text-left table-auto">
-                                        <thead class="bg-gray-100 text-gray-700 uppercase text-sm"><tr><th class="p-3">Cycle</th><th class="p-3 text-center">View Certificate</th></tr></thead>
-                                        <tbody class="divide-y divide-gray-200 text-gray-700">
-                                            <tr><td class="p-3 font-medium">Cycle-I (2004)</td><td class="p-3 text-center"><a href="../wp-content/uploads/2023/03/NAAC-Certificate-2004.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">Cycle-II (2017)</td><td class="p-3 text-center"><a href="../wp-content/uploads/2022/10/NAAC-CERTIFICATE-II.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                            <tr><td class="p-3 font-medium">Cycle-III (2023)</td><td class="p-3 text-center"><a href="../wp-content/uploads/2023/09/NAAC-Certificate-III.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </article>
+                        <article id="certificates" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">NAAC Certificates</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="overflow-hidden rounded-xl border border-gray-200">
+                                <table class="w-full text-left border-collapse">
+                                    <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
+                                        <tr>
+                                            <th class="p-5 font-bold border-b border-gray-200">Cycle / Year</th>
+                                            <th class="p-5 font-bold border-b border-gray-200 text-center w-40">Certificate</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-700 divide-y divide-gray-100">
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">Cycle-I (2004)</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2023/03/NAAC-Certificate-2004.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">Cycle-II (2017)</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2022/10/NAAC-CERTIFICATE-II.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                        <tr class="hover:bg-gray-50 transition-colors">
+                                            <td class="p-5 font-medium text-gray-800">Cycle-III (2023)</td>
+                                            <td class="p-5 text-center"><a href="../wp-content/uploads/2023/09/NAAC-Certificate-III.pdf" target="_blank" class="table-link"><span class="text-sm">View PDF</span></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
 
-                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -134,27 +208,35 @@
     <div id="footer"></div>
 
     <script>
-        // Inject Header
-        fetch('../header.html').then(r => r.ok ? r.text() : Promise.reject('err')).then(d => { document.getElementById('header').innerHTML = d; if(typeof initializeHeaderScripts === 'function') initializeHeaderScripts(); }).catch(e => console.error('Error loading header:', e));
-        // Inject Footer
-        fetch('../footer.html').then(r => r.ok ? r.text() : Promise.reject('err')).then(d => { document.getElementById('footer').innerHTML = d; if(typeof initializeFooterScripts === 'function') initializeFooterScripts(); }).catch(e => console.error('Error loading footer:', e));
-        // Sidebar Active State on Scroll
+        // Header Injection
+        fetch('../header.html').then(res => res.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+            if (typeof initializeHeaderScripts === 'function') initializeHeaderScripts();
+        });
+
+        // Footer Injection
+        fetch('../footer.html').then(res => res.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+            if (typeof initializeFooterScripts === 'function') initializeFooterScripts();
+        });
+
+        // Smart Sidebar highlighting
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('article[id]');
             const navLinks = document.querySelectorAll('.sidebar-nav a');
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
-                        navLinks.forEach(link => { link.classList.toggle('active', link.getAttribute('href') === `#${id}`); });
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+                        });
                     }
                 });
-            }, { rootMargin: "-20% 0px -70% 0px", threshold: 0 });
-            sections.forEach(section => { observer.observe(section); });
+            }, { rootMargin: "-20% 0px -70% 0px" });
+            sections.forEach(s => observer.observe(s));
         });
     </script>
     <script src="../header-scripts.js" defer></script>
     <script src="../footer-scripts.js" defer></script>
-
 </body>
 </html>

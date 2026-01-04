@@ -5,82 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Calendar | Dyal Singh College, Karnal</title>
     <meta name="description" content="Access the official academic calendars for Dyal Singh College, Karnal. Find key dates, schedules, and important information for the academic year.">
-    <meta name="keywords" content="Academic Calendar, Dyal Singh College, Karnal, College Calendar, Term Dates, Examination Schedule">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            background-color: #f9fafb;
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .table-btn {
+            display: inline-flex; align-items: center; gap: 0.25rem;
+            color: #dc2626; font-weight: 500; font-size: 0.875rem;
+            padding: 0.25rem 0.75rem; border-radius: 0.375rem;
+            background-color: #fef2f2; transition: all 0.2s;
         }
-        .table-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #2563eb;
-            font-weight: 600;
-            transition: all 0.2s ease-in-out;
-        }
-        .table-link:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
-        }
+        .table-btn:hover { background-color: #dc2626; color: white; }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
     <div id="header"></div>
 
-    <main id="main-content">
-        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-blue-900/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Academic Calendar</h1>
-                <p class="text-lg md:text-xl max-w-3xl mt-4">Your guide to the academic year, including key dates, events, and schedules.</p>
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative h-[50vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('https://www.dsckarnal.ac.in/wp-content/uploads/2020/08/college1.jpg');">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">
+                    Academic Calendar
+                </h1>
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mb-6 rounded-full shadow-sm"></div>
+                <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-2xl mx-auto">
+                    Your guide to the academic year, including key dates, events, and examination schedules.
+                </p>
             </div>
         </section>
 
-        <section class="py-16 sm:py-24">
+        <section class="py-16">
             <div class="container mx-auto px-4">
-                <div class="max-w-5xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-lg">
+                <div class="max-w-5xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-gray-100">
                     
-                    <div class="text-center mb-10">
-                        <h2 class="text-3xl font-bold text-gray-800">College Academic Calendars</h2>
-                        <p class="mt-4 text-lg text-gray-600">
-                            Stay informed about the academic schedule for various sessions.
+                    <div class="mb-10 border-b border-gray-100 pb-6">
+                        <h2 class="text-2xl font-bold text-gray-900">College Academic Calendars</h2>
+                        <p class="mt-2 text-gray-600 text-lg">
+                            Stay informed about the academic schedule for current and previous sessions.
                         </p>
                     </div>
 
-                    <div class="overflow-x-auto border border-gray-200 rounded-lg">
-                        <table class="w-full text-left table-auto">
-                            <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
+                    <div class="overflow-hidden rounded-xl border border-gray-200">
+                        <table class="w-full text-left border-collapse">
+                            <thead class="bg-gray-50 text-gray-700 uppercase text-xs tracking-wider">
                                 <tr>
-                                    <th class="p-4 font-semibold">S.No.</th>
-                                    <th class="p-4 font-semibold">Title</th>
-                                    <th class="p-4 font-semibold text-center">Download</th>
+                                    <th class="p-5 font-bold border-b border-gray-200 w-16">S.No.</th>
+                                    <th class="p-5 font-bold border-b border-gray-200">Academic Session</th>
+                                    <th class="p-5 font-bold border-b border-gray-200 text-center w-40">Download</th>
                                 </tr>
                             </thead>
-                            <tbody class="text-gray-700">
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">1.</td><td class="p-4">Academic Calendar 2024-25</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2024/08/KUK-Academic-CAlendar-2024-25.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">2.</td><td class="p-4">Academic Calendar 2023-24</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/Schedule-of-Academic-Calendar-2023-24-1-2.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">3.</td><td class="p-4">Academic Calendar 2022-23</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Schedule-of-Academic-Calendar-2022-23.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">4.</td><td class="p-4">Academic Calendar 2021-22 (c)</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/14.-Academic-Calender-2021-22c.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">5.</td><td class="p-4">Academic Calendar 2021-22 (b)</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/13.-Academic-Calender-2021-22b.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">6.</td><td class="p-4">Academic Calendar 2021-22 (a)</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/12.-Academic-Calendar-2021-22a.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">7.</td><td class="p-4">Academic Calendar 2020-21 (f)</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/11.-Academic-Calender-2020-21f.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">8.</td><td class="p-4">Academic Calendar 2020-21 (e)</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/10.-Academic-Calender-2020-21e.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">9.</td><td class="p-4">Academic Calendar 2020-21 (d)</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/9.-Academic-Calendar-2020-21d.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">10.</td><td class="p-4">Academic Calendar 2020-21 (c)</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/8.-Academic-Calender-2020-21c.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">11.</td><td class="p-4">Academic Calendar 2020-21 (b)</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/7.-Academic-Calender-2020-21b.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">12.</td><td class="p-4">Academic Calendar 2020-21 (a)</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/6.-Academic-Calender-2020-21a.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">13.</td><td class="p-4">Academic Calendar 2019-20</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Academic-Calender-2019-20.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">14.</td><td class="p-4">Academic Calendar 2018-19</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Academic-Calendar-2018-19.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">15.</td><td class="p-4">Academic Calendar 2017-18</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Academic-Calender-2017-18.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="border-b border-gray-200 hover:bg-gray-50"><td class="p-4">16.</td><td class="p-4">Academic Calendar 2016-17</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Academic-Calendar-2016-17.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
-                                <tr class="hover:bg-gray-50"><td class="p-4">17.</td><td class="p-4">Academic Calendar 2015-16</td><td class="p-4 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Academic-Calender-2015-16.pdf" target="_blank" class="table-link">View PDF</a></td></tr>
+                            <tbody class="text-gray-700 divide-y divide-gray-100">
+                                
+                                <tr class="hover:bg-blue-50/50 transition-colors">
+                                    <td class="p-5 font-medium text-gray-500">1.</td>
+                                    <td class="p-5 font-semibold text-gray-900">Academic Calendar 2025-26 <span class="ml-2 bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wide">New</span></td>
+                                    <td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2025/07/Academic-Calender-2025-26.pdf" target="_blank" class="table-btn">View PDF</a></td>
+                                </tr>
+
+                                <tr class="hover:bg-gray-50"><td class="p-5">2.</td><td class="p-5 font-medium">Academic Calendar 2024-25</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2024/08/KUK-Academic-CAlendar-2024-25.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">3.</td><td class="p-5 font-medium">Academic Calendar 2023-24</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/Schedule-of-Academic-Calendar-2023-24-1-2.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">4.</td><td class="p-5 font-medium">Academic Calendar 2022-23</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Schedule-of-Academic-Calendar-2022-23.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">5.</td><td class="p-5 font-medium">Academic Calendar 2021-22 (c)</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/14.-Academic-Calender-2021-22c.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">6.</td><td class="p-5 font-medium">Academic Calendar 2021-22 (b)</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/13.-Academic-Calender-2021-22b.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">7.</td><td class="p-5 font-medium">Academic Calendar 2021-22 (a)</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/12.-Academic-Calendar-2021-22a.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">8.</td><td class="p-5 font-medium">Academic Calendar 2020-21 (f)</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/11.-Academic-Calender-2020-21f.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">9.</td><td class="p-5 font-medium">Academic Calendar 2020-21 (e)</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/10.-Academic-Calender-2020-21e.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">10.</td><td class="p-5 font-medium">Academic Calendar 2020-21 (d)</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/9.-Academic-Calendar-2020-21d.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">11.</td><td class="p-5 font-medium">Academic Calendar 2020-21 (c)</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/8.-Academic-Calender-2020-21c.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">12.</td><td class="p-5 font-medium">Academic Calendar 2020-21 (b)</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/7.-Academic-Calender-2020-21b.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">13.</td><td class="p-5 font-medium">Academic Calendar 2020-21 (a)</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/6.-Academic-Calender-2020-21a.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">14.</td><td class="p-5 font-medium">Academic Calendar 2019-20</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Academic-Calender-2019-20.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">15.</td><td class="p-5 font-medium">Academic Calendar 2018-19</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Academic-Calendar-2018-19.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">16.</td><td class="p-5 font-medium">Academic Calendar 2017-18</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Academic-Calender-2017-18.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">17.</td><td class="p-5 font-medium">Academic Calendar 2016-17</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Academic-Calendar-2016-17.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
+                                <tr class="hover:bg-gray-50"><td class="p-5">18.</td><td class="p-5 font-medium">Academic Calendar 2015-16</td><td class="p-5 text-center"><a href="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Academic-Calender-2015-16.pdf" target="_blank" class="table-btn">View PDF</a></td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -93,30 +97,19 @@
     <div id="footer"></div>
 
     <script>
-        // Inject Header
-        fetch('../header.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Header not found'))
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                if (typeof initializeHeaderScripts === 'function') {
-                    initializeHeaderScripts();
-                }
-            })
-            .catch(error => console.error('Error loading header:', error));
+        // Header Injection
+        fetch('../header.html').then(res => res.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+            if (typeof initializeHeaderScripts === 'function') initializeHeaderScripts();
+        });
 
-        // Inject Footer
-        fetch('../footer.html')
-            .then(response => response.ok ? response.text() : Promise.reject('Footer not found'))
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-                 if (typeof initializeFooterScripts === 'function') {
-                    initializeFooterScripts();
-                }
-            })
-            .catch(error => console.error('Error loading footer:', error));
+        // Footer Injection
+        fetch('../footer.html').then(res => res.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+            if (typeof initializeFooterScripts === 'function') initializeFooterScripts();
+        });
     </script>
     <script src="../header-scripts.js" defer></script>
     <script src="../footer-scripts.js" defer></script>
-
 </body>
 </html>

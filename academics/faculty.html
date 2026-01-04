@@ -5,265 +5,657 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Faculty | Dyal Singh College, Karnal</title>
     <meta name="description" content="Meet the esteemed and dedicated faculty members across all departments at Dyal Singh College, Karnal.">
-    <meta name="keywords" content="Faculty, Dyal Singh College, Karnal, Departments, Professors, Teaching Staff">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background-color: #f9fafb; }
-        .sidebar-nav a.active { background-color: #1d4ed8; color: white; font-weight: 600; }
-        .profile-card {
-            background-color: white;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .profile-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
-        .profile-card img {
-            width: 128px;
-            height: 128px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #e5e7eb;
-            flex-shrink: 0;
-            background-color: #f3f4f6;
-        }
-        .table-link { display: inline-flex; align-items: center; gap: 0.5rem; color: #2563eb; font-weight: 600; }
-        .table-link:hover { color: #1d4ed8; text-decoration: underline; }
-    </style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+    
+    /* Sleek Scrollbar for Sidebar */
+    .sidebar-scroll {
+        scrollbar-width: thin;
+        scrollbar-color: #cbd5e1 transparent;
+    }
+    .sidebar-scroll::-webkit-scrollbar {
+        width: 6px;
+    }
+    .sidebar-scroll::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .sidebar-scroll::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 20px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+    }
+    .sidebar-scroll::-webkit-scrollbar-thumb:hover {
+        background-color: #94a3b8;
+    }
+
+    /* Active Link Styling */
+    .sidebar-nav a.active {
+        background-color: #1d4ed8; /* blue-700 */
+        color: white;
+        font-weight: 600;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+</style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
     <div id="header"></div>
 
-    <main id="main-content">
-        <section class="relative h-[40vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1580894732444-8ec539b7b744?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-blue-900/70"></div>
-            <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Our Esteemed Faculty</h1>
-                <p class="text-lg md:text-xl max-w-3xl mt-4">Meet the dedicated mentors and scholars shaping the future of our students.</p>
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative h-[50vh] flex items-center justify-center bg-cover bg-center bg-no-repeat" 
+                 style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop');">
+            
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+            
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-md">
+                    Our Esteemed Faculty
+                </h1>
+                
+                <div class="h-1.5 w-24 bg-yellow-500 mx-auto mb-6 rounded-full shadow-sm"></div>
+                
+                <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-2xl mx-auto">
+                    Meet the dedicated mentors and scholars shaping the future of our students.
+                </p>
             </div>
         </section>
 
-        <section class="py-16 sm:py-20">
+        <section class="py-16">
             <div class="container mx-auto px-4">
-                <div class="grid lg:grid-cols-12 gap-8 lg:gap-12">
+                <div class="grid lg:grid-cols-12 gap-10">
 
-                    <aside class="lg:col-span-3 lg:sticky top-8 self-start">
-                         <div class="bg-white p-5 rounded-lg shadow-md">
-                            <h2 class="text-xl font-bold mb-4 text-gray-800 border-b pb-3">Departments</h2>
-                            <nav class="sidebar-nav space-y-1 mt-4">
-                                <a href="#dept-economics" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Economics</a>
-                                <a href="#dept-english" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">English</a>
-                                <a href="#dept-geography" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Geography</a>
-                                <a href="#dept-hindi" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Hindi</a>
-                                <a href="#dept-history" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">History</a>
-                                <a href="#dept-pol-science" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Political Science</a>
-                                <a href="#dept-punjabi" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Punjabi</a>
-                                <a href="#dept-commerce" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Commerce</a>
-                                <a href="#dept-comp-sci" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Computer Science</a>
-                                <a href="#dept-botany" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Botany</a>
-                                <a href="#dept-chemistry" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Chemistry</a>
-                                <a href="#dept-mathematics" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Mathematics</a>
-                                <a href="#dept-physics" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Physics</a>
-                                <a href="#dept-zoology" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Zoology</a>
-                                <a href="#dept-sanskrit" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Sanskrit</a>
-                                <a href="#dept-library" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Library</a>
-                                <a href="#dept-music" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Music</a>
-                                <a href="#dept-psychology" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Psychology</a>
-                                <a href="#dept-physical-edu" class="block p-2 rounded-lg text-gray-700 hover:bg-blue-100 text-sm">Physical Education</a>
-                            </nav>
-                        </div>
-                    </aside>
+                    <aside class="lg:col-span-3">
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 sticky top-8 flex flex-col max-h-[80vh]">
+        
+        <div class="p-5 border-b border-gray-100 bg-white rounded-t-xl z-10">
+            <h2 class="text-lg font-bold text-gray-900 uppercase tracking-wide">Departments</h2>
+        </div>
+        
+        <div class="overflow-y-auto p-3 sidebar-scroll flex-grow bg-white rounded-b-xl">
+            <nav class="space-y-1">
+                <a href="#dept-economics" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Economics</a>
+                <a href="#dept-english" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">English</a>
+                <a href="#dept-geography" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Geography</a>
+                <a href="#dept-hindi" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Hindi</a>
+                <a href="#dept-history" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">History</a>
+                <a href="#dept-pol-science" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Political Science</a>
+                <a href="#dept-punjabi" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Punjabi</a>
+                <a href="#dept-commerce" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Commerce</a>
+                <a href="#dept-comp-sci" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Computer Science</a>
+                <a href="#dept-botany" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Botany</a>
+                <a href="#dept-chemistry" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Chemistry</a>
+                <a href="#dept-mathematics" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Mathematics</a>
+                <a href="#dept-physics" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Physics</a>
+                <a href="#dept-zoology" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Zoology</a>
+                <a href="#dept-sanskrit" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Sanskrit</a>
+                <a href="#dept-library" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Library</a>
+                <a href="#dept-music" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Music</a>
+                <a href="#dept-psychology" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Psychology</a>
+                <a href="#dept-physical-edu" class="block px-3 py-2.5 rounded-lg text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-all duration-200 text-sm font-medium">Physical Education</a>
+            </nav>
+        </div>
+    </div>
+</aside>
 
-                    <div class="lg:col-span-9">
-                        <div class="space-y-16">
-                            
-                            <article id="dept-economics">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Economics</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Dr.-Sarika.jpg" alt="Dr. Sarika Choudhary"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Sarika Choudhary</h4><p class="text-sm text-gray-600">Head & Associate Professor</p><p class="text-xs text-gray-500 mt-1">PGDCA, M.A., M.Sc., NET, M.Phil., Ph.D.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Renu.jpeg" alt="Dr. Renu Tanwar"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Renu Tanwar</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">B.A. (Hons), M.A., NET, Ph.D.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Ritu.jpg" alt="Dr. Ritu Sharma"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Ritu Sharma</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">SET, NET, Ph.D.</p></div></div>
+                    <div class="lg:col-span-9 space-y-12">
+                        
+                        <article id="dept-economics" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Economics</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Dr.-Sarika.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Sarika Choudhary</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Associate Professor</p>
+                                    <p class="text-xs text-gray-500">PGDCA, M.A., M.Sc., NET, M.Phil., Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                            <article id="dept-english">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of English</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Sh.-Dinesh.jpg" alt="Sh. Dinesh Kumar"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Sh. Dinesh Kumar</h4><p class="text-sm text-gray-600">Head & Associate Professor</p><p class="text-xs text-gray-500 mt-1">M.A., M.Phil.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Dr.-Ritu-Sharma.jpg" alt="Dr. Ritu Sharma"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Ritu Sharma</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">M.A., M.Phil., Ph.D.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Sh.-Subhash.jpg" alt="Sh. Subhash Singh"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Sh. Subhash Singh</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">M.A., M.Phil.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Dr.-Jyotsna.jpg" alt="Dr. Jyotsna Grewal"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Jyotsna Grewal</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">M.A., M.Phil., Ph.D.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/6.-Sh.-Mahavir.jpg" alt="Sh. Mahavir Singh"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Sh. Mahavir Singh</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">M.A., M.Phil.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/7.-Sh.-Bhupinder.jpg" alt="Dr. Bhupender Kumar"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Bhupender Kumar</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">M.A., M.Phil., MBA, M.Ed., Ph.D.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/8.-Ms.-Astha.jpg" alt="Ms. Aastha Bhatia"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Ms. Aastha Bhatia</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">M.A., NET, M.Phil.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/Usha-Maam-English.jpeg" alt="Dr. Usha Rani"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Usha Rani</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">M.A., NET, M.Phil., Ph.D.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/11.-Sh.-Kiran.jpg" alt="Sh. Kiran Kumar"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Sh. Kiran Kumar</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">M.A., NET, M.Phil.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/12.-Arpita.jpg" alt="Ms. Arpita Sawhney"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Ms. Arpita Sawhney</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">M.A., NET</p></div></div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Renu.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Renu Tanwar</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">B.A. (Hons), M.A., NET, Ph.D.</p>
                                 </div>
-                            </article>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Ritu.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Ritu Sharma</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">SET, NET, Ph.D.</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article id="dept-english" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of English</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Sh.-Dinesh.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Sh. Dinesh Kumar</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Associate Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., M.Phil.</p>
+                                </div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Dr.-Ritu-Sharma.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Ritu Sharma</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., M.Phil., Ph.D.</p>
+                                </div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Sh.-Subhash.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Sh. Subhash Singh</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., M.Phil.</p>
+                                </div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Dr.-Jyotsna.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Jyotsna Grewal</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., M.Phil., Ph.D.</p>
+                                </div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/6.-Sh.-Mahavir.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Sh. Mahavir Singh</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., M.Phil.</p>
+                                </div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/7.-Sh.-Bhupinder.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Bhupender Kumar</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., M.Phil., MBA, M.Ed., Ph.D.</p>
+                                </div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/8.-Ms.-Astha.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Ms. Aastha Bhatia</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., NET, M.Phil.</p>
+                                </div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/Usha-Maam-English.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Usha Rani</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., NET, M.Phil., Ph.D.</p>
+                                </div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/11.-Sh.-Kiran.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Sh. Kiran Kumar</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., NET, M.Phil.</p>
+                                </div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/12.-Arpita.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Ms. Arpita Sawhney</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., NET</p>
+                                </div>
+                            </div>
+                        </article>
 
-                            <article id="dept-geography">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Geography</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Manishaa.jpeg" alt="Ms. Manishaa Sharma"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Ms. Manishaa Sharma</h4><p class="text-sm text-gray-600">Head & Associate Professor</p><p class="text-xs text-gray-500 mt-1">M.A., M.Phil., Diploma in Geo-Informatics</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Rajpal.jpg" alt="Sh. Rajpal Singh"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Sh. Rajpal Singh</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">M.Sc., M.Phil.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Tejpal.jpg" alt="Dr. Tejpal"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Tejpal</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">M.A., M.Phil., Ph.D., CC in Remote Sensing & GIS</p></div></div>
+                        <article id="dept-geography" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Geography</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Manishaa.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Ms. Manishaa Sharma</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Associate Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., M.Phil., Diploma in Geo-Informatics</p>
                                 </div>
-                            </article>
-                            
-                            <article id="dept-hindi">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Hindi</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Dr_Randhir.jpg" alt="Dr. Randhir Singh"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Randhir Singh</h4><p class="text-sm text-gray-600">Head & Associate Professor</p><p class="text-xs text-gray-500 mt-1">SLET, NET, M.Phil.,Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Balbir.jpg" alt="Dr. Balbir Singh"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Balbir Singh</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Subhash.jpg" alt="Dr. Subhash Saini"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Subhash Saini</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">M.Phil., Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Dr.-Jaikumar.jpeg" alt="Dr. Jai Kumar"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Jai Kumar</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">M.Phil., Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Dr.-Yashwanti.jpg" alt="Dr. Yashwanti devi"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Yashwanti devi</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/kamlesh.jpeg" alt="Dr. Kamlesh"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Kamlesh</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Rajpal.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Sh. Rajpal Singh</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">M.Sc., M.Phil.</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-history">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of History</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/Dr.-Parveen.jpeg" alt="Dr. Parveen Kumar"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Parveen Kumar</h4><p class="text-sm text-gray-600">Head & Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                    <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/jyoti.jpg" alt="Ms. Jyoti"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Ms. Jyoti</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET</p></div></div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Tejpal.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Tejpal</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">M.A., M.Phil., Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                            <article id="dept-pol-science">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Political Science</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Santosh-Yadav.jpg" alt="Dr. Santosh Yadav"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Santosh Yadav</h4><p class="text-sm text-gray-600">Head & Associate Professor</p><p class="text-xs text-gray-500 mt-1">NET, M.Phil., Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Dr.-Pawan-Kumar.jpg" alt="Dr. Pawan Kumar"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Pawan Kumar</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, M.Phil., Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Dr.-Anita.jpg" alt="Dr. Anita Aggarwal"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Anita Aggarwal</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
+                            </div>
+                        </article>
+                        
+                        <article id="dept-hindi" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Hindi</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Dr_Randhir.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Randhir Singh</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Associate Professor</p>
+                                    <p class="text-xs text-gray-500">SLET, NET, M.Phil.,Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-punjabi">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Punjabi</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Dr.-Baljinder.jpg" alt="Dr. Baljinder Singh"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Baljinder Singh</h4><p class="text-sm text-gray-600">Head & Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, M.Phil., Ph.D.</p></div></div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Balbir.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Balbir Singh</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                            <article id="dept-commerce">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Commerce</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Dr.-Mukta.jpeg" alt="Dr. Mukta"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Mukta</h4><p class="text-sm text-gray-600">Head & Associate Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Pooja.png" alt="Dr. Pooja Malhotra"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Pooja Malhotra</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/PHOTO-2023-01-05-20-23-44.jpg" alt="Dr. Dimple Khosla"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Dimple Khosla</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Dr.-Vandna.jpeg" alt="Dr. Vandana Sabharwal"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Vandana Sabharwal</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Ms.-Nikita.jpg" alt="Ms. Nikita Arya"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Ms. Nikita Arya</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, M.Phil.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/chanchal.jpg" alt="Dr. Chanchal Gupta"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Chanchal Gupta</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">M.com, Ph.D., NET-JRF</p></div></div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Subhash.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Subhash Saini</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">M.Phil., Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-comp-sci">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Computer Science</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Sh.-Sushil-Goel.jpg" alt="Sh. Sushil Goel"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Sh. Sushil Goel</h4><p class="text-sm text-gray-600">Head & Associate Professor</p><p class="text-xs text-gray-500 mt-1">M.Phil.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Sh.-S.L-Arora.jpg" alt="Sh. S.L Arora"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Sh. S.L Arora</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">M.Phil.</p></div></div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Dr.-Jaikumar.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Jai Kumar</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">M.Phil., Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-botany">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Botany</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/Dr.-Aditi.jpg" alt="Dr. Aditi Shreeya Bali"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Aditi Shreeya Bali</h4><p class="text-sm text-gray-600">Head & Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/Dr.Suhana.jpg" alt="Dr. Suhana Rao"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Suhana Rao</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/isha.jpg" alt="Ms. Isha"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Ms. Isha</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET</p></div></div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Dr.-Yashwanti.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Yashwanti devi</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-chemistry">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Chemistry</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Dr.-S.P.-Bhatti.jpg" alt="Dr. S.P. Bhatti"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. S.P. Bhatti</h4><p class="text-sm text-gray-600">Head & Associate Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Sh.-Sandeep.jpg" alt="Sh. Sandeep Kumar"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Sh. Sandeep Kumar</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">NET</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Dr.-Kapil.jpg" alt="Dr. Kapil"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Kapil</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Dr.-Akshay.jpg" alt="Dr. Akshay Kumar"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Akshay Kumar</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/mandeep.jpg" alt="Dr. Mandeep"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Mandeep</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/poonam-rani.jpg" alt="Dr. Poonam Rani"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Poonam Rani</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/kamlesh.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Kamlesh</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-mathematics">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Mathematics</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Mrs.-Sarita.jpg" alt="Ms. Sarita"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Ms. Sarita</h4><p class="text-sm text-gray-600">Head & Associate Professor</p><p class="text-xs text-gray-500 mt-1">M.Phil.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Vishakha.jpg" alt="Dr. Vishakha Gupta"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Vishakha Gupta</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Dr.-Vivek.jpg" alt="Dr. Vivek Parkash"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Vivek Parkash</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
+                            </div>
+                        </article>
+                        
+                         <article id="dept-history" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of History</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/Dr.-Parveen.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Parveen Kumar</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-physics">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Physics</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Sh.-Rajesh-Arora.jpg" alt="Sh. Rajesh Arora"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Sh. Rajesh Arora</h4><p class="text-sm text-gray-600">Head & Associate Professor</p><p class="text-xs text-gray-500 mt-1">NET/M.Phil.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Rajni-Seth.jpg" alt="Dr. Rajni Seth"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Rajni Seth</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">M.Phil, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Dr.-Devinder.jpg" alt="Dr. Devender Singh"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Devender Singh</h4><p class="text-sm text-gray-600">Associate Professor</p><p class="text-xs text-gray-500 mt-1">NET, M.Phil., Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Dr.-Ambika.jpg" alt="Dr. Ambika Rani"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Ambika Rani</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Ms.-Nidhi.jpg" alt="Ms. Nidhi Jast"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Ms. Nidhi Jast</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, M.Phil.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/6.-Dr.-Rubi.jpg" alt="Dr. Rubi"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Rubi</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, M.Phil., Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/heena.jpg" alt="Dr. Heena"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Heena</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
+                                <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/jyoti.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Ms. Jyoti</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-zoology">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Zoology</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://via.placeholder.com/128" alt="Dr. Shweta Yadav"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Shweta Yadav</h4><p class="text-sm text-gray-600">Head & Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Amanpreet-Kaur.jpg" alt="Dr. Amanpreet Kaur Kalsi"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Amanpreet Kaur Kalsi</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/sonal-saluja.jpg" alt="Dr. Sonal Saluja"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Sonal Saluja</h4><p class="text-sm text-gray-600">Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET, Ph.D.</p></div></div>
+                            </div>
+                        </article>
+                        
+                        <article id="dept-pol-science" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Political Science</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Santosh-Yadav.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Santosh Yadav</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Associate Professor</p>
+                                    <p class="text-xs text-gray-500">NET, M.Phil., Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-sanskrit">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Sanskrit</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/deepak-kumar.jpg" alt="Mr. Deepak Kumar"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Mr. Deepak Kumar</h4><p class="text-sm text-gray-600">Head & Assistant Professor</p><p class="text-xs text-gray-500 mt-1">Shastri, B.Ed, M.A.(Sanskrit Vyakaran), UGC NET</p></div></div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Dr.-Pawan-Kumar.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Pawan Kumar</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, M.Phil., Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                            <article id="dept-library">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Library</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Anil-Photo.jpg" alt="Sh. Anil"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Sh. Anil</h4><p class="text-sm text-gray-600">Librarian</p><p class="text-xs text-gray-500 mt-1">NET, M.Phil.</p></div></div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Dr.-Anita.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Anita Aggarwal</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-music">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Music</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/12/Srishti-Nirwan.jpeg" alt="Dr. Srishti Nirwan"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Dr. Srishti Nirwan</h4><p class="text-sm text-gray-600">Head & Assistant Professor</p><p class="text-xs text-gray-500 mt-1">NET-JRF, Ph.D. (Music)</p></div></div>
+                            </div>
+                        </article>
+                        
+                         <article id="dept-punjabi" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Punjabi</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Dr.-Baljinder.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Baljinder Singh</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, M.Phil., Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                             <article id="dept-psychology">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Psychology</h2>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                     <div class="profile-card"><img src="https://via.placeholder.com/128" alt="Indu Bala"><div class="mt-4"><h4 class="font-bold text-lg text-gray-800">Indu Bala</h4><p class="text-sm text-gray-600">Assistant professor</p><p class="text-xs text-gray-500 mt-1">MA psychology, PG Diploma, NET</p></div></div>
+                            </div>
+                        </article>
+                        
+                        <article id="dept-commerce" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Commerce</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Dr.-Mukta.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Mukta</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Associate Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
                                 </div>
-                            </article>
-                            
-                            <article id="dept-physical-edu">
-                                <h2 class="text-3xl font-bold text-gray-800 mb-8 pb-2 border-b-4 border-blue-600">Department of Physical Education</h2>
-                                 <p class="text-gray-500">Information for this department is not available at the moment.</p>
-                            </article>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Pooja.png" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Pooja Malhotra</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/PHOTO-2023-01-05-20-23-44.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Dimple Khosla</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Dr.-Vandna.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Vandana Sabharwal</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Ms.-Nikita.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Ms. Nikita Arya</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, M.Phil.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/chanchal.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Chanchal Gupta</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">M.com, Ph.D., NET-JRF</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                         <article id="dept-comp-sci" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Computer Science</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Sh.-Sushil-Goel.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Sh. Sushil Goel</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Associate Professor</p>
+                                    <p class="text-xs text-gray-500">M.Phil.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Sh.-S.L-Arora.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Sh. S.L Arora</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">M.Phil.</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                         <article id="dept-botany" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Botany</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/Dr.-Aditi.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Aditi Shreeya Bali</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/12/Dr.Suhana.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Suhana Rao</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/isha.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Ms. Isha</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                         <article id="dept-chemistry" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Chemistry</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Dr.-S.P.-Bhatti.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. S.P. Bhatti</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Associate Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Sh.-Sandeep.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Sh. Sandeep Kumar</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">NET</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Dr.-Kapil.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Kapil</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Dr.-Akshay.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Akshay Kumar</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/mandeep.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Mandeep</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/poonam-rani.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Poonam Rani</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                         <article id="dept-mathematics" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Mathematics</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Mrs.-Sarita.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Ms. Sarita</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Associate Professor</p>
+                                    <p class="text-xs text-gray-500">M.Phil.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Vishakha.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Vishakha Gupta</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Dr.-Vivek.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Vivek Parkash</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                         <article id="dept-physics" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Physics</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/1.-Sh.-Rajesh-Arora.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Sh. Rajesh Arora</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Associate Professor</p>
+                                    <p class="text-xs text-gray-500">NET/M.Phil.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Rajni-Seth.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Rajni Seth</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">M.Phil, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/3.-Dr.-Devinder.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Devender Singh</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Associate Professor</p>
+                                    <p class="text-xs text-gray-500">NET, M.Phil., Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/4.-Dr.-Ambika.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Ambika Rani</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/5.-Ms.-Nidhi.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Ms. Nidhi Jast</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, M.Phil.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/6.-Dr.-Rubi.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Rubi</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, M.Phil., Ph.D.</p>
+                                </div>
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/heena.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Heena</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET, Ph.D.</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                         <article id="dept-zoology" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+    <div class="mb-8 border-b border-gray-100 pb-4">
+        <h2 class="text-3xl font-bold text-gray-900">Department of Zoology</h2>
+        <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/11/WhatsApp-Image-2024-09-27-at-1.28.58-PM.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+            <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Shweta Yadav</h4>
+            <p class="text-sm font-medium text-blue-600 mb-2">Head & Assistant Professor</p>
+            <p class="text-xs text-gray-500">NET, Ph.D.</p>
+        </div>
+            <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2022/03/2.-Dr.-Amanpreet-Kaur.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+            <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Amanpreet Kaur Kalsi</h4>
+            <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+            <p class="text-xs text-gray-500">NET, Ph.D.</p>
+        </div>
+            <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/sonal-saluja.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+            <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Sonal Saluja</h4>
+            <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+            <p class="text-xs text-gray-500">NET, Ph.D.</p>
+        </div>
+    </div>
+</article>
+                        
+                         <article id="dept-sanskrit" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Sanskrit</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/01/deepak-kumar.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Mr. Deepak Kumar</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">Shastri, B.Ed, M.A.(Sanskrit Vyakaran), UGC NET</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article id="dept-library" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Library</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2023/01/Anil-Photo.jpg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Sh. Anil</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Librarian</p>
+                                    <p class="text-xs text-gray-500">NET, M.Phil.</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                         <article id="dept-music" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Music</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2024/12/Srishti-Nirwan.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Dr. Srishti Nirwan</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Head & Assistant Professor</p>
+                                    <p class="text-xs text-gray-500">NET-JRF, Ph.D. (Music)</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                         <article id="dept-psychology" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <div class="mb-8 border-b border-gray-100 pb-4">
+                                <h2 class="text-3xl font-bold text-gray-900">Department of Psychology</h2>
+                                <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                 <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+                                    <img src="https://via.placeholder.com/128" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+                                    <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Indu Bala</h4>
+                                    <p class="text-sm font-medium text-blue-600 mb-2">Assistant professor</p>
+                                    <p class="text-xs text-gray-500">MA psychology, PG Diploma, NET</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article id="dept-physical-edu" class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+    <div class="mb-8 border-b border-gray-100 pb-4">
+        <h2 class="text-3xl font-bold text-gray-900">Department of Physical Education</h2>
+        <div class="h-1 w-20 bg-blue-600 mt-2 rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 text-center">
+            <img src="https://www.dsckarnal.ac.in/wp-content/uploads/2025/07/gourav.jpeg" class="w-28 h-28 rounded-full mx-auto object-cover border-4 border-gray-50 group-hover:border-blue-100 transition-colors">
+            <h4 class="mt-4 font-bold text-lg text-gray-800 group-hover:text-blue-700 transition-colors">Mr. Gourav</h4>
+            <p class="text-sm font-medium text-blue-600 mb-2">Assistant Professor</p>
+            <p class="text-xs text-gray-500">Master of Physical Education</p>
+        </div>
+    </div>
+</article>
 
-                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -272,27 +664,35 @@
     <div id="footer"></div>
 
     <script>
-        // Inject Header
-        fetch('../header.html').then(response => response.ok ? response.text() : Promise.reject('Header not found')).then(data => { document.getElementById('header').innerHTML = data; if (typeof initializeHeaderScripts === 'function') { initializeHeaderScripts(); } }).catch(error => console.error('Error loading header:', error));
-        // Inject Footer
-        fetch('../footer.html').then(response => response.ok ? response.text() : Promise.reject('Footer not found')).then(data => { document.getElementById('footer').innerHTML = data; if (typeof initializeFooterScripts === 'function') { initializeFooterScripts(); } }).catch(error => console.error('Error loading footer:', error));
-        // Sidebar Active State on Scroll
+        // Header Injection
+        fetch('../header.html').then(res => res.text()).then(data => {
+            document.getElementById('header').innerHTML = data;
+            if (typeof initializeHeaderScripts === 'function') initializeHeaderScripts();
+        });
+
+        // Footer Injection
+        fetch('../footer.html').then(res => res.text()).then(data => {
+            document.getElementById('footer').innerHTML = data;
+            if (typeof initializeFooterScripts === 'function') initializeFooterScripts();
+        });
+
+        // Smart Sidebar highlighting
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('article[id]');
             const navLinks = document.querySelectorAll('.sidebar-nav a');
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
-                        navLinks.forEach(link => { link.classList.toggle('active', link.getAttribute('href') === `#${id}`); });
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+                        });
                     }
                 });
-            }, { rootMargin: "-20% 0px -70% 0px", threshold: 0 });
-            sections.forEach(section => { observer.observe(section); });
+            }, { rootMargin: "-20% 0px -70% 0px" });
+            sections.forEach(s => observer.observe(s));
         });
     </script>
     <script src="../header-scripts.js" defer></script>
     <script src="../footer-scripts.js" defer></script>
-
 </body>
 </html>
